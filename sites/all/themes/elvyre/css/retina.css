@@ -1,0 +1,155 @@
+/* 
+    Document   : retina background images
+*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5){
+    .search-submit{
+        background: url('../img/search@2x.png') no-repeat;
+        background-size: 40px;
+    }
+
+    .accordion.style-2 .title{
+        background-image: url('../img/accordion-closed2@2x.png');
+        background-size: 25px;
+    }
+
+    .accordion.style-2 .title.active{
+        background-image: url('../img/accordion-opened2@2x.png');
+        background-size: 25px;
+    }
+
+    .information-boxes .close{
+        background: url('../img/close@2x.png') no-repeat;
+        background-size: 20px;
+    }
+
+    .infobox p{
+        background: url('../img/info-box@2x.png') no-repeat 0 center;
+        background-size: 20px;
+    }
+
+    .warning-box p{
+        background: url('../img/warning-box@2x.png') no-repeat 0 center;
+        background-size: 20px;
+    }
+
+    .success-box p{
+        background: url('../img/success-box@2x.png') no-repeat 0 center;
+        background-size: 20px;
+    }
+
+    .error-box p{
+        background: url('../img/error-box@2x.png') no-repeat 0 center;
+        background-size: 20px;
+    }
+
+    .services-overview li{
+        background: url('../img/checkmark@2x.png') no-repeat 0 0;
+        background-size: 41px;
+    }
+
+    .carousel-nav li a[class^="c_prev"]{
+        background-image: url('../img/c_prev@2x.png');
+        background-size: 30px;
+    }
+
+    .carousel-nav li a[class^="c_next"]{
+        background-image: url('../img/c_next@2x.png');
+        background-size: 30px;
+    }
+
+    .comment .comment-reply-link{
+        background: url('../img/icon-reply@2x.png') no-repeat 0 center;
+        background-size: 14px;
+    }
+
+    .widget li{
+        background: url('../img/aside-arrow@2x.png') no-repeat 0 12px;
+        background-size: 4px 7px;
+    }
+
+    .widget_search .search-submit{
+        background: url('../img/aside-search@2x.png') center center no-repeat;
+        background-size: 13px;
+    }
+
+    .widget_recent_comments li{
+        background: url('../img/icon-comment@2x.png') no-repeat 0 center;
+        background-size: 40px;
+    }
+
+    #tweet-sroll-wrapper.widget li{
+        background: url('../img/twitter@2x.png') no-repeat 0 5px;
+        background-size: 24px 17px;
+    }
+
+    .scroll-up{
+        background: url('../img/to-top@2x.png') no-repeat;
+        background-size: 40px;
+    }
+
+    /* FROM COLOR STYLE.CSS
+    ------------------------------------------------------------------------- */
+    .carousel-nav .c_next:hover{
+        background-image: url('../img/c_next_hover@2x.png');
+        background-size: 30px;
+    }
+
+    .carousel-nav .c_prev:hover{
+        background-image: url('../img/c_prev_hover@2x.png');
+        background-size: 30px;
+    }
+
+    .accordion .title{
+        background-image: url('../img/accordion-closed@2x.png');  
+        background-size: 25px;
+    }
+
+    .accordion .title.active{
+        background-image: url('../img/accordion-opened@2x.png');
+        background-size: 25px;
+    }
+
+    .history-arrow-right{   
+        background: url('../img/timeline-right@2x.png') no-repeat center center;
+        background-size: 170px 35px;
+    }
+
+    .history-arrow-left{   
+        background: url('../img/timeline-left@2x.png') no-repeat center center;
+        background-size: 170px 35px;
+    }
+
+
+    /* FOR NIVO SLIDER
+    ------------------------------------------------------------------------- */
+    .nivoSlider{
+        background: #f6f6f6 url('../img/loading@2X.gif') no-repeat center;
+        background-size: 48px;
+    }
+
+    .nivo-prevNav { 
+        background-image: url('../img/nivo-left@2x.png');
+        background-size: 17px 28px;
+    }
+
+    .nivo-nextNav{
+        background-image: url('../img/nivo-right@2x.png');
+        background-size: 17px 28px;
+    }
+
+    .nivo-prevNav:hover{
+        background-image: url('../img/nivo-left-hover@2x.png');
+        background-size: 17px 28px;
+    }
+
+    .nivo-nextNav:hover{
+        background-image: url('../img/nivo-right-hover@2x.png');
+        background-size: 17px 28px;
+    }
+
+}
+

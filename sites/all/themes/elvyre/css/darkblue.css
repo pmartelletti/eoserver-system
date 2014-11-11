@@ -1,0 +1,133 @@
+/* 
+    Document   : darkblue style
+*/
+
+a:hover, 
+#top-bar .contact-info li a:hover, 
+.post-body a h3:hover, 
+.pi_recent_posts .widget-post-info a h6:hover, 
+#filters li.active a, 
+.sharrre.portfolio-item-like:hover, 
+.icons-list.colored, 
+.btn-medium.empty, 
+#page-title.page-title-3 .breadcrumbs li a:hover, 
+.service-box-1 a:hover h5, 
+.service-box-2:hover .icon i, 
+.tabs.vertical li.active a, 
+.latest-posts li a:hover h5{
+    /*color: #727c89 !important;*/
+	color: #727c89;
+}
+
+#search, 
+.wpcf7-submit:hover, 
+.widget .newsletter .submit:hover, 
+.widget_tag_cloud a:hover, 
+.breadcrumbs, 
+#top-bar .social-links li:hover a, 
+.post-info .post-category, 
+.post-info-container .post-category,
+.post-meta li a::after, 
+.nivo-prevNav, 
+.highlighted-color, 
+.pagination li:hover, 
+.sharrre .right, 
+#respond #comment-reply:hover, 
+#filters li.active .item-number, 
+#filters li:hover .item-number, 
+.portfolio-img-container .portfolio-img-hover li:hover, 
+.btn-medium.empty:hover, 
+.btn-big.empty:hover,
+.btn-medium:hover, 
+.btn-big:hover,
+.carousel-nav li:hover,
+.expand, 
+.team-member-hover .mask, 
+.history .year-holder span.year, 
+.service-box-1:hover .icon, 
+.tabs.vertical.services-tabs li.active .icon, 
+.tabs.vertical.services-tabs li:hover .icon, 
+.service-box-2 .icon i, 
+.service-box-2:hover, 
+.process-box:hover, 
+.header-style-4 .social-links li:hover, 
+.pricing-table-col.selected .price, 
+.pagination li.active, 
+.dropcap.colored, 
+.numbers-counter li{
+    background-color: #727c89;
+}
+
+.nivo-prevNav, 
+.nivo-nextNav{
+    background-color: rgba(114, 124, 137, 0.6);
+}
+
+#nav > ul > li.current-menu-item > a{
+    color: #f7bd14;
+}
+
+blockquote{
+    border-left: 3px solid #727c89;
+}
+
+.btn-medium.empty, 
+.btn-big.empty,
+.btn-medium.empty.white:hover, 
+.btn-big.empty.white:hover,
+.field-name-field-portfolio-link a{
+    border: 1px solid #727c89;
+    
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.history .year-holder{
+    border: 3px solid #727c89;
+}
+
+.carousel-nav .c_next:hover{
+    background-image: url('../img/c_next_hover.png');
+}
+
+.carousel-nav .c_prev:hover{
+    background-image: url('../img/c_prev_hover.png');
+}
+
+.tabs li.active{
+    border-top: 1px solid #727c89;
+}
+
+.accordion .title{
+    background-image: url('../img/accordion-closed.png');    
+}
+
+.accordion .title.active{
+    background-image: url('../img/accordion-opened.png');
+}
+
+.history-arrow-right{   
+    background: url('../img/timeline-right.png') no-repeat center center;
+    background-size: 100%;
+}
+
+.history-arrow-left{   
+    background: url('../img/timeline-left.png') no-repeat center center;
+    background-size: 100%;
+}
+
+
+
+/* DARKER BLUE COLOR 
+==============================================================================*/
+.widget .newsletter .submit:hover{
+    border: 1px solid #39414b;
+}
+
+.portfolio-img-container .portfolio-img-hover .mask, 
+.btn-medium, 
+.btn-big{
+    background: #39414b;
+}

@@ -1,0 +1,75 @@
+;Theme Elvyre
+name = 'Elvyre'
+description = 'Elvyre is modern and clean corporate theme with fuly responsive design.'
+core = '7.x'
+engine = 'phptemplate'
+screenshot = 'screenshot.png'
+
+
+;Stylesheets
+stylesheets[all][] = 'css/grid.css'
+stylesheets[all][] = 'css/style.css'
+stylesheets[all][] = 'css/darkblue.css'
+stylesheets[all][] = 'css/responsive.css'
+stylesheets[all][] = 'css/a.css'
+stylesheets[all][] = 'css/retina.css'
+stylesheets[all][] = 'css/prettyPhoto.css'
+stylesheets[all][] = 'css/nivo-slider.css'
+stylesheets[all][] = 'pixons/s.css'
+stylesheets[all][] = 'iconsfont/iconsfont.css'
+
+scripts[] = js/jquery-migrate-1.2.1.min.js
+scripts[] = js/jquery.placeholder.min.js
+scripts[] = js/modernizr.custom.js
+scripts[] = js/waypoints.min.js
+scripts[] = js/easypiechart.js
+scripts[] = js/jquery.nivo.slider.js
+scripts[] = js/jquery.stellar.min.js
+scripts[] = js/jquery.carouFredSel.js
+scripts[] = js/jquery.touchSwipe-1.6.js
+scripts[] = js/jquery.countTo.js
+scripts[] = js/jquery.isotope.min.js
+scripts[] = js/jquery.prettyPhoto.js
+scripts[] = js/portfolio.js
+scripts[] = js/socialstream.jquery.js
+scripts[] = js/include.js
+
+
+;regions[header] = Header
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+regions[top_left] = Top Left
+regions[top_right] = Top Right
+
+regions[main_menu] = Main Menu
+;regions[search_box] = Search Box
+regions[page_title] = Page Title
+regions[slider] = Slider
+regions[featured] = Featured
+regions[content_parallax_1] = Content Parallax 1
+regions[sidebar_left] = Sidebar Left
+regions[sidebar_right] = Sidebar Right
+regions[content] = Content
+regions[content_parallax_2] = Content Parallax 2
+regions[postscript_first] = Postscript First
+regions[content_parallax_3] = Content Parallax 3
+regions[postscript_second] = Postscript Second
+regions[content_parallax_4] = Content Parallax 4
+regions[postscript_third] = Postscript Third
+regions[postscript_fourth] = Postscript Fourth
+regions[bottom] = Bottom
+
+regions[footer_firstcolumn] = Footer first column
+regions[footer_secondcolumn] = Footer second column
+regions[footer_thirdcolumn] = Footer third column
+regions[footer_fourthcolumn] = Footer fourth column
+regions[footer-a] = Footer a
+regions[footer-b] = Footer b
+
+
+settings[theme_color_palette]  = turquoise
+settings[theme_bg_pattern]  = none
+settings[boson_boxed]  = 0
+

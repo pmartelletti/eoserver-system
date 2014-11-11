@@ -1,0 +1,4 @@
+name = Custom Producto
+description = Funciones basicas para mostrar los productos
+package = Custom
+core = 7.x

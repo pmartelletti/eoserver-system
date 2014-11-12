@@ -8,6 +8,12 @@
             <li><a href="/distribuidores">&iquest;Donde comprar?</a></li>
             <li><a href="/colocaciones">colocaci&oacute;n</a></li>
             <li><a href="/mantenimiento">mantenimiento</a></li>
+	    <?php
+		if(!empty($node->field_url)){
+		        $field = field_view_field('node', $node, 'field_url', 'full');
+        		print "<li>".render($field)."</li>";
+		}
+	    ?>
         </ul>
     </div>
     <div class="detalle">

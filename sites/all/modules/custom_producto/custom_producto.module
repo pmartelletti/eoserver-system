@@ -1,10 +1,10 @@
 <?php
 
-function _custom_producto_get_categoria() {
+function _custom_producto_get_linea() {
     $tid = false;
     $node = menu_get_object();
     if ($node && $node->type == 'productos') {
-        $tid = $node->field_categor_a[LANGUAGE_NONE][0]['tid'];
+        $tid = $node->field_linea[LANGUAGE_NONE][0]['tid'];
     }
     return $tid;
 }

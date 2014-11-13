@@ -112,7 +112,7 @@ textarea {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 input.form-text {
-    height: 18px;
+    height: 24px;
     width: 320px;
 }
 input.w200 {

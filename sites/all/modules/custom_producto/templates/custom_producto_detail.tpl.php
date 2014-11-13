@@ -11,7 +11,8 @@
 	    <?php
 		if(!empty($node->field_url)){
 		        $field = field_view_field('node', $node, 'field_url', 'full');
-        		print "<li>".render($field)."</li>";
+        		$html =render($field);
+        		print $html;
 		}
 	    ?>
         </ul>

@@ -699,15 +699,18 @@ All this is done for any sub-level being entered.
 		padding-top: 10px;
 	}
 	
-	.productos_filtro_categoria {
+	.productos_filtro_categoria,
+	.productos_filtro_linea {
 		padding: 15px 30px;
 	}
 	
-	.productos_filtro_categoria h2 {
+	.productos_filtro_categoria h2,
+	.productos_filtro_linea h2 {
 		margin-bottom: 0;
 	}
 	
-	.productos_filtro_categoria ul {
+	.productos_filtro_categoria ul,
+	.productos_filtro_linea ul {
 		display: none;
 		background: none repeat scroll 0 0 #fff;
 		left: 0;
@@ -825,7 +828,8 @@ All this is done for any sub-level being entered.
 		padding-top: 40px;
 	}
 	
-	.productos_filtro_categoria {
+	.productos_filtro_categoria,
+	.productos_filtro_linea {
 		padding: 15px;
 		width: auto;
 	}
@@ -1236,16 +1240,19 @@ All this is done for any sub-level being entered.
 	}
 	
 	
-	.productos_filtro_categoria {
+	.productos_filtro_categoria,
+	.productos_filtro_linea {
 		padding: 15px 30px;
 	}
 	
-	.productos_filtro_categoria h2 {
+	.productos_filtro_categoria h2,
+	.productos_filtro_linea h2 {
 		margin-bottom: 0;
 	}
 	
 	
-	.productos_filtro_categoria ul {
+	.productos_filtro_categoria ul,
+	.productos_filtro_linea ul {
 		background: none repeat scroll 0 0 #fff;
 		display: none;
 		left: 0;
@@ -1725,7 +1732,8 @@ All this is done for any sub-level being entered.
 		margin-right: 0 !important;
 	}
 	
-	.productos_filtro_categoria {
+	.productos_filtro_categoria,
+	.productos_filtro_linea {
 		padding: 15px 15px 180px;
 		width: 170px;
 	}

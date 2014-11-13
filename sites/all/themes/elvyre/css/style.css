@@ -4969,14 +4969,16 @@ body.page-productos-porcellanato {
 }
 
 /*.page-productos-porcellanato .productos_filtro_categoria {*/
-.productos_filtro_categoria {
+.productos_filtro_categoria,
+.productos_filtro_linea {
 	background: none repeat scroll 0 0 #fff;
     float: left;
     padding: 15px 30px 180px;
     width: 174px;
 }
 
-.productos_filtro_categoria h2 {
+.productos_filtro_categoria h2,
+.productos_filtro_linea h2 {
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-weight: 700;
 	font-size: 24px;
@@ -4985,17 +4987,20 @@ body.page-productos-porcellanato {
 	text-transform: uppercase;
 }
 
-.productos_filtro_categoria ul li {
+.productos_filtro_categoria ul li,
+.productos_filtro_linea ul li {
 	padding: 10px 0;
 	margin: 0 !important;
 	border-bottom: 1px solid #e5e5e5;
 }
 
-.productos_filtro_categoria ul li:last-child {
+.productos_filtro_categoria ul li:last-child,
+.productos_filtro_linea ul li:last-child {
 	border-bottom: 0 none;
 }
 
-.productos_filtro_categoria ul li a {
+.productos_filtro_categoria ul li a,
+.productos_filtro_linea ul li a {
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
@@ -5005,7 +5010,9 @@ body.page-productos-porcellanato {
 }
 
 .productos_filtro_categoria ul li a.active,
-.productos_filtro_categoria ul li a:hover {
+.productos_filtro_categoria ul li a:hover,
+.productos_filtro_linea ul li a.active,
+.productos_filtro_linea ul li a:hover {
 	color: #ffb740;
 }
 
@@ -5531,4 +5538,15 @@ body.page-productos-porcellanato {
 	color: #ffffff;
 	font-size: 12px;
 	text-decoration: none;
+}
+
+.institucional .page-content {
+	background: #dbdbdb;
+}
+
+.cont_institucional {
+	float: left;
+    padding-left: 40px;
+    padding-top: 15px;
+    width: 990px;
 }

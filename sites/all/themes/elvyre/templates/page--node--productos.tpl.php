@@ -277,6 +277,15 @@
                             </section><!-- .page-content end -->
                         <?php endif; ?> 
 
+			<?php if ($page['bottom_product']): ?>
+                            <section class="page-content bottom_product">
+                                <div class="container">
+                                    <div class="row">
+                                        <?php print render($page['bottom_product']); ?>
+                                    </div><!-- .row end -->
+                                </div><!-- .container end -->
+                            </section><!-- .page-content end -->
+                        <?php endif; ?>
 
                         <!-- .footer-wrapper start -->
                         <section class="footer-wrapper">

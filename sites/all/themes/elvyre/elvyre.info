@@ -60,6 +60,7 @@ regions[content_parallax_4] = Content Parallax 4
 regions[postscript_third] = Postscript Third
 regions[postscript_fourth] = Postscript Fourth
 regions[bottom] = Bottom
+regions[bottom_product] = Bottom (Only for Products)
 
 regions[footer_firstcolumn] = Footer first column
 regions[footer_secondcolumn] = Footer second column

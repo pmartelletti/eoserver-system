@@ -709,6 +709,13 @@ All this is done for any sub-level being entered.
 	
 	.productos_filtro_categoria ul {
 		display: none;
+		background: none repeat scroll 0 0 #fff;
+		left: 0;
+		padding: 0 15px;
+		position: absolute;
+		top: 74px;
+		width: 134px;
+		z-index: 100;
 	}
 	
 	.detalle_producto {
@@ -774,6 +781,14 @@ All this is done for any sub-level being entered.
 	
 	.muestra_producto .opciones {
 		display: none;
+		background: none repeat scroll 0 0 #fff;
+		position: absolute;
+		top: 288px;
+		width: 164px;
+	}
+	
+	.muestra_producto .opciones li {
+		margin: 10px !important;
 	}
 	
 	.muestra_producto .detalle {
@@ -1231,7 +1246,13 @@ All this is done for any sub-level being entered.
 	
 	
 	.productos_filtro_categoria ul {
+		background: none repeat scroll 0 0 #fff;
 		display: none;
+		left: 0;
+		padding: 0 30px 15px;
+		position: absolute;
+		top: 74px;
+		width: 174px;
 	}
 	
 	.detalle_producto {
@@ -1263,23 +1284,26 @@ All this is done for any sub-level being entered.
 		line-height: 24px;
 	}
 	
-	.detalle_producto .imagen {
+	.detalle_producto .imagen,
+	.detalle_producto .imagen .zoomWrapper {
 		float: right;
 		height: 200px;
 		width: 200px;
 	}
 	
-	#fancybox-wrap {
-		height: 160px;
-	}
-	
-	
-	#fancybox-inner img {
+	.detalle_producto .imagen img {
 		height: 160px;
 	}
 	
 	.muestra_producto .opciones {
+		background: none repeat scroll 0 0 #fff;
 		display: none;
+		position: absolute;
+		top: 303px;
+	}
+	
+	.muestra_producto .opciones li {
+		margin: 10px !important;
 	}
 	
 	.muestra_producto .detalle {

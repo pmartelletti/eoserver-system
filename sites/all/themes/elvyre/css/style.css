@@ -380,10 +380,11 @@ b{
 	position: absolute;
 	z-index: 900;
 }
-/*.productos #logo {
+
+.front #logo {
 	width: 295px !important;
 	padding: 32px 0 !important;
-}*/
+}
 
 .not-front #logo {
 	width: 234px;
@@ -5612,8 +5613,7 @@ body.page-productos-porcellanato {
 	text-align: right;
 }
 
-.contacto #block-system-main input,
-.contacto #block-system-main select {
+.contacto #block-system-main input {
     background: none repeat scroll 0 0 #ffffff;
     border: 1px solid #c7c7c7;
     color: #000000;
@@ -5622,6 +5622,18 @@ body.page-productos-porcellanato {
     font-weight: bold;
     height: 25px;
     width: 330px;
+	border-radius: 0;
+}
+
+.contacto #block-system-main select {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #c7c7c7;
+    color: #000000;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: bold;
+    height: 25px;
+    width: 350px;
 	border-radius: 0;
 }
 
@@ -5661,6 +5673,7 @@ body.page-productos-porcellanato {
 	font-weight: 700;
 }
 
+.desp #nav > ul > li.current-menu-item > a, 
 .desp #nav > ul > li:hover > a {
     background: none repeat scroll 0 0 #fff;
     border-left: 1px solid #a9a9a9;

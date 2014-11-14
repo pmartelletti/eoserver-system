@@ -15,8 +15,8 @@ function _custom_producto_get_term_from_arg($arg = 1, $vocabulary = 'categor_a')
     return $term;
 }
 
-function _custom_producto_get_items_filtro_linea($categoria_term_name) {
-    return _custom_producto_get_categorias_by_another_category($categoria_term_name, 'linea');
+function _custom_producto_get_items_filtro_linea($categoria_term_name, $type = 'linea') {
+    return _custom_producto_get_categorias_by_another_category($categoria_term_name, $type);
 }
 
 function _custom_producto_get_categorias_fijas() {
@@ -42,28 +42,28 @@ function _custom_producto_get_items_filtro_all($term_name) {
 
     $items['lineas'] = l('Lineas', "productos/$term_name");
     $items['ambientes'] = l('Ambientes', "productos/$term_name/ambientes");
-    $items['colores'] = l('Colores', "productos/$term_name/colors");
+    $items['colores'] = l('Colores', "productos/$term_name/colores");
     $items['usos'] = l('Usos', "productos/$term_name/usos");
     $items['medidas'] = l('Medidas', "productos/$term_name/medidas");
-    /*$items['ambientes'] = array('data' => '<a href="/productos">Ambientes</a>', 'children' => array());
-    $ambientes = _custom_producto_get_categorias_by_another_category($term_name, 'ambiente');
-    foreach ($ambientes as $ambiente) {
-        $name = explode(':', $ambiente->name);
-        if (isset($name[1])) {
-            $url = pathauto_cleanstring($ambiente->name);
-            $items['ambientes']['children'][] = l($name[1], "productos/$term_name/ambiente/$url");
-        }
-    }
-    $items['colores'] = array('data' => '<a href="#">Colores</a>', 'children' => array());
-    $colores = _custom_producto_get_categorias_by_another_category($term_name, 'color');
-    foreach ($colores as $color) {
-        $name = $color->name;
-        if (isset($name)) {
-            $url = pathauto_cleanstring($name);
-            $items['colores']['children'][] = l($name, "productos/$term_name/color/$url");
-        }
-    }
-    $items['usos'] = array('data' => '<a href="#">Usos</a>', 'children' => array());*/
+    /* $items['ambientes'] = array('data' => '<a href="/productos">Ambientes</a>', 'children' => array());
+      $ambientes = _custom_producto_get_categorias_by_another_category($term_name, 'ambiente');
+      foreach ($ambientes as $ambiente) {
+      $name = explode(':', $ambiente->name);
+      if (isset($name[1])) {
+      $url = pathauto_cleanstring($ambiente->name);
+      $items['ambientes']['children'][] = l($name[1], "productos/$term_name/ambiente/$url");
+      }
+      }
+      $items['colores'] = array('data' => '<a href="#">Colores</a>', 'children' => array());
+      $colores = _custom_producto_get_categorias_by_another_category($term_name, 'color');
+      foreach ($colores as $color) {
+      $name = $color->name;
+      if (isset($name)) {
+      $url = pathauto_cleanstring($name);
+      $items['colores']['children'][] = l($name, "productos/$term_name/color/$url");
+      }
+      }
+      $items['usos'] = array('data' => '<a href="#">Usos</a>', 'children' => array()); */
     /* $usos = _custom_producto_get_categorias_by_another_category($term_name, 'uso');
       foreach ($usos as $uso) {
       $name = $uso->name;
@@ -72,15 +72,15 @@ function _custom_producto_get_items_filtro_all($term_name) {
       $items['usos']['children'][] = l($name, "productos/$term_name/uso/$url");
       }
       } */
-    /*$items['medidas'] = array('data' => '<a href="#">Medidas</a>', 'children' => array());
-    $medidas = _custom_producto_get_categorias_by_another_category($term_name, 'medida');
-    foreach ($medidas as $medida) {
-        $name = explode(':', $medida->name);
-        if (isset($name[1])) {
-            $url = pathauto_cleanstring($medida->name);
-            $items['medidas']['children'][] = l($name[1], "productos/$term_name/medida/$url");
-        }
-    }*/
+    /* $items['medidas'] = array('data' => '<a href="#">Medidas</a>', 'children' => array());
+      $medidas = _custom_producto_get_categorias_by_another_category($term_name, 'medida');
+      foreach ($medidas as $medida) {
+      $name = explode(':', $medida->name);
+      if (isset($name[1])) {
+      $url = pathauto_cleanstring($medida->name);
+      $items['medidas']['children'][] = l($name[1], "productos/$term_name/medida/$url");
+      }
+      } */
 
     return $items;
 }
@@ -113,20 +113,42 @@ function _custom_producto_get_categorias_by_another_category($term_name, $output
         ;
         $query->join('taxonomy_index', 'taxonomy_index', 'taxonomy_index.tid = taxonomy_term_data.tid');
         $query->join('field_revision_field_categor_a', 'field_revision_field_categor_a', 'field_revision_field_categor_a.entity_id = taxonomy_index.nid');
-
+        $filter_propiedades_adicionales = false;
         switch (strtolower($output_result)) {
             case 'linea':
+            case 'lineas':
+                $output_result = 'linea';
+                $o_vocabulary = taxonomy_vocabulary_machine_name_load($output_result);
+                break;
             case 'color':
+            case 'colores':
+                $output_result = 'color';
                 $o_vocabulary = taxonomy_vocabulary_machine_name_load($output_result);
                 break;
             case 'ambiente':
+            case 'ambientes':
+                $output_result = 'ambiente';
+                $filter_propiedades_adicionales = true;
+                break;
             case 'uso':
+            case 'usos':
+                $output_result = 'uso';
+                $filter_propiedades_adicionales = true;
+                break;
             case 'medida':
-                $query->where('taxonomy_term_data.name LIKE :value', array(':value' => substr($output_result, 0, 6) . '%'));
-                $o_vocabulary = taxonomy_vocabulary_machine_name_load('propiedades_adicionales');
+            case 'medidas':
+                $output_result = 'medida';
+                $filter_propiedades_adicionales = true;
+                break;
                 break;
         }
-        $query->condition('taxonomy_term_data.vid', $o_vocabulary->vid);
+        if ($filter_propiedades_adicionales) {
+            $query->where('taxonomy_term_data.name LIKE :value', array(':value' => substr($output_result, 0, 6) . '%'));
+            $o_vocabulary = taxonomy_vocabulary_machine_name_load('propiedades_adicionales');
+        }
+        if ($o_vocabulary) {
+            $query->condition('taxonomy_term_data.vid', $o_vocabulary->vid);
+        }
         $result = $query->execute()->fetchAll();
         $terms[$term_name][$vocabulary][$output_result] = array();
 

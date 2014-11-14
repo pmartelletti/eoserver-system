@@ -32,7 +32,7 @@ function _custom_producto_block_filter_show($type) {
             $term_name = arg(1);
             $term = taxonomy_get_term_by_name($term_name, 'categor_a');
             $term = array_shift($term);
-            if ($term->vid == 8) {
+            if ($term && $term->vid == 8) {
                 $is_visible = true;
             }
             break;
@@ -78,12 +78,37 @@ function custom_producto_block_view($delta = '') {
             break;
         case 'filter_linea':
             $arg = pathauto_cleanstring(arg(1));
-            $items = _custom_producto_get_items_filtro_linea($arg);
+            $type = 'lineas';
+            $explode = false;
+            switch (arg(2)) {
+                case 'linea':
+                case 'lineas':
+                case 'color':
+                case 'colores':
+                    $type = arg(2);
+                    break;
+                case 'ambiente':
+                case 'ambientes':
+                case 'uso':
+                case 'usos':
+                case 'medida':
+                case 'medidas':
+                    $explode = true;
+                    $type = arg(2);
+                    break;
+            }
+            $items = _custom_producto_get_items_filtro_linea($arg, $type);
 
             $list = array();
             foreach ($items as $item) {
-                $name = pathauto_cleanstring($item->name);
-                $list[] = l($item->name, "productos/$arg/linea/$name");
+                $name=$item->name;
+                if($explode){
+                    $name = explode(':', $item->name);
+                    $name = isset($name[1]) ? $name[1] : $item->name;
+                }
+                
+                $url = str_replace(array(' '), array('-'),$item->name);
+                $list[] = l($name, "productos/$arg/$type/$url");
             }
 
             $block['content'] = array(

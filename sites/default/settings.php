@@ -213,9 +213,9 @@
 $databases = array();
 $databases['default']['default'] = array(
     'driver' => 'mysql',
-    'database' => 'durlock',
+    'database' => 'sistema-durlock',
     'username' => 'root',
-    'password' => 'durlock2014',
+    'password' => 'qwe123',
     'host' => 'localhost',
     'collation' => 'utf8_general_ci',
 );

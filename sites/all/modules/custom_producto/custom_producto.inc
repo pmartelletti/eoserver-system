@@ -41,7 +41,11 @@ function _custom_producto_get_items_filtro_all($term_name) {
     $term_name = pathauto_cleanstring($term_name);
 
     $items['lineas'] = l('Lineas', "productos/$term_name");
-    $items['ambientes'] = array('data' => '<a href="#">Ambientes</a>', 'children' => array());
+    $items['ambientes'] = l('Ambientes', "productos/$term_name/ambientes");
+    $items['colores'] = l('Colores', "productos/$term_name/colors");
+    $items['usos'] = l('Usos', "productos/$term_name/usos");
+    $items['medidas'] = l('Medidas', "productos/$term_name/medidas");
+    /*$items['ambientes'] = array('data' => '<a href="/productos">Ambientes</a>', 'children' => array());
     $ambientes = _custom_producto_get_categorias_by_another_category($term_name, 'ambiente');
     foreach ($ambientes as $ambiente) {
         $name = explode(':', $ambiente->name);
@@ -59,7 +63,7 @@ function _custom_producto_get_items_filtro_all($term_name) {
             $items['colores']['children'][] = l($name, "productos/$term_name/color/$url");
         }
     }
-    $items['usos'] = array('data' => '<a href="#">Usos</a>', 'children' => array());
+    $items['usos'] = array('data' => '<a href="#">Usos</a>', 'children' => array());*/
     /* $usos = _custom_producto_get_categorias_by_another_category($term_name, 'uso');
       foreach ($usos as $uso) {
       $name = $uso->name;
@@ -68,7 +72,7 @@ function _custom_producto_get_items_filtro_all($term_name) {
       $items['usos']['children'][] = l($name, "productos/$term_name/uso/$url");
       }
       } */
-    $items['medidas'] = array('data' => '<a href="#">Medidas</a>', 'children' => array());
+    /*$items['medidas'] = array('data' => '<a href="#">Medidas</a>', 'children' => array());
     $medidas = _custom_producto_get_categorias_by_another_category($term_name, 'medida');
     foreach ($medidas as $medida) {
         $name = explode(':', $medida->name);
@@ -76,7 +80,7 @@ function _custom_producto_get_items_filtro_all($term_name) {
             $url = pathauto_cleanstring($medida->name);
             $items['medidas']['children'][] = l($name[1], "productos/$term_name/medida/$url");
         }
-    }
+    }*/
 
     return $items;
 }

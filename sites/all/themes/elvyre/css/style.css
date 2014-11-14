@@ -471,7 +471,7 @@ b{
 	background: none repeat scroll 0 0 #ffffff;
 	border-bottom: 1px solid #a9a9a9;
     border-left: 1px solid #a9a9a9;
-    border-right: 1px solid #a9a9a9
+    border-right: 1px solid #a9a9a9;
     display: none;
     position: absolute;	
     margin: 0;
@@ -4019,7 +4019,7 @@ input, textarea{
     font-weight: 700 !important;
     text-transform: uppercase !important;
     width: 350px !important;
-	margin-right: 45px !important;
+	margin-right: 5px !important;
 	height: 30px !important;
 }
 
@@ -5589,7 +5589,8 @@ body.page-productos-porcellanato {
 	text-align: right;
 }
 
-.contacto #block-system-main input {
+.contacto #block-system-main input,
+.contacto #block-system-main select {
     background: none repeat scroll 0 0 #ffffff;
     border: 1px solid #c7c7c7;
     color: #000000;
@@ -5633,4 +5634,13 @@ body.page-productos-porcellanato {
 .contacto #block-block-21 .txt a {
 	color: #ffc63b;
 	text-decoration: none;
+	font-weight: 700;
+}
+
+.desp #nav > ul > li:hover > a {
+    background: none repeat scroll 0 0 #fff;
+    border-left: 1px solid #a9a9a9;
+    border-right: 1px solid #a9a9a9;
+    border-top: 1px solid #a9a9a9;
+    color: #000000;
 }

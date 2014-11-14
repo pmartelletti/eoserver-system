@@ -5561,7 +5561,8 @@ body.page-productos-porcellanato {
 	margin-bottom: 40px;
 }
 
-.institucional #block-system-main .left {
+.institucional #block-system-main .left,
+.institucional .institucional_bot .left {
 	float: left;
     padding-right: 4%;
     width: 48%;
@@ -5572,7 +5573,8 @@ body.page-productos-porcellanato {
 	text-align: left;
 }
 
-.institucional #block-system-main .right {
+.institucional #block-system-main .right,
+.institucional .institucional_bot .right {
 	float: left;
     width: 48%;
 	font-family: Verdana, Geneva, sans-serif;
@@ -5581,10 +5583,22 @@ body.page-productos-porcellanato {
 	text-align: left;
 }
 
-.institucional #block-system-main h3 {
+.institucional #block-system-main h3,
+.institucional .institucional_bot h3 {
 	font-family: 'PT Sans Narrow', sans-serif !important;
 	font-weight: 400;
 	color: #000000;
 	font-size: 30px;
 	margin: 40px 0 20px;
+}
+
+.institucional .institucional_bot {
+	float: right;
+    width: 990px;
+}
+
+.institucional .parallax-4 {
+    background: none repeat scroll 0 0 #efefef;
+	border: 0 none !important;
+    padding: 40px 0 60px !important;
 }

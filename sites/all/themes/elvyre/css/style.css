@@ -5674,9 +5674,8 @@ body.page-productos-porcellanato {
 	text-decoration: none;
 	font-weight: 700;
 }
-
-.desp #nav > ul > li.current-menu-item > a, 
-.desp #nav > ul > li:hover > a {
+ 
+.desp #nav > ul > li > a:hover {
     background: none repeat scroll 0 0 #fff;
     border-left: 1px solid #a9a9a9;
     border-right: 1px solid #a9a9a9;
@@ -5685,9 +5684,14 @@ body.page-productos-porcellanato {
 }
 
 .btn_display {
+	display: none;
     height: 42px;
     left: 180px;
-    padding-top: 15px;
+    padding-top: 20px;
     position: absolute;
     width: 42px;
+}
+
+.btn_display .display {
+    padding: 15px;
 }

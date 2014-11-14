@@ -717,7 +717,7 @@ All this is done for any sub-level being entered.
 		padding: 0 15px;
 		position: absolute;
 		top: 74px;
-		width: 134px;
+		width: 180px;
 		z-index: 100;
 	}
 	
@@ -831,7 +831,7 @@ All this is done for any sub-level being entered.
 	.productos_filtro_categoria,
 	.productos_filtro_linea {
 		padding: 15px;
-		width: auto;
+		width: 180px;
 	}
 	
 	.not-front #logo {
@@ -1344,6 +1344,7 @@ All this is done for any sub-level being entered.
 	.detalle_producto .caracteristicas {
 		position: absolute;
 		width: 430px;
+		padding-top: 30px;
 	}
 	
 	.productos #logo {
@@ -1425,6 +1426,14 @@ All this is done for any sub-level being entered.
 	
 	.page-productos .container {
 		max-width: 430px;
+	}
+	
+	.page-productos .productos_filtro_linea .view-id-filter_categorias li:nth-child(2n) {
+		float: left;
+	}
+	
+	.btn_display {
+		display: block;
 	}
 
 }

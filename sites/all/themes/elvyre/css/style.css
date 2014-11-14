@@ -5565,6 +5565,7 @@ body.page-productos-porcellanato {
 .contacto #block-system-main {
     float: left;
     margin-left: 40px;
+	margin-top: 20px;
     width: 465px;
 }
 
@@ -5617,7 +5618,8 @@ body.page-productos-porcellanato {
 
 .contacto #block-block-21 {
 	float: left;
-	padding-left: 40px;
+	margin-left: 40px;
+    margin-top: 95px;
     width: 486px;
 }
 

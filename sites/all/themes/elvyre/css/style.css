@@ -468,6 +468,10 @@ b{
 /* MAIN NAVIGATION SECOND LEVEL
 ----------------------------------------------------------------------------- */
 #nav li ul{
+	background: none repeat scroll 0 0 #ffffff;
+	border-bottom: 1px solid #a9a9a9;
+    border-left: 1px solid #a9a9a9;
+    border-right: 1px solid #a9a9a9
     display: none;
     position: absolute;	
     margin: 0;
@@ -478,9 +482,11 @@ b{
 }
 
 #nav li ul li{
-    background: #fff;
-    border-right: 4px solid #eee;
-    border-left: 4px solid #eee; 
+    background: none repeat scroll 0 0 #fff;
+    border-bottom: 1px solid #e5e5e5;
+    border-left: 0 none;
+    border-right: 0 none;
+    margin: 0 25px; 
 
     -webkit-transition: all 0.2s ease 0s;
     -moz-transition: all 0.2s ease 0s;
@@ -502,11 +508,17 @@ b{
 }
 
 #nav li ul li a{
-    text-transform: none !important;
+    /*text-transform: none !important;
     font: 13px 'Droid Sans', sans-serif;
     line-height: 15px;
     color: #777 !important;
-    padding: 10px 15px !important; 
+    padding: 10px 15px !important; */
+	
+	color: #000000 !important;
+    font-family: "PT Sans Narrow",sans-serif;
+    font-size: 16px;
+    padding: 10px 15px !important;
+    text-transform: uppercase;
 
     transition-property: text-indent;
     transition-duration: 0.2s;
@@ -519,9 +531,7 @@ b{
 }
 
 #nav li ul li:hover > a{
-    text-indent: 3px;
-    color: #333 !important;
-    background: #f6f6f6;
+    color: #ffb740;
 }
 
 #nav li ul li, #nav li ul li a{

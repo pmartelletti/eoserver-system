@@ -3992,6 +3992,26 @@ input, textarea{
 }
 
 .wpcf7-submit{
+    border: 0px solid;
+    font: 12px 'Open Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    line-height: 11px;
+    color: #fff;
+    background-color: #333;
+    /*padding: 10px 17px;*/
+    cursor: pointer;
+	margin-right: 6px;
+
+    /*float: right;*/
+
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+}
+
+.contacto .wpcf7-submit{
     /*border: 0px solid;
     font: 12px 'Open Sans', Arial, sans-serif;
     text-transform: uppercase;

@@ -498,11 +498,13 @@ b{
 #nav li ul li:first-child{
     /*border-top: 4px solid #eee; */
 	border-top: medium none;
+	margin-top: 25px;
 }
 
 #nav li ul li:last-child{
     /*border-bottom: 4px solid #eee;*/
 	border-top: medium none;
+	margin-bottom: 25px;
 }
 
 #nav li ul li:hover{

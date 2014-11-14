@@ -939,6 +939,35 @@ All this is done for any sub-level being entered.
 	.page-productos .block-system .view-id-productosbycategory ul li:nth-child(2n+2) {
 		margin: 0;
 	}
+	
+	.institucional #block-system-main {
+		padding-left: 0;
+		width: 100%;
+	}
+	
+	.institucional #block-system-main .left, .institucional .institucional_bot .left {
+		padding-right: 0;
+		width: 100%;
+	}
+	
+	.institucional #block-system-main .right, .institucional .institucional_bot .right {
+		width: 100%;
+	}
+	
+	.institucional .institucional_bot {
+		width: 100%;
+	}
+	
+	.institucional #block-system-main .left, .institucional .institucional_bot .left {
+		padding-right: 0;
+		width: 100%;
+	}
+	
+	.institucional #block-system-main .right, .institucional .institucional_bot .right {
+		padding-right: 0;
+		width: 100%;
+		padding-top: 40px;
+	}
 
 }
 
@@ -1748,7 +1777,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	.not-front #logo {
-		width: 200px;
+		width: 200px !important;
 	}
 	
 	.detalle_producto {
@@ -1792,7 +1821,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	.productos #logo {
-		width: 240px !important;
+		width: 240px;
 	}
 	
 	.productos #page-title .novedades_header {
@@ -1845,6 +1874,30 @@ All this is done for any sub-level being entered.
 	
 	.productos #page-title .novedades_header_side {
 		padding: 182px 0 0 40px;
+	}
+	
+	.view-novedades ul {
+		width: 530px;
+	}
+	
+	.view-novedades ul li {
+		background: none repeat scroll 0 0 #fff;
+		float: left;
+		margin: 0 0 5% 3%;
+		width: 30%;
+	}
+	
+	.institucional #block-system-main {
+		padding-left: 20px;
+		width: 530px;
+	}
+	
+	.institucional .parallax-4 {
+		padding: 10px 0 60px !important;
+	}
+	
+	.institucional .institucional_bot {
+		width: 536px;
 	}
 
 }
@@ -2188,6 +2241,33 @@ All this is done for any sub-level being entered.
 	.page-productos .productos_filtro_linea .view-id-filter_categorias li:nth-child(2n+1) {
 		float: left;
 		margin: 0 4% 0 0 !important;
+	}
+	
+	.contacto #block-system-main {
+		margin-left: 20px;
+		width: 400px;
+	}
+	
+	.contacto #block-system-main select {
+		width: 270px;
+	}
+	
+	.contacto #block-system-main input {
+		width: 250px;
+	}
+	
+	.contacto #block-system-main textarea {
+		width: 270px;
+	}
+
+	.contacto .wpcf7-submit {
+		margin-right: 20px !important;
+		width: 270px !important;
+	}
+	
+	.contacto #block-block-21 {
+		margin-left: 20px;
+		width: 296px;
 	}
 	
 }

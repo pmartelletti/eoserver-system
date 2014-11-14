@@ -7,7 +7,10 @@ $theme_root = base_path() . drupal_get_path('theme', 'elvyre');
  * Implements template_preprocess_html().
  */
 function elvyre_preprocess_html(&$vars) {
-    $vars['classes_array'][] = drupal_get_path_alias($_GET['q']);
+    $path = explode('/', drupal_get_path_alias($_GET['q']));
+    foreach ($path as $p) {
+        $vars['classes_array'][] = $p;
+    }
 }
 
 function elvyre_breadcrumb($variables) {

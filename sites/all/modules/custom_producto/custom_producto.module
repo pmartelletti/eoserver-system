@@ -15,15 +15,25 @@ function _custom_producto_block_show() {
 
 function _custom_producto_block_filter_show($type) {
     $is_visible = false;
+    if ((arg(0) == 'productos' && arg(1) != '' && arg(2) == NULL)) {
+        $type = 'linea';
+    }
     switch ($type) {
         case 'linea':
-            if ((arg(0) == 'productos' && arg(2) == NULL) || (arg(0) == 'productos' && arg(2) == 'linea')) {
-                $term_name = arg(1);
-                $term = taxonomy_get_term_by_name($term_name, 'categor_a');
-                $term = array_shift($term);
-                if ($term->vid == 8) {
-                    $is_visible = true;
-                }
+        case 'lineas':
+        case 'ambiente':
+        case 'ambientes':
+        case 'color':
+        case 'colores':
+        case 'uso':
+        case 'usos':
+        case 'medida':
+        case 'medidas':
+            $term_name = arg(1);
+            $term = taxonomy_get_term_by_name($term_name, 'categor_a');
+            $term = array_shift($term);
+            if ($term->vid == 8) {
+                $is_visible = true;
             }
             break;
     }

@@ -4943,8 +4943,6 @@ overflow: auto;
 	line-height: 14px;
 }
 
-
-
 .omega {
     margin-right: 0 !important;
 }
@@ -4978,7 +4976,9 @@ body.page-productos-porcellanato {
 }
 
 .productos_filtro_categoria h2,
-.productos_filtro_linea h2 {
+.productos_filtro_linea h2,
+.productos_filtro_categoria h2 a,
+.productos_filtro_linea h2 a {
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-weight: 700;
 	font-size: 24px;
@@ -5502,7 +5502,8 @@ body.page-productos-porcellanato {
     padding: 40px 0 60px !important;
 }
 
-.institucional #page-title.page-title-3 {
+.institucional #page-title.page-title-3,
+.novedades #page-title.page-title-3 {
     background: none repeat scroll 0 0 #f6f6f6;
     padding: 8px 0 0 !important;
     position: absolute;

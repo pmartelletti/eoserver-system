@@ -11,8 +11,12 @@ html.js input.webform-calendar {
   display: inline;
 }
 .webform-container-inline label {
-  display: inline;
-  margin-right: 1em;
+  /*display: inline;
+  margin-right: 1em;*/
+	display: inline-block;
+	margin-right: 1em;
+	text-align: right;
+	width: 95px !important;
 }
 .webform-container-inline div,
 .webform-container-inline div.form-item {

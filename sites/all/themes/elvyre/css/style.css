@@ -3978,15 +3978,15 @@ input, textarea{
 }
 
 .wpcf7-submit{
-    border: 0px solid;
+    /*border: 0px solid;
     font: 12px 'Open Sans', Arial, sans-serif;
     text-transform: uppercase;
     line-height: 11px;
     color: #fff;
-    background-color: #333;
+    background-color: #333;*/
     /*padding: 10px 17px;*/
-    cursor: pointer;
-	margin-right: 6px;
+    /*cursor: pointer;
+	margin-right: 6px;*/
 
     /*float: right;*/
 
@@ -3995,6 +3995,23 @@ input, textarea{
     -o-transition: all 0.2s ease 0s;
     -ms-transition: all 0.2s ease 0s;
     transition: all 0.2s ease 0s;
+	
+	background-color: #f7bd14;
+    border: 0 solid;
+    border-radius: 0;
+    color: #000000;
+    cursor: pointer;
+    float: right;
+    font-family: 'PT Sans Narrow', sans-serif !important;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 6px;
+    text-transform: uppercase;
+    width: 350px;
+}
+
+.wpcf7-submit:hover {
+	background-color: #f7bd14;
 }
 
 .wpcf7-select{
@@ -5504,7 +5521,8 @@ body.page-productos-porcellanato {
 }
 
 .institucional #page-title.page-title-3,
-.novedades #page-title.page-title-3 {
+.novedades #page-title.page-title-3,
+.contacto #page-title.page-title-3 {
     background: none repeat scroll 0 0 #f6f6f6;
     padding: 8px 0 0 !important;
     position: absolute;
@@ -5519,4 +5537,82 @@ body.page-productos-porcellanato {
     border-bottom: medium none;
     margin: 0 !important;
     padding: 2px 0;
+}
+
+
+.contacto .productos_filtro_linea {
+    background: none repeat scroll 0 0 #fff;
+    float: left;
+    padding: 15px 20px 180px;
+    width: 194px;
+}
+
+.contacto #block-system-main {
+    float: left;
+    margin-left: 40px;
+    width: 505px;
+}
+
+.contacto #block-system-main h1 {
+	font-family: 'PT Sans Narrow', sans-serif !important;
+	font-weight: 400;
+	color: #000000;
+	font-size: 48px;
+}
+
+.contacto #block-system-main p {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-align: left;
+	font-weight: bold;
+}
+
+.contacto #block-system-main label {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-align: left;
+}
+
+.contacto #block-system-main input {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #c7c7c7;
+    color: #000000;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: bold;
+    height: 25px;
+    width: 350px;
+	border-radius: 0;
+}
+
+.contacto #block-system-main textarea {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #c7c7c7;
+    color: #000000;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: bold;
+    width: 350px;
+	border-radius: 0;
+}
+
+.contacto #block-block-21 {
+	float: left;
+    width: 486px;
+}
+
+.contacto #block-block-21 .txt,
+.contacto #block-block-21 .txt a {
+	background-color: #000000;
+    color: #ffc63b;
+    font-size: 15px;
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+	font-family: 'PT Sans Narrow', sans-serif !important;
+	font-weight: 700;
+	text-decoration: none;
 }

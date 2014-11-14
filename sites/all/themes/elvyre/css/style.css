@@ -5480,6 +5480,7 @@ body.page-productos-porcellanato {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
 	color: #000000;
+	line-height: 16px;
 }
 
 .institucional #block-system-main h3,
@@ -5508,4 +5509,14 @@ body.page-productos-porcellanato {
     padding: 8px 0 0 !important;
     position: absolute;
     width: 100%;
+}
+
+.contacto .page-content {
+	background: #efefef;
+}
+
+.contacto .productos_filtro_linea ul li {
+    border-bottom: medium none;
+    margin: 0 !important;
+    padding: 2px 0;
 }

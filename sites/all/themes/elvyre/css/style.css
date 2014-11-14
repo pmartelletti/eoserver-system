@@ -5171,8 +5171,6 @@ body.page-productos-porcellanato {
 }
 
 .detalle_producto .imagen img {
-	-webkit-box-shadow: 0 0 20px 2px #000000;
-	box-shadow: 0 0 20px 2px #000000;
     margin: 20px;
     width: 443px;
 }
@@ -5184,124 +5182,6 @@ body.page-productos-porcellanato {
     position: absolute;
     width: 100%
 }
-
-/*******************shadow******************/
-
-#fancybox-wrap {
-	height: 443px;
-    left: 0;
-    margin: 0;
-    padding: 20px;
-    top: 0;
-    width: auto;
-    z-index: 1101;
-}
-
-#fancybox-outer {
-	position: relative;
-	width: auto;
-	height: 100%;
-}
-
-#fancybox-inner {
-	position: absolute;
-	top: 0 !important;
-	left: 0 !important;
-	/*width: 1px;
-	height: 1px;*/
-	padding: 0;
-	margin: 0;
-	outline: none;
-	overflow: hidden;
-	/*border:#fff solid 10px !important;*/
-}
-
-#fancybox-inner img {
-	width: auto;
-	height: 443px;
-	padding: 0;
-	margin: 0;
-	border: none;
-	outline: none;
-	line-height: 0;
-	vertical-align: top;
-	-ms-interpolation-mode: bicubic;
-}
-
-.fancy-bg {
-	position: absolute;
-	padding: 0;
-	margin: 0;
-	border: 0;
-	width: 19px;
-	height: 19px;
-	z-index: 1001;
-}
-
-#fancy-bg-n {
-	left: 0;
-    top: -19px;
-	width: 100%;
-	background-image: url(../img/top.png);
-}
-
-#fancy-bg-ne {
-	right: -19px;
-    top: -19px;
-	background-image: url(../img/rt.png);
-}
-
-#fancy-bg-e {
-	right: -19px;
-    top: 0;
-	height: 100%;
-	background-image: url(../img/right.png);
-}
-
-#fancy-bg-se {
-	bottom: -19px;
-    right: -19px;
-	background-image: url(../img/rb.png);
-}
-
-#fancy-bg-s {
-	bottom: -19px;
-    left: 0;
-	width: 100%;
-	background-image: url(../img/bottom.png);
-}
-
-#fancy-bg-sw {
-	bottom: -19px;
-    left: -19px;
-	background-image: url(../img/lb.png);
-}
-
-#fancy-bg-w {
-	left: -19px;
-    top: 0;
-	height: 100%;
-	background-image: url(../img/left.png);
-}
-
-#fancy-bg-nw {
-	left: -19px;
-    top: -19px;
-	background-image: url(../img/tl.png);
-}
-
-.fancybox-ie .fancy-bg { background: transparent !important; }
-.fancybox-ie #fancy-bg-n	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/top.png', sizingMethod='scale'); }
-.fancybox-ie #fancy-bg-ne	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/rt.png', sizingMethod='scale'); }
-.fancybox-ie #fancy-bg-e	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/right.png', sizingMethod='scale'); }
-.fancybox-ie #fancy-bg-se	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/rb.png', sizingMethod='scale'); }
-.fancybox-ie #fancy-bg-s	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bottom.png', sizingMethod='scale'); }
-.fancybox-ie #fancy-bg-sw	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/lb.png', sizingMethod='scale'); }
-.fancybox-ie #fancy-bg-w	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/left.png', sizingMethod='scale'); }
-.fancybox-ie #fancy-bg-nw	{ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/tl.png', sizingMethod='scale'); }
-
-/*******************shadow******************/
-
 
 .relacionados h2 {
 	font-family: 'PT Sans Narrow', sans-serif !important;
@@ -5591,6 +5471,15 @@ body.page-productos-porcellanato {
 	font-size: 12px;
 	color: #000000;
 	text-align: left;
+}
+
+.institucional #block-system-main .right strong,
+.institucional .institucional_bot .right strong,
+.institucional #block-system-main .right p,
+.institucional .institucional_bot .right p {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #000000;
 }
 
 .institucional #block-system-main h3,

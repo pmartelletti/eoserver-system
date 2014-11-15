@@ -5674,8 +5674,9 @@ body.page-productos-porcellanato {
 	text-decoration: none;
 	font-weight: 700;
 }
- 
-.desp #nav > ul > li > a:hover {
+
+.desp #nav > ul > li.current-menu-item > a, 
+.desp #nav > ul > li:hover > a {
     background: none repeat scroll 0 0 #fff;
     border-left: 1px solid #a9a9a9;
     border-right: 1px solid #a9a9a9;

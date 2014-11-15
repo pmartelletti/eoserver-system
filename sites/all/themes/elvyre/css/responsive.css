@@ -968,6 +968,10 @@ All this is done for any sub-level being entered.
 		width: 100%;
 		padding-top: 40px;
 	}
+	
+	.btn_display {
+		display: block;
+	}
 
 }
 

@@ -972,6 +972,42 @@ All this is done for any sub-level being entered.
 	.btn_display {
 		display: block;
 	}
+	
+	.institucional #block-system-main h2 {
+		font-size: 32px;
+		margin-bottom: 30px;
+	}
+	
+	.contacto #block-system-main {
+		width: 100%;
+	}
+	
+	.contacto #block-system-main label {
+		text-align: left;
+	}
+	
+	.contacto #block-system-main select {
+		width: 270px;
+	}
+	
+	.contacto #block-system-main input {
+		width: 250px;
+	}
+	
+	.contacto #block-system-main textarea {
+		width: 270px;
+	}
+	
+	.contacto #block-block-21 {
+		margin-top: 60px;
+		width: 100%;
+	}
+	
+	.contacto .productos_filtro_linea ul {
+		display: block;
+		top: 110px;
+		width: 190px;
+	}
 
 }
 
@@ -1469,6 +1505,33 @@ All this is done for any sub-level being entered.
 		display: block;
 	}
 
+	.institucional #block-system-main {
+		padding-left: 0;
+		width: 100%;
+	}
+	
+	.institucional #block-system-main .left, .institucional .institucional_bot .left {
+		padding-right: 0;
+		width: 100%;
+	}
+	
+	.institucional #block-system-main .right, .institucional .institucional_bot .right {
+		padding-top: 40px;
+		width: 100%;
+	}
+	
+	.institucional .institucional_bot {
+		width: 100%;
+	}
+	
+	.contacto #block-system-main {
+		margin-left: 0;
+	}
+	
+	.contacto #block-block-21 {
+		margin-left: 0;
+	}
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px){
@@ -1903,6 +1966,15 @@ All this is done for any sub-level being entered.
 	.institucional .institucional_bot {
 		width: 536px;
 	}
+	
+	.contacto .productos_filtro_linea {
+		padding: 15px 15px 180px;
+		width: 170px;
+	}
+	
+	.contacto #block-block-21 {
+		margin-left: 130px;
+	}
 
 }
 
@@ -2272,6 +2344,15 @@ All this is done for any sub-level being entered.
 	.contacto #block-block-21 {
 		margin-left: 20px;
 		width: 296px;
+	}
+	
+	.institucional #block-system-main {
+		padding-left: 20px;
+		width: 710px;
+	}
+	
+	.institucional .institucional_bot {
+		width: 718px;
 	}
 	
 }

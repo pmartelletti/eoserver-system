@@ -25,6 +25,8 @@ function _custom_producto_block_filter_show($type) {
         case 'ambientes':
         case 'color':
         case 'colores':
+        case 'tono':
+        case 'tonos':
         case 'uso':
         case 'usos':
         case 'medida':
@@ -85,6 +87,8 @@ function custom_producto_block_view($delta = '') {
                 case 'lineas':
                 case 'color':
                 case 'colores':
+                case 'tono':
+                case 'tonos':
                     $type = arg(2);
                     break;
                 case 'ambiente':

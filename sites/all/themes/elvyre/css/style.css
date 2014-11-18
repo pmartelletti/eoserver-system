@@ -5826,6 +5826,12 @@ body.page-productos-porcellanato {
     width: 174px;
 }
 
+.distribuidores .views-widget-filter-city input,
+.distribuidores .views-widget-filter-province input,
+.distribuidores .views-widget-filter-country select {
+    padding: 0;
+}
+
 .distribuidores .page-content .container #block-views-distribuidores-block-1 table td {
 	color: #000;
     font-family: verdana;

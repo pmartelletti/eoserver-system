@@ -5779,3 +5779,39 @@ body.page-productos-porcellanato {
 	padding-top: 40px !important;
     width: 1035px !important;
 }
+
+.distribuidores .page-content .container #block-views-distribuidores-block-1 table {
+	width: 1035px;
+}
+
+.distribuidores .page-content .container #block-views-distribuidores-block-1 thead {
+	border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+}
+
+.distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-title-1,
+.distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-field-location,
+.distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-field-tel-fono {
+	padding: 5px 20px;
+    width: 250px;
+}
+
+.distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-field-email {
+	padding: 5px 20px;
+    width: 335px;
+}
+
+.distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-nothing {
+	padding: 5px 20px;
+    width: 100px;
+}
+
+.distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-title-1 a,
+.distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-field-location a,
+.distribuidores .page-content .container #block-views-distribuidores-block-1 table th {
+	color: #000;
+    font-family: "PT Sans Narrow",sans-serif !important;
+    font-size: 18px;
+    font-weight: 700;
+	text-transform: uppercase;
+}

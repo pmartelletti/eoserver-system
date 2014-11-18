@@ -5415,7 +5415,8 @@ body.page-productos-porcellanato {
 }
 
 .novedades .page-content,
-.novedad .page-content {
+.novedad .page-content,
+.distribuidores .page-content {
     background: none repeat scroll 0 0 #efefef;
 }
 
@@ -5423,30 +5424,35 @@ body.page-productos-porcellanato {
 	width: 988px;
 }
 
-.view-novedades ul li {
+.view-novedades ul li,
+.view-novedades-con-productos-relacionados ul li {
 	background: none repeat scroll 0 0 #fff;
     float: left;
     margin: 0 0 5% 5%;
     width: 28%;
 }
 
-.view-novedades .views-field-field-image img {
+.view-novedades .views-field-field-image img,
+.view-novedades-con-productos-relacionados .views-field-field-image img {
 	height: auto;
     width: 100%;
 }
 
-.view-novedades .views-field-created {
+.view-novedades .views-field-created,
+.view-novedades-con-productos-relacionados .views-field-created {
 	color: #000;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 10px;
     padding: 8% 8% 4%;
 }
 
-.view-novedades .views-field-title-1 {
+.view-novedades .views-field-title-1,
+.view-novedades-con-productos-relacionados .views-field-title-1 {
 	padding: 0 8%;
 }
 
-.view-novedades .views-field-title-1 a {
+.view-novedades .views-field-title-1 a,
+.view-novedades-con-productos-relacionados .views-field-title-1 a {
 	font-family: 'PT Sans Narrow', sans-serif !important;
 	font-weight: 400;
 	color: #000000;
@@ -5454,7 +5460,8 @@ body.page-productos-porcellanato {
 	text-decoration: none;
 }
 
-.view-novedades .views-field-body {
+.view-novedades .views-field-body,
+.view-novedades-con-productos-relacionados .views-field-body {
 	padding: 4% 8% 8%;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
@@ -5462,12 +5469,14 @@ body.page-productos-porcellanato {
 	line-height: 16px;
 }
 
-.view-novedades .views-field-view-node {
+.view-novedades .views-field-view-node,
+.view-novedades-con-productos-relacionados .views-field-view-node {
 	background: none repeat scroll 0 0 #b1b1b1;
 	padding: 4% 8%;
 }
 
-.view-novedades .views-field-view-node a {
+.view-novedades .views-field-view-node a,
+.view-novedades-con-productos-relacionados .views-field-view-node a {
 	font-family: Verdana, Geneva, sans-serif;
 	color: #ffffff;
 	font-size: 12px;
@@ -5560,7 +5569,8 @@ body.page-productos-porcellanato {
 .institucional #page-title.page-title-3,
 .novedades #page-title.page-title-3,
 .contacto #page-title.page-title-3,
-.node-type-novedades #page-title.page-title-3 {
+.node-type-novedades #page-title.page-title-3,
+.distribuidores #page-title.page-title-3 {
     background: none repeat scroll 0 0 #f6f6f6;
     padding: 8px 0 0 !important;
     position: absolute;
@@ -5675,8 +5685,8 @@ body.page-productos-porcellanato {
 	font-weight: 700;
 }
 
-.desp #nav > ul > li.current-menu-item > a, 
-.desp #nav > ul > li:hover > a {
+#nav > ul > li.current-menu-item > a.desp, 
+#nav > ul > li:hover > a.desp {
     background: none repeat scroll 0 0 #fff;
     border-left: 1px solid #a9a9a9;
     border-right: 1px solid #a9a9a9;
@@ -5711,7 +5721,7 @@ body.page-productos-porcellanato {
 	margin-bottom: 10px
 }
 
-.node-type-novedades .block-system-main h1 {
+.node-type-novedades #block-system-main h1 {
     color: #000000;
     font-family: "PT Sans Narrow",sans-serif !important;
     font-size: 24px;
@@ -5721,4 +5731,8 @@ body.page-productos-porcellanato {
 
 .node-type-novedades .field-type-image {
 	padding-bottom: 30px;
+}
+
+.producto .clearfix {
+	clear: none !important;
 }

@@ -5414,7 +5414,8 @@ body.page-productos-porcellanato {
 	color: #000000;
 }
 
-.novedades .page-content {
+.novedades .page-content,
+.novedad .page-content {
     background: none repeat scroll 0 0 #efefef;
 }
 
@@ -5716,4 +5717,8 @@ body.page-productos-porcellanato {
     font-size: 24px;
     font-weight: 400;
     text-decoration: none;
+}
+
+.node-type-novedades .field-type-image {
+	padding-bottom: 30px;
 }

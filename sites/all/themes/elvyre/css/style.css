@@ -5735,3 +5735,47 @@ body.page-productos-porcellanato {
 .producto .clearfix {
 	clear: none !important;
 }
+
+.distribuidores #page-title {
+	height: 10px !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    position: inherit !important;
+}
+
+.distribuidores #page-title .grid_12 {
+    margin: 0 !important;
+}
+
+.distribuidores .grisado {
+    top: 112px;
+}
+
+.distribuidores #block-views-exp-distribuidores-page {
+	position: absolute;
+    top: 127px;
+    z-index: 100;
+}
+
+.distribuidores .page-content .container {
+	width: 100%;
+}
+
+.distribuidores .page-content .container article.grid_12 {
+	padding: 0;
+    width: 100%;
+}
+
+.distribuidores .page-content .container #block-system-main {
+	height: 590px;
+}
+
+.distribuidores .page-content .container #block-system-main #gmap-auto1map-gmap0 {
+	height: 590px;
+}
+
+.distribuidores .page-content .container #block-system-main #block-views-distribuidores-block-1 {
+	margin: 0 auto;
+	padding-top: 40px;
+    width: 1035px;
+}

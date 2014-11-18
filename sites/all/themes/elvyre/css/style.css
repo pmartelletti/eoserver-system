@@ -5009,8 +5009,7 @@ overflow: auto;
     width: 100%;
 }
 
-.node-type-productos #block-system-main,
-.page-novedades #block-system-main {
+.novedades #block-system-main {
 	float: left;
 }
 
@@ -5415,8 +5414,7 @@ body.page-productos-porcellanato {
 	color: #000000;
 }
 
-.page-novedades .page-content,
-.node-type-novedades .page-content {
+.novedades .page-content {
     background: none repeat scroll 0 0 #efefef;
 }
 
@@ -5710,4 +5708,12 @@ body.page-productos-porcellanato {
     font-size: 12px;
     line-height: 16px;
 	margin-bottom: 10px
+}
+
+.node-type-novedades .block-system-main h1 {
+    color: #000000;
+    font-family: "PT Sans Narrow",sans-serif !important;
+    font-size: 24px;
+    font-weight: 400;
+    text-decoration: none;
 }

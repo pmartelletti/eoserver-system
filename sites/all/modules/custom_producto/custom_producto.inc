@@ -42,7 +42,7 @@ function _custom_producto_get_items_filtro_all($term_name) {
 
     $items['lineas'] = l('Lineas', "productos/$term_name");
     $items['ambientes'] = l('Ambientes', "productos/$term_name/ambientes");
-    $items['colores'] = l('Colores', "productos/$term_name/colores");
+    $items['colores'] = l('Colores', "productos/$term_name/tonos");
     $items['usos'] = l('Usos', "productos/$term_name/usos");
     $items['medidas'] = l('Medidas', "productos/$term_name/medidas");
     /* $items['ambientes'] = array('data' => '<a href="/productos">Ambientes</a>', 'children' => array());
@@ -123,6 +123,10 @@ function _custom_producto_get_categorias_by_another_category($term_name, $output
             case 'color':
             case 'colores':
                 $output_result = 'color';
+                $o_vocabulary = taxonomy_vocabulary_machine_name_load($output_result);
+                break;
+            case 'tonos':
+                $output_result = 'tono';
                 $o_vocabulary = taxonomy_vocabulary_machine_name_load($output_result);
                 break;
             case 'ambiente':

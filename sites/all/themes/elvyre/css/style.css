@@ -5415,20 +5415,20 @@ body.page-productos-porcellanato {
 	color: #000000;
 }
 
-.page-novedades .page-content {
+.page-novedades .page-content,
+.node-type-novedades .page-content {
     background: none repeat scroll 0 0 #efefef;
 }
 
 .view-novedades ul {
-	padding-left: 45px;
 	width: 988px;
 }
 
 .view-novedades ul li {
 	background: none repeat scroll 0 0 #fff;
     float: left;
-    margin: 0 0 5%;
-    width: 30%;
+    margin: 0 0 5% 5%;
+    width: 28%;
 }
 
 .view-novedades .views-field-field-image img {
@@ -5560,7 +5560,8 @@ body.page-productos-porcellanato {
 
 .institucional #page-title.page-title-3,
 .novedades #page-title.page-title-3,
-.contacto #page-title.page-title-3 {
+.contacto #page-title.page-title-3,
+.node-type-novedades #page-title.page-title-3 {
     background: none repeat scroll 0 0 #f6f6f6;
     padding: 8px 0 0 !important;
     position: absolute;
@@ -5695,4 +5696,18 @@ body.page-productos-porcellanato {
 
 .btn_display .display {
     padding: 15px;
+}
+
+.node-type-novedades #block-system-main {
+	float: left;
+    padding-left: 45px;
+    width: 988px;
+}
+
+.node-type-novedades .field-type-text-with-summary p {
+	color: #000000;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+	margin-bottom: 10px
 }

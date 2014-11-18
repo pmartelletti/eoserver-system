@@ -5767,15 +5767,15 @@ body.page-productos-porcellanato {
 }
 
 .distribuidores .page-content .container #block-system-main {
-	height: 590px;
+	height: 590px !important;
 }
 
 .distribuidores .page-content .container #block-system-main #gmap-auto1map-gmap0 {
-	height: 590px;
+	height: 590px !important;
 }
 
-.distribuidores .page-content .container #block-system-main #block-views-distribuidores-block-1 {
-	margin: 0 auto;
-	padding-top: 40px;
-    width: 1035px;
+.distribuidores .page-content .container #block-views-distribuidores-block-1 {
+	margin: 0 auto !important;
+	padding-top: 40px !important;
+    width: 1035px !important;
 }

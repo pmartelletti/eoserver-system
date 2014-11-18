@@ -175,7 +175,7 @@
                 </div>
              
                 <?php endif; ?>
-         <?php if ($title): ?><h1 class="title" id="pt"><?php print $title; ?></h1><?php endif; ?>
+         <?php if (false && $title): ?><h1 class="title" id="pt"><?php print $title; ?></h1><?php endif; ?>
                 
         <?php if ($tabs): ?><div class="d-tabs"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print render($page['help']); ?>

@@ -5792,17 +5792,19 @@ body.page-productos-porcellanato {
 .distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-title-1,
 .distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-field-location,
 .distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-field-tel-fono {
-	padding: 5px 20px;
+	padding: 15px 20px;
     width: 250px;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
 .distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-field-email {
-	padding: 5px 20px;
+	padding: 15px 20px;
     width: 335px;
 }
 
 .distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-nothing {
-	padding: 5px 20px;
+	padding: 15px 20px;
+	text-align: center;
     width: 100px;
 }
 
@@ -5814,4 +5816,18 @@ body.page-productos-porcellanato {
     font-size: 18px;
     font-weight: 700;
 	text-transform: uppercase;
+}
+
+.distribuidores .views-widget-filter-city,
+.distribuidores .views-widget-filter-province,
+.distribuidores .views-widget-filter-country {
+	float: left;
+    padding: 0.5em 0 0;
+    width: 174px;
+}
+
+.distribuidores .page-content .container #block-views-distribuidores-block-1 table td {
+	color: #000;
+    font-family: verdana;
+    font-size: 12px;
 }

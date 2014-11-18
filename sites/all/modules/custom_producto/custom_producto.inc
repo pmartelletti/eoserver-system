@@ -157,7 +157,7 @@ function _custom_producto_get_categorias_by_another_category($term_name, $output
         $terms[$term_name][$vocabulary][$output_result] = array();
 
         foreach ($result as $t) {
-            $terms[$term_name][$vocabulary][$output_result][$t->tid] = $t;
+            $terms[$term_name][$vocabulary][$output_result][$t->tid] = taxonomy_term_load($t->tid);
         }
     }
     return $terms[$term_name][$vocabulary][$output_result];

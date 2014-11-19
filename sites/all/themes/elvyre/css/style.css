@@ -5880,3 +5880,38 @@ body.page-productos-porcellanato {
 	text-transform: uppercase;
 	padding: 5px;
 }
+
+.view-galeria-de-imagenes ul{
+    float: left;
+    padding-left: 45px;
+	padding-top: 40px;
+    width: 988px;
+	margin: 0;
+}
+
+.view-galeria-de-imagenes ul li {
+    margin: 0 2.5% 2.5% 0;
+    width: 22.5%;
+	position: relative;
+}
+
+.view-galeria-de-imagenes ul li img {
+	height: auto;
+    width: 100%;
+}
+
+.view-galeria-de-imagenes .views-field-title {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4);
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+}
+
+.view-galeria-de-imagenes .views-field-title a {
+	color: #ffffff !important;
+    font-family: "PT Sans Narrow",sans-serif !important;
+    font-size: 21px !important;
+	text-decoration: none
+}

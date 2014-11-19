@@ -5318,6 +5318,7 @@ body.page-productos-porcellanato {
 	border: 1px solid #d0d0d0;
     margin-bottom: 10px;
     padding: 10px 25px;
+	margin-left: 0 !important;
 }
 
 .muestra_producto .opciones a {
@@ -5877,4 +5878,5 @@ body.page-productos-porcellanato {
     font-size: 18px;
     font-weight: 700;
 	text-transform: uppercase;
+	padding: 5px;
 }

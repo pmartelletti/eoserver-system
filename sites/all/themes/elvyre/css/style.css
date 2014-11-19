@@ -5833,6 +5833,17 @@ body.page-productos-porcellanato {
     padding: 0;
 }
 
+.distribuidores .views-widget-filter-country select {
+    background: none repeat scroll 0 0 #f6f6f6;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    color: #666;
+    height: 30px;
+    width: 100%;
+}
+
 .distribuidores .page-content .container #block-views-distribuidores-block-1 table td {
 	color: #000;
     font-family: verdana;

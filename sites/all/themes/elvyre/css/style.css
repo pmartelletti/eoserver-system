@@ -5685,13 +5685,14 @@ body.page-productos-porcellanato {
 	font-weight: 700;
 }
 
-/*#nav > ul > li:hover > a.desp {
+#nav > ul > li:hover > a.desp {
     background: none repeat scroll 0 0 #fff;
     border-left: 1px solid #a9a9a9;
     border-right: 1px solid #a9a9a9;
     border-top: 1px solid #a9a9a9;
     color: #000000;
-}*/
+	margin-top: -1px;
+}
 
 .btn_display {
 	display: none;
@@ -5830,6 +5831,17 @@ body.page-productos-porcellanato {
 .distribuidores .views-widget-filter-province input,
 .distribuidores .views-widget-filter-country select {
     padding: 0;
+}
+
+.distribuidores .views-widget-filter-country select {
+    background: none repeat scroll 0 0 #f6f6f6;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    color: #666;
+    height: 30px;
+    width: 100%;
 }
 
 .distribuidores .page-content .container #block-views-distribuidores-block-1 table td {

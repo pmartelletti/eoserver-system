@@ -4543,3 +4543,4 @@ a.active {
 .update table.version .version-links {
   text-align: left;
 }
+body.ember .fid.form-text{display: none;}

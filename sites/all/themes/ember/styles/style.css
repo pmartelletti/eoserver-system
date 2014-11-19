@@ -4543,7 +4543,7 @@ a.active {
 .update table.version .version-links {
     text-align: left;
 }
-body.page-admin .fid.form-text{display: none;}
+body.ember .fid.form-text{display: none;}
 body.page-admin ul.media-display-switch li {
     display: inline-block;
 }

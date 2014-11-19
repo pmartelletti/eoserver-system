@@ -6,17 +6,21 @@
             print render($field);
             ?>
             <li><a href="/distribuidores">&iquest;Donde comprar?</a></li>
-            <li><a href="/colocaciones">colocaci&oacute;n</a></li>
-            <li><a href="/mantenimiento">mantenimiento</a></li>
-	    <?php
-		if(!empty($node->field_url)){
-		        $field = field_view_field('node', $node, 'field_url', 'full');
-        		$html =render($field);
-        		print $html;
-		}
-	    ?>
+
+            <?php
+            if (!empty($node->field_url)) {
+                $field = field_view_field('node', $node, 'field_url', 'full');
+                $html = render($field);
+                print $html;
+            }
+            ?>
         </ul>
     </div>
+    <?php
+    $block = module_invoke('views', 'block_view', 'productos_archivos-block');
+    unset($block['subject']);
+    print render($block);
+    ?>
     <div class="detalle">
         <?php
         $field = field_view_field('node', $node, 'body', 'full');
@@ -85,6 +89,6 @@
                         oscuro</li>
                 </ul>
             </div>
-<?php endif ?>
+        <?php endif ?>
     </div>
 </div>

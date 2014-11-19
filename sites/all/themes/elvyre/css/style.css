@@ -5858,3 +5858,23 @@ body.page-productos-porcellanato {
     font-family: verdana;
     font-size: 12px;
 }
+
+.biblioteca-archivos table {
+	width: 100%;
+	margin-top: 40px;
+}
+
+.biblioteca-archivos td {
+	color: #000;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.biblioteca-archivos th {
+	color: #000;
+    font-family: "PT Sans Narrow",sans-serif !important;
+    font-size: 18px;
+    font-weight: 700;
+	text-transform: uppercase;
+}

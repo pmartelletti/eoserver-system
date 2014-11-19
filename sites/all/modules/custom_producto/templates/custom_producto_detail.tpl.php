@@ -56,11 +56,6 @@
 
     <div class="right">
         <?php
-        $block = module_invoke('views', 'block_view', 'productos_archivos-block');
-        unset($block['subject']);
-        print render($block);
-        ?>
-        <?php
         $field = field_view_field('node', $node, 'field_imagenes_de_ambiente', 'full');
         if (!empty($field['#items'])):
             ?>
@@ -91,4 +86,9 @@
             </div>
         <?php endif ?>
     </div>
+    <?php
+        $block = module_invoke('views', 'block_view', 'productos_archivos-block');
+        unset($block['subject']);
+        print render($block);
+        ?>
 </div>

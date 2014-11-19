@@ -5881,10 +5881,22 @@ body.page-productos-porcellanato {
 	padding: 5px;
 }
 
+.view-galeria-de-imagenes .view-header {
+	float: left;
+	padding-top: 15px;
+}
+
+.view-galeria-de-imagenes .view-header h1 {
+	color: #000000;
+    font-family: "PT Sans Narrow",sans-serif !important;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
 .view-galeria-de-imagenes ul{
     float: left;
     padding-left: 45px;
-	padding-top: 40px;
     width: 988px;
 	margin: 0;
 }

@@ -5685,13 +5685,14 @@ body.page-productos-porcellanato {
 	font-weight: 700;
 }
 
-/*#nav > ul > li:hover > a.desp {
+#nav > ul > li:hover > a.desp {
     background: none repeat scroll 0 0 #fff;
     border-left: 1px solid #a9a9a9;
     border-right: 1px solid #a9a9a9;
     border-top: 1px solid #a9a9a9;
     color: #000000;
-}*/
+	margin-top: -1px;
+}
 
 .btn_display {
 	display: none;

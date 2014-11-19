@@ -5570,14 +5570,18 @@ body.page-productos-porcellanato {
 .novedades #page-title.page-title-3,
 .contacto #page-title.page-title-3,
 .node-type-novedades #page-title.page-title-3,
-.distribuidores #page-title.page-title-3 {
+.distribuidores #page-title.page-title-3,
+.biblioteca-archivos #page-title.page-title-3,
+.galerias #page-title.page-title-3 {
     background: none repeat scroll 0 0 #f6f6f6;
     padding: 8px 0 0 !important;
     position: absolute;
     width: 100%;
 }
 
-.contacto .page-content {
+.contacto .page-content,
+.galerias .page-content,
+.biblioteca-archivos .page-content {
 	background: #efefef;
 }
 
@@ -5685,6 +5689,10 @@ body.page-productos-porcellanato {
 	font-weight: 700;
 }
 
+#nav > ul > li > a.desp {
+	margin-top: -1px;
+}
+
 #nav > ul > li:hover > a.desp {
     background: none repeat scroll 0 0 #fff;
     border-left: 1px solid #a9a9a9;
@@ -5707,7 +5715,8 @@ body.page-productos-porcellanato {
     padding: 15px;
 }
 
-.node-type-novedades #block-system-main {
+.node-type-novedades #block-system-main,
+.biblioteca-archivos #block-system-main {
 	float: left;
     padding-left: 45px;
     width: 988px;

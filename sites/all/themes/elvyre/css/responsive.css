@@ -980,6 +980,7 @@ All this is done for any sub-level being entered.
 	
 	.contacto #block-system-main {
 		width: 100%;
+		margin-left: 0;
 	}
 	
 	.contacto #block-system-main label {
@@ -999,6 +1000,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	.contacto #block-block-21 {
+		margin-left: 0;
 		margin-top: 60px;
 		width: 100%;
 	}
@@ -1531,6 +1533,19 @@ All this is done for any sub-level being entered.
 	.contacto #block-block-21 {
 		margin-left: 0;
 	}
+	
+	.biblioteca-archivos #block-system-main {
+		width: 445px;
+	}
+	
+	.contact .btn_display {
+		display: none;
+	}
+	
+	.productos_filtro_linea ul {
+		display: block;
+    	margin-top: 40px;
+	}
 
 }
 
@@ -1975,6 +1990,11 @@ All this is done for any sub-level being entered.
 	.contacto #block-block-21 {
 		margin-left: 130px;
 	}
+	
+	.biblioteca-archivos #block-system-main {
+		padding-left: 20px;
+		width: 535px;
+	}
 
 }
 
@@ -2353,6 +2373,10 @@ All this is done for any sub-level being entered.
 	
 	.institucional .institucional_bot {
 		width: 718px;
+	}
+	
+	.biblioteca-archivos #block-system-main {
+		width: 690px;
 	}
 	
 }

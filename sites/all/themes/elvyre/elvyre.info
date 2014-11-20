@@ -33,6 +33,7 @@ scripts[] = js/jquery.prettyPhoto.js
 scripts[] = js/portfolio.js
 scripts[] = js/socialstream.jquery.js
 scripts[] = js/include.js
+scripts[] = js/isotope.pkgd.js
 
 
 ;regions[header] = Header

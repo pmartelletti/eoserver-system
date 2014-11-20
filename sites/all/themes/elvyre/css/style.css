@@ -5429,7 +5429,7 @@ body.page-productos-porcellanato {
 .view-novedades-con-productos-relacionados ul li {
 	background: none repeat scroll 0 0 #fff;
     float: left;
-    margin: 0 0 5% 5%;
+    margin: 0 2.5% 5%;
     width: 28%;
 }
 
@@ -5884,6 +5884,7 @@ body.page-productos-porcellanato {
 .view-galeria-de-imagenes .view-header {
 	float: left;
 	padding-top: 15px;
+	padding-left: 45px
 }
 
 .view-galeria-de-imagenes .view-header h1 {

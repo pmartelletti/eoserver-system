@@ -45,42 +45,6 @@ function _custom_producto_get_items_filtro_all($term_name) {
     $items['colores'] = l('Colores', "productos/$term_name/tonos");
     $items['usos'] = l('Usos', "productos/$term_name/usos");
     $items['medidas'] = l('Medidas', "productos/$term_name/medidas");
-    /* $items['ambientes'] = array('data' => '<a href="/productos">Ambientes</a>', 'children' => array());
-      $ambientes = _custom_producto_get_categorias_by_another_category($term_name, 'ambiente');
-      foreach ($ambientes as $ambiente) {
-      $name = explode(':', $ambiente->name);
-      if (isset($name[1])) {
-      $url = pathauto_cleanstring($ambiente->name);
-      $items['ambientes']['children'][] = l($name[1], "productos/$term_name/ambiente/$url");
-      }
-      }
-      $items['colores'] = array('data' => '<a href="#">Colores</a>', 'children' => array());
-      $colores = _custom_producto_get_categorias_by_another_category($term_name, 'color');
-      foreach ($colores as $color) {
-      $name = $color->name;
-      if (isset($name)) {
-      $url = pathauto_cleanstring($name);
-      $items['colores']['children'][] = l($name, "productos/$term_name/color/$url");
-      }
-      }
-      $items['usos'] = array('data' => '<a href="#">Usos</a>', 'children' => array()); */
-    /* $usos = _custom_producto_get_categorias_by_another_category($term_name, 'uso');
-      foreach ($usos as $uso) {
-      $name = $uso->name;
-      if (isset($name)) {
-      $url = pathauto_cleanstring($name);
-      $items['usos']['children'][] = l($name, "productos/$term_name/uso/$url");
-      }
-      } */
-    /* $items['medidas'] = array('data' => '<a href="#">Medidas</a>', 'children' => array());
-      $medidas = _custom_producto_get_categorias_by_another_category($term_name, 'medida');
-      foreach ($medidas as $medida) {
-      $name = explode(':', $medida->name);
-      if (isset($name[1])) {
-      $url = pathauto_cleanstring($medida->name);
-      $items['medidas']['children'][] = l($name[1], "productos/$term_name/medida/$url");
-      }
-      } */
 
     return $items;
 }
@@ -144,14 +108,16 @@ function _custom_producto_get_categorias_by_another_category($term_name, $output
                 $output_result = 'medida';
                 $filter_propiedades_adicionales = true;
                 break;
-                break;
         }
         if ($filter_propiedades_adicionales) {
-            $query->where('taxonomy_term_data.name LIKE :value', array(':value' => substr($output_result, 0, 6) . '%'));
-            $o_vocabulary = taxonomy_vocabulary_machine_name_load('propiedades_adicionales');
+        	$query->join('taxonomy_term_hierarchy', 'taxonomy_term_hierarchy', 'taxonomy_term_hierarchy.tid = taxonomy_term_data.tid', NULL);
+        	$_term_parent = taxonomy_get_term_by_name($output_result, 'propiedades_adicionales');
+        	$tid = key($_term_parent);
+        	$o_vocabulary = taxonomy_vocabulary_machine_name_load('propiedades_adicionales');
+        	$query->condition('taxonomy_term_hierarchy.parent', $tid);
         }
         if ($o_vocabulary) {
-            $query->condition('taxonomy_term_data.vid', $o_vocabulary->vid);
+            $query->condition('taxonomy_term_data.vid', $o_vocabulary->vid);            
         }
         $result = $query->execute()->fetchAll();
         $terms[$term_name][$vocabulary][$output_result] = array();

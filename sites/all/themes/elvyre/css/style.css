@@ -5337,6 +5337,9 @@ body.page-productos-porcellanato {
 
 .muestra_producto .right {
 	float: right;
+    min-height: 500px;
+    padding-left: 20px;
+    width: 510px;
 }
 
 .node-type-productos #block-block-20 {

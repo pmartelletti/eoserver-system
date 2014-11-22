@@ -1010,6 +1010,24 @@ All this is done for any sub-level being entered.
 		top: 110px;
 		width: 190px;
 	}
+	
+	.view-novedades ul {
+		width: 100%;
+	}
+	
+	.view-novedades ul li {
+		margin: 0 0 10%;
+		width: 100%;
+	}
+	
+	.view-galeria-de-imagenes ul {
+		width: 100%;
+	}
+	
+	.view-galeria-de-imagenes ul li {
+		margin: 0 0 10%;
+		width: 100%;
+	}
 
 }
 
@@ -1546,6 +1564,22 @@ All this is done for any sub-level being entered.
 		display: block;
     	margin-top: 40px;
 	}
+	
+	.view-novedades ul {
+		width: 470px;
+	}
+	
+	.view-novedades ul li {
+		width: 45%;
+	}
+	
+	.view-galeria-de-imagenes ul {
+		width: 100%;
+	}
+	
+	.view-galeria-de-imagenes ul li {
+		width: 45%;
+	}
 
 }
 
@@ -1995,6 +2029,19 @@ All this is done for any sub-level being entered.
 		padding-left: 20px;
 		width: 535px;
 	}
+	
+	.view-galeria-de-imagenes .view-header {
+		padding-left: 20px;
+	}
+	
+	.view-galeria-de-imagenes ul {
+		padding-left: 20px;
+		width: 535px;
+	}
+	
+	.view-galeria-de-imagenes ul li {
+		width: 30.5%;
+	}
 
 }
 
@@ -2376,6 +2423,14 @@ All this is done for any sub-level being entered.
 	}
 	
 	.biblioteca-archivos #block-system-main {
+		width: 690px;
+	}
+	
+	.view-novedades ul {
+		width: 735px;
+	}
+	
+	.view-galeria-de-imagenes ul {
 		width: 690px;
 	}
 	

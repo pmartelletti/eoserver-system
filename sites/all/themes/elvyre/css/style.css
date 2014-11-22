@@ -5914,6 +5914,7 @@ body.page-productos-porcellanato {
 }
 
 .view-galeria-de-imagenes ul li {
+	float: left;
     margin: 0 2.5% 2.5% 0;
     width: 22.5%;
 	position: relative;

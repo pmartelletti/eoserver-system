@@ -5224,7 +5224,8 @@ body.page-productos-porcellanato {
 
 .detalle_producto .imagen img {
     margin: 20px;
-    width: 443px;
+    max-width: 443px;
+    max-height: 443px;
 }
 
 .n50 {

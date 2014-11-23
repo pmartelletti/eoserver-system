@@ -23,6 +23,9 @@
  * @ingroup views_templates
  */
 ?>
+<?php if($fields['title_1']->raw == 'Blend Cemento'){
+    $a=0;
+} ?>
 <?php
 $width = 100;
 $height = 100;
@@ -34,4 +37,4 @@ if (isset($row->field_field_medida_largo[0]['raw']['value']) && isset($row->fiel
 <div style="width: <?php print $width ?>%; height: <?php print $height ?>%">
     <?php print $fields['field_image']->content; ?>
 </div>
-<?php print $fields['title']->content; ?>
+<?php print $fields['title_1']->content; ?>

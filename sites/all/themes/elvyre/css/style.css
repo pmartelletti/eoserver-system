@@ -5128,9 +5128,10 @@ body.page-productos-porcellanato {
 
 .page-productos .block-system .view-id-productosbycategory  ul li {
     float: left;
-    margin: 0 35px 0 0;
-    padding: 0 0 20px;
-    width: 140px;
+    margin: 0;
+    padding: 0 10px 20px;
+    text-align: center;
+    width: auto;
 }
 
 .page-productos .block-system .view-id-productosbycategory  ul li:nth-child(3n+3) {

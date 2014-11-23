@@ -15,6 +15,11 @@
             }
             ?>
         </ul>
+        <?php
+        $block = module_invoke('views', 'block_view', 'productos_archivos-block');
+        unset($block['subject']);
+        print render($block);
+        ?>
     </div>
     <div class="detalle">
         <?php
@@ -86,9 +91,4 @@
             </div>
         <?php endif ?>
     </div>
-    <?php
-        $block = module_invoke('views', 'block_view', 'productos_archivos-block');
-        unset($block['subject']);
-        print render($block);
-        ?>
 </div>

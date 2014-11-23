@@ -106,7 +106,7 @@ function custom_producto_block_view($delta = '') {
             $list = array();
             if ($type == 'tonos') {
                 foreach ($items as $item) {
-                    $name = theme('image_style', array('style_name'=>'125x125', 'path'=>$item->field_icono[LANGUAGE_NONE][0]['filename']));
+                    $name = theme('image_style', array('style_name'=>'125x125', 'path'=>$item->field_icono[LANGUAGE_NONE][0]['uri']));
                     $url = str_replace(array(' '), array('-'), $item->name);
                     $list[] = l($name, "productos/$arg/$type/$url", array('html'=>true));
                 }

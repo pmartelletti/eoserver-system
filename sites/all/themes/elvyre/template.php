@@ -104,13 +104,13 @@ function elvyre_menu_link(array $variables) {
 
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
 
-    if (isset($variables['element']['#original_link']['options']['content']['image'])) {
+    /*if (isset($variables['element']['#original_link']['options']['content']['image'])) {
         $file = file_load($variables['element']['#original_link']['options']['content']['image']);
         $image = theme('image_style', array('style_name' => 'menu', 'path' => $file->uri));
         $image = l($image, $element['#href'], array('html' => true));
         $output = $output . '<div class="image-menu image-menu-'. $variables['element']['#original_link']['mlid'] .'">' . $image . '</div>';
         $element['#attributes'][] = 'has-image';
-    }
+    }*/
 
     if (strpos($output, "active") > 0) {
         $element['#attributes']['class'][] = "current-menu-item";

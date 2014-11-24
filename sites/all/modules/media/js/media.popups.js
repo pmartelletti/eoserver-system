@@ -82,7 +82,7 @@ Drupal.media.popups.mediaBrowser = function (onSelect, globalOptions, pluginOpti
       return;
     }
     onSelect(selected);
-    //$(this).dialog("close");
+    $(this).dialog("close");
   };
 
   dialogOptions.buttons[cancel] = function () {
@@ -127,7 +127,7 @@ Drupal.media.popups.mediaBrowser.finalizeSelection = function () {
     return;
   }
   onSelect(selected);
-  //$(this).dialog("close");
+  $(this).dialog("close");
 }
 
 /**
@@ -178,7 +178,7 @@ Drupal.media.popups.mediaStyleSelector = function (mediaFile, onSelect, options)
       return;
     }
     onSelect(formattedMedia);
-    //$(this).dialog("close");
+    $(this).dialog("close");
   };
 
   dialogOptions.buttons[cancel] = function () {

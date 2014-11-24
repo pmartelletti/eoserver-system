@@ -72,8 +72,6 @@ function elvyre_preprocess_node(&$variables) {
 
 function elvyre_preprocess_node_productos(&$variables) {
     $variables['page'] = false;
-    $variables['image_principal'] = image_style_url('productos_imagen_principal', $variables['content']['field_image']['#items'][0]['uri']);
-    $variables['image_zoom'] = file_create_url($variables['content']['field_image']['#items'][0]['uri']);
 }
 
 /**

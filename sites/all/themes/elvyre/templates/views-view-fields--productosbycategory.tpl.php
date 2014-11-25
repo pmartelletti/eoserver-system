@@ -23,9 +23,11 @@
  * @ingroup views_templates
  */
 ?>
-<?php if($fields['title_1']->raw == 'Blend Cemento'){
-    $a=0;
-} ?>
+<?php
+if ($fields['title_1']->raw == 'Blend Cemento') {
+    $a = 0;
+}
+?>
 <?php
 $width = 100;
 $height = 100;
@@ -35,6 +37,11 @@ if (isset($row->field_field_medida_largo[0]['raw']['value']) && isset($row->fiel
 }
 ?>
 <div class="content-new-parent">
-    <?php print str_replace('<div class="field-content">', '<div class="field-content" style="width:' . $width . '%;height:' . $height . '%;">', $fields['field_image']->content); ?>
+    <?php
+    //print str_replace('<div class="field-content">', '<div class="field-content" style="width:' . $width . '%;height:' . $height . '%;">', $fields['field_image']->content);
+    $html = preg_replace('/width="[0-9]*"/', 'width="' . $width . '%"', $fields['field_image']->content);
+    $html = preg_replace('/height="[0-9]*"/', 'height="' . $height . '%"', $html);
+    print $html;
+    ?>
 </div>
 <?php print $fields['title_1']->content; ?>

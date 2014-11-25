@@ -5123,25 +5123,35 @@ body.page-productos-porcellanato {
 
 .page-productos .block-system {
 	float: right;
-	width: 500px;
+    padding-top: 30px;
+    width: 600px;
 }
 
 .page-productos .block-system .view-id-productosbycategory  ul li {
     float: left;
-    margin: 0;
-    padding: 0 10px 20px;
+    height: 180px;
+    margin: 0 0 40px;
+    max-width: 180px;
+    padding: 0 10px;
     text-align: center;
     width: auto;
 }
 
-.page-productos .block-system .view-id-productosbycategory  ul li:nth-child(3n+3) {
-	margin: 0;
+.page-productos .block-system .view-id-productosbycategory ul li > div {
+	position: relative;
 }
 
-.page-productos .block-system .view-id-productosbycategory .views-field-field-image img {
+.page-productos .block-system .view-id-productosbycategory ul li .field-content {
+	bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+/*.page-productos .block-system .view-id-productosbycategory .views-field-field-image img {
 	width: 140px;
 	height: auto;
-}
+}*/
 
 .page-productos .block-system .view-id-productosbycategory .views-field-title-1 {
 	text-align: center;

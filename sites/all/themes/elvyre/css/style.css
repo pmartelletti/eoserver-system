@@ -5198,7 +5198,8 @@ body.page-productos-porcellanato {
 }
 
 .detalle_producto h1 {
-	font-size: 75px;
+	font-size: 60px;
+    line-height: normal;
     margin-bottom: 30px;
 }
 

@@ -58,6 +58,8 @@ function elvyre_preprocess_page_productos(&$variables) {
     $variables['image_fondo'] = '';
     if (isset($variables['node']->field_imagenes_del_producto) && !empty($variables['node']->field_imagenes_del_producto)) {
         $variables['image_fondo'] = image_style_url('productos_imagen_fondo', $variables['node']->field_imagenes_del_producto[LANGUAGE_NONE][0]['uri']);
+    }else{
+        $variables['image_fondo'] = '/sites/all/themes/elvyre/img/default_imagen_fondo.jpg';
     }
 }
 

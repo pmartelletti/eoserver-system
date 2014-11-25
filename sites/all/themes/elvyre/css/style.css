@@ -5142,7 +5142,7 @@ body.page-productos-porcellanato {
 	position: relative;
 }
 
-.page-productos .block-system .view-id-productosbycategory ul li .field-content {
+.page-productos .block-system .view-id-productosbycategory ul li div.field-content {
 	bottom: 0;
     left: 0;
     position: absolute;

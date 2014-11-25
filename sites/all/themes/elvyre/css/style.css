@@ -5111,6 +5111,7 @@ body.page-productos-porcellanato {
 	font-size: 20px;
 	text-transform: uppercase;
 	color: #000000;
+	padding: 0;
 }
 
 .page-productos .productos_filtro_linea .view-id-filter_categorias ul li a:hover {
@@ -5141,7 +5142,7 @@ body.page-productos-porcellanato {
 	position: relative;
 }
 
-.page-productos .block-system .view-id-productosbycategory ul li .field-content {
+.page-productos .block-system .view-id-productosbycategory ul li div.field-content {
 	bottom: 0;
     left: 0;
     position: absolute;
@@ -5197,7 +5198,8 @@ body.page-productos-porcellanato {
 }
 
 .detalle_producto h1 {
-	font-size: 75px;
+	font-size: 60px;
+    line-height: normal;
     margin-bottom: 30px;
 }
 

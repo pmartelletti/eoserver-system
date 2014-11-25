@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Default simple view template to all the fields as a row.
@@ -24,14 +23,10 @@
  * @ingroup views_templates
  */
 ?>
+<?php if($fields['title_1']->raw == 'Blend Cemento'){
+    $a=0;
+} ?>
 <?php
-
-if ($fields['title_1']->raw == 'Blend Cemento') {
-    $a = 0;
-}
-?>
-<?php
-
 $width = 100;
 $height = 100;
 if (isset($row->field_field_medida_largo[0]['raw']['value']) && isset($row->field_field_medida_ancho[0]['raw']['value'])) {
@@ -39,5 +34,7 @@ if (isset($row->field_field_medida_largo[0]['raw']['value']) && isset($row->fiel
     $height = ($row->field_field_medida_largo[0]['raw']['value'] * 100 ) / 60;
 }
 ?>
-<?php print str_replace('<div class="field-content">', '<div class="field-content" style="width:' . $width . '%;height:' . $height . '%;">', $fields['field_image']->content); ?>
+<div class="content-new-parent">
+    <?php print str_replace('<div class="field-content">', '<div class="field-content" style="width:' . $width . '%;height:' . $height . '%;">', $fields['field_image']->content); ?>
+</div>
 <?php print $fields['title_1']->content; ?>

@@ -5111,6 +5111,7 @@ body.page-productos-porcellanato {
 	font-size: 20px;
 	text-transform: uppercase;
 	color: #000000;
+	padding: 0;
 }
 
 .page-productos .productos_filtro_linea .view-id-filter_categorias ul li a:hover {

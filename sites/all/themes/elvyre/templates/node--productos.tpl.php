@@ -108,7 +108,7 @@
             <?php print render($content['field_propiedad_adicional']) ?>
         </div>
         <div class="imagen">
-            <img class="images_zoom" src="<?php print $image_principal ?>" data-zoom-image="<?php print $image_zoom ?>"/>
+            <?php print render($content['field_image']) ?>
         </div>
     </div>
 </div>

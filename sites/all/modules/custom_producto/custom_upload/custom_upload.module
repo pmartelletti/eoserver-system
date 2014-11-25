@@ -1,0 +1,8 @@
+<?php
+
+/*function custom_upload_form_alter(&$form, &$form_state, $form_id){
+    die($form_id);
+}*/
+function custom_upload_form_media_add_upload_alter(&$form, &$form_state){
+    $a=0;
+}

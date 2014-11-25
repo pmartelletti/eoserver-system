@@ -5139,13 +5139,13 @@ body.page-productos-porcellanato {
 }
 
 .page-productos .block-system .view-id-productosbycategory ul li > div {
-	position: relative;
+	/*position: relative;*/
 }
 
 .page-productos .block-system .view-id-productosbycategory ul li div.field-content {
 	bottom: 0;
     left: 0;
-    position: absolute;
+    /*position: absolute;*/
     right: 0;
 }
 

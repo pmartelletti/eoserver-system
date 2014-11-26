@@ -5178,7 +5178,8 @@ body.page-productos-porcellanato {
 
 .detalle_producto .caracteristicas {
 	width: 487px;
-	padding-top: 100px;
+	bottom: 0;
+    position: absolute;
 }
 
 .detalle_producto h1,
@@ -5227,18 +5228,22 @@ body.page-productos-porcellanato {
 
 .detalle_producto .cont_detalle {
 	float: left;
+	height: 473px;
+    position: relative;
 }
 
 .detalle_producto .imagen {
 	float: right;
+	position: relative;
     height: 483px;
     width: 483px;
 }
 
 .detalle_producto .imagen img {
-    margin: 20px;
-    max-width: 443px;
+    bottom: 0;
     max-height: 443px;
+    max-width: 443px;
+    position: absolute;
 }
 
 .n50 {
@@ -5956,4 +5961,18 @@ body.page-productos-porcellanato {
     font-family: "PT Sans Narrow",sans-serif !important;
     font-size: 21px !important;
 	text-decoration: none
+}
+
+.page-productos #block-system-main .view-productosbycategory h2 {
+	font-family: "PT Sans Narrow",sans-serif !important;
+	font-weight: 400;
+	font-size: 60px;
+	color: #000000;
+}
+
+.page-productos #block-system-main .view-productosbycategory .views-row span a {
+	font-family: "PT Sans Narrow",sans-serif !important;
+	font-weight: 400;
+	font-size: 16px;
+	color: #000000;
 }

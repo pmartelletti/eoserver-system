@@ -35,3 +35,4 @@ if (isset($row->field_field_medida_largo[0]['raw']['value']) && isset($row->fiel
     <?php print $fields['field_image']->content; ?>
 </div>
 <?php print $fields['title']->content; ?>
+<div class="medidas"><?php print "{$fields['field_medida_ancho']->content}x{$fields['field_medida_largo']->content}"; ?></div>

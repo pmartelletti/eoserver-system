@@ -34,6 +34,7 @@ scripts[] = js/portfolio.js
 scripts[] = js/socialstream.jquery.js
 scripts[] = js/include.js
 scripts[] = js/isotope.pkgd.js
+scripts[] = js/menu.productos.js
 
 
 ;regions[header] = Header

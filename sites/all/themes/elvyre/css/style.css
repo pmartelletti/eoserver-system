@@ -460,7 +460,17 @@ b{
     font: 13px 'Open Sans', Arial, sans-serif;
     color: #fff;  
 }
-
+#nav div.content-image div.image-menu{
+	display:block;
+	position: absolute;
+	top: 50px;
+	right: -291px;
+	padding:10px;
+	background-color: white;
+	height: 276px;
+}
+#nav div.content-image div.image-menu,
+#nav li ul li div.image-menu{display:none}
 /*#nav > ul > li.no-sub:hover{
     border-bottom: 4px solid #eee;
 }*/

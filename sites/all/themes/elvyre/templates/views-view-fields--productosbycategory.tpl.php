@@ -45,3 +45,4 @@ if (isset($row->field_field_medida_largo[0]['raw']['value']) && isset($row->fiel
     ?>
 </div>
 <?php print $fields['title_1']->content; ?>
+<div class="medidas"><?php print "{$fields['field_medida_ancho']->content}x{$fields['field_medida_largo']->content}"; ?></div>

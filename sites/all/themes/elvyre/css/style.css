@@ -5241,6 +5241,7 @@ body.page-productos-porcellanato {
 
 .detalle_producto li b {
 	font-size: 21px !important;
+	font-weight: normal !important;
 }
 
 .detalle_producto li span{
@@ -5803,7 +5804,8 @@ body.page-productos-porcellanato {
 }
 
 .distribuidores #page-title {
-	height: 10px !important;
+	background: none repeat scroll 0 0 #ffc343 !important;
+    height: 120px !important;
     margin-bottom: 0 !important;
     padding: 0 !important;
     position: inherit !important;
@@ -5813,14 +5815,19 @@ body.page-productos-porcellanato {
     margin: 0 !important;
 }
 
+.distribuidores #page-title > .container {
+	width: 100%;
+}
+
 .distribuidores .grisado {
     top: 112px;
 }
 
 .distribuidores #block-views-exp-distribuidores-page {
-	position: absolute;
-    top: 127px;
-    z-index: 100;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    float: right !important;
+    padding: 15px !important;
+    width: auto !important;
 }
 
 .distribuidores .page-content .container {

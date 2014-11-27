@@ -463,12 +463,15 @@ b{
 #nav div.content-image div.image-menu{
 	display:block;
 	position: absolute;
-	top: 50px;
+	top: 100%;
 	right: -291px;
-	padding:10px;
+	padding:16px;
 	background-color: white;
 	height: 276px;
+	border-bottom: 1px solid #a9a9a9;
+    border-right: 1px solid #a9a9a9;
 }
+
 #nav div.content-image div.image-menu,
 #nav li ul li div.image-menu{display:none}
 /*#nav > ul > li.no-sub:hover{
@@ -5140,7 +5143,8 @@ body.page-productos-porcellanato {
 
 .page-productos .block-system .view-id-productosbycategory  ul li {
     float: left;
-    height: 180px;
+    height: auto;
+	min-height: 180px;
     margin: 0 0 40px;
     max-width: 180px;
     padding: 0 10px;
@@ -5149,14 +5153,17 @@ body.page-productos-porcellanato {
 }
 
 .page-productos .block-system .view-id-productosbycategory ul li > div {
-	/*position: relative;*/
+	display: table;
+    text-align: center;
+    width: 100%;
 }
 
 .page-productos .block-system .view-id-productosbycategory ul li div.field-content {
-	bottom: 0;
-    left: 0;
-    /*position: absolute;*/
-    right: 0;
+	display: table-cell;
+    height: 180px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: bottom;
 }
 
 /*.page-productos .block-system .view-id-productosbycategory .views-field-field-image img {
@@ -5991,11 +5998,4 @@ body.page-productos-porcellanato {
 	font-size: 16px;
 	color: #000000;
 }
-
-#nav .image-menu {
-	border-bottom: 1px solid #a9a9a9;
-    border-right: 1px solid #a9a9a9;
-    padding: 16px;
-    position: absolute;
-    top: 100%;
-}
+	

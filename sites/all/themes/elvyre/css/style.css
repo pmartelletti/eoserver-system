@@ -5816,7 +5816,27 @@ body.page-productos-porcellanato {
 }
 
 .distribuidores #page-title > .container {
-	width: 100%;
+	/*width: 100%;*/
+}
+
+.distribuidores #page-title .region-page-title {
+	position: absolute;
+}
+
+.distribuidores #page-title .region-page-title .productos_filtro_linea h2 {
+	color: #000000;
+    font-family: "PT Sans Narrow",sans-serif !important;
+    font-size: 24px;
+    font-weight: 700;
+	margin-bottom: 25px;
+}
+
+.distribuidores #page-title .region-page-title .productos_filtro_linea p {
+	color: #000000;
+    font-family: "PT Sans Narrow",sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+	line-height: normal;
 }
 
 .distribuidores .grisado {
@@ -5827,7 +5847,8 @@ body.page-productos-porcellanato {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     float: right !important;
     padding: 15px !important;
-    width: 940px !important;
+    width: 980px !important;
+	margin-left: 25px;
 }
 
 .distribuidores #block-views-exp-distribuidores-page h2 {

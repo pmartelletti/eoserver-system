@@ -65,13 +65,15 @@
         if (!empty($field['#items'])):
             ?>
             <div class="imagenes">
+            <ul id="testimonial-carousel" class="carousel-li">
                 <?php
                 foreach ($field['#items'] as $item):
                     $image_principal = image_style_url('productos_imagen_ambientes', $item['uri']);
                     $image_zoom = file_create_url($item['uri']);
                     ?>
-                    <img class="images_zoom" src="<?php print $image_principal ?>" data-zoom-image="<?php print $image_zoom ?>"/>
+                    <li class="testimonial"><img class="images_zoom" src="<?php print $image_principal ?>" data-zoom-image="<?php print $image_zoom ?>"/></li>
                 <?php endforeach; ?>
+                </ul>
             </div>
         <?php endif ?>
         <?php

@@ -71,7 +71,7 @@
                     $image_principal = image_style_url('productos_imagen_ambientes', $item['uri']);
                     $image_zoom = file_create_url($item['uri']);
                     ?>
-                    <li class="testimonial"><img class="images_zoom" src="<?php print $image_principal ?>" data-zoom-image="<?php print $image_zoom ?>"/></li>
+                    <li class="testimonial"><img class="images_zoom" src="<?php print $image_principal ?>" rel="lightshow[field_image_ambientaciones][&lt;p&gt;&lt;a href=&quot;<?php print $image_zoom ?>&quot;&gt;&lt;/a&gt;&lt;/p&gt;]" /></li>
                 <?php endforeach; ?>
                 </ul>
             </div>

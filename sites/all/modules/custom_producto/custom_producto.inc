@@ -125,6 +125,12 @@ function _custom_producto_get_categorias_by_another_category($term_name, $output
         foreach ($result as $t) {
             $terms[$term_name][$vocabulary][$output_result][$t->tid] = taxonomy_term_load($t->tid);
         }
+        usort($terms[$term_name][$vocabulary][$output_result], "_custom_producto_sort_filter_categoria");
     }
     return $terms[$term_name][$vocabulary][$output_result];
 }
+function _custom_producto_sort_filter_categoria($a, $b)
+{
+    return strcmp($a->name, $b->name);
+}
+

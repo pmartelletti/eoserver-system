@@ -40,11 +40,11 @@ function _custom_producto_get_items_filtro_all($term_name) {
     $items = array();
     $term_name = pathauto_cleanstring($term_name);
 
-    $items['lineas'] = l('Lineas', "productos/$term_name");
     $items['ambientes'] = l('Ambientes', "productos/$term_name/ambientes");
     $items['colores'] = l('Colores', "productos/$term_name/tonos");
-    $items['usos'] = l('Usos', "productos/$term_name/usos");
+    $items['lineas'] = l('Lineas', "productos/$term_name");
     $items['medidas'] = l('Medidas', "productos/$term_name/medidas");
+    $items['usos'] = l('Usos', "productos/$term_name/usos");
 
     return $items;
 }
@@ -125,6 +125,12 @@ function _custom_producto_get_categorias_by_another_category($term_name, $output
         foreach ($result as $t) {
             $terms[$term_name][$vocabulary][$output_result][$t->tid] = taxonomy_term_load($t->tid);
         }
+        usort($terms[$term_name][$vocabulary][$output_result], "_custom_producto_sort_filter_categoria");
     }
     return $terms[$term_name][$vocabulary][$output_result];
 }
+function _custom_producto_sort_filter_categoria($a, $b)
+{
+    return strcmp($a->name, $b->name);
+}
+

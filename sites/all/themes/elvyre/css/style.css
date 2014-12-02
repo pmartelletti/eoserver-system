@@ -5144,6 +5144,7 @@ body.page-productos-porcellanato {
 
 .page-productos .block-system .view-id-productosbycategory div.item-list {
 	float: left;
+	clear: both;
 }
 
 .page-productos .block-system .view-id-productosbycategory  ul li {

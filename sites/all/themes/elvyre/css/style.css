@@ -6034,7 +6034,8 @@ body.page-productos-porcellanato {
 	text-decoration: none
 }
 
-.page-productos #block-system-main .view-productosbycategory h2 {
+.page-productos #block-system-main .view-productosbycategory h2,
+.page-productos #block-system-main .view-productosbycategory h3 {
 	font-family: "PT Sans Narrow",sans-serif !important;
 	font-weight: 400;
 	font-size: 60px;

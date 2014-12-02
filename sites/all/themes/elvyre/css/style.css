@@ -5142,6 +5142,11 @@ body.page-productos-porcellanato {
     width: 600px;
 }
 
+.page-productos .block-system .view-id-productosbycategory div.item-list {
+	float: left;
+	clear: both;
+}
+
 .page-productos .block-system .view-id-productosbycategory  ul li {
     float: left;
     height: auto;
@@ -6029,7 +6034,8 @@ body.page-productos-porcellanato {
 	text-decoration: none
 }
 
-.page-productos #block-system-main .view-productosbycategory h2 {
+.page-productos #block-system-main .view-productosbycategory h2,
+.page-productos #block-system-main .view-productosbycategory h3 {
 	font-family: "PT Sans Narrow",sans-serif !important;
 	font-weight: 400;
 	font-size: 60px;

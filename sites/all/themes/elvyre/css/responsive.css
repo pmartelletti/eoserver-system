@@ -940,7 +940,9 @@ All this is done for any sub-level being entered.
 		margin: 0;
 	}
 	
-	.institucional #block-system-main {
+	.institucional #block-system-main,
+	.galeria #block-system-main,
+	.galerias #block-system-main {
 		padding-left: 0;
 		width: 100%;
 	}
@@ -973,7 +975,9 @@ All this is done for any sub-level being entered.
 		display: block;
 	}
 	
-	.institucional #block-system-main h2 {
+	.institucional #block-system-main h2,
+	.galeria #block-system-main h2,
+	.galerias #block-system-main h2 {
 		font-size: 32px;
 		margin-bottom: 30px;
 	}
@@ -1587,7 +1591,9 @@ All this is done for any sub-level being entered.
 		display: block;
 	}
 
-	.institucional #block-system-main {
+	.institucional #block-system-main,
+	.galeria #block-system-main,
+	.galerias #block-system-main {
 		padding-left: 0;
 		width: 100%;
 	}
@@ -2113,7 +2119,9 @@ All this is done for any sub-level being entered.
 		width: 30%;
 	}
 	
-	.institucional #block-system-main {
+	.institucional #block-system-main,
+	.galeria #block-system-main,
+	.galerias #block-system-main {
 		padding-left: 20px;
 		width: 530px;
 	}
@@ -2533,7 +2541,9 @@ All this is done for any sub-level being entered.
 		width: 296px;
 	}
 	
-	.institucional #block-system-main {
+	.institucional #block-system-main,
+	.galerias #block-system-main,
+	.galeria #block-system-main {
 		padding-left: 20px;
 		width: 710px;
 	}

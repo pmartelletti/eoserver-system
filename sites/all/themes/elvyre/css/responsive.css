@@ -1041,6 +1041,10 @@ All this is done for any sub-level being entered.
 		top: 80px;
 		width: 100%;
 	}
+	
+	.front .tp-banner-container {
+		padding-top: 50px;
+	}
 
 }
 

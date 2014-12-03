@@ -1083,6 +1083,7 @@ All this is done for any sub-level being entered.
 	.item-list .pager li {
 		float: none;
     	margin: 0;
+		width: auto !important;
 	}
 
 }
@@ -1370,7 +1371,7 @@ All this is done for any sub-level being entered.
 		background: url("http://www-sistema-durlock.com.ar/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center #fff;
 		float: none;
 		margin: 0 auto;
-		padding: 12px 0;
+		padding: 12px 0 !important;
 		position: relative;
 	}
 	
@@ -1492,9 +1493,9 @@ All this is done for any sub-level being entered.
 		padding-top: 30px;
 	}
 	
-	.productos #logo {
+	/*.productos #logo {
 		padding: 12px 0 !important;
-	}
+	}*/
 	
 	.productos #page-title {
 		padding: 40px 0 200px !important;

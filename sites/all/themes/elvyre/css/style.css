@@ -6060,3 +6060,15 @@ body.page-productos-porcellanato {
 .views-reset-button {
 	display: none;
 }
+
+.tonos .productos_filtro_linea .view-id-filter_categorias li {
+    border-bottom: medium none;
+    padding: 1.5%;
+    width: 30%;
+}
+
+.tonos .productos_filtro_linea .view-id-filter_categorias li:nth-child(2n+1),
+.tonos .productos_filtro_linea .view-id-filter_categorias li:nth-child(2n) {
+    float: left;
+    margin: 0 !important;
+}

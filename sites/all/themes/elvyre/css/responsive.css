@@ -1085,6 +1085,11 @@ All this is done for any sub-level being entered.
     	margin: 0;
 		width: auto !important;
 	}
+	
+	.node-type-novedades #block-system-main, .biblioteca-archivos #block-system-main {
+		padding-left: 0;
+		width: 100%;
+	}
 
 }
 

@@ -44,6 +44,9 @@ function elvyre_preprocess_page(&$variables) {
     $main_menu = menu_tree_output(menu_tree_all_data(variable_get('menu_main_links_source', 'main-menu'), NULL, 3));
     // Custom wrapper for 1st menu level.
     $main_menu['#theme_wrappers'] = array('menu_tree__main_menu_primary');
+    if (isset($variables['node']->type)) {
+        $variables['theme_hook_suggestions'][] = 'page__node__' . $variables['node']->type;
+    }
     $variables['page']['main_menu'] = $main_menu;
     if (isset($variables['node'])) {
         $function = __FUNCTION__ . '_' . $variables['node']->type;
@@ -54,11 +57,11 @@ function elvyre_preprocess_page(&$variables) {
 }
 
 function elvyre_preprocess_page_productos(&$variables) {
-    $variables['theme_hook_suggestions'][] = 'page__node__' . $variables['node']->type;
+    //$variables['theme_hook_suggestions'][] = 'page__node__' . $variables['node']->type;
     $variables['image_fondo'] = '';
     if (isset($variables['node']->field_imagenes_del_producto) && !empty($variables['node']->field_imagenes_del_producto)) {
         $variables['image_fondo'] = image_style_url('productos_imagen_fondo', $variables['node']->field_imagenes_del_producto[LANGUAGE_NONE][0]['uri']);
-    }else{
+    } else {
         $variables['image_fondo'] = '/sites/all/themes/elvyre/img/default_imagen_fondo.jpg';
     }
 }
@@ -107,10 +110,10 @@ function elvyre_menu_link(array $variables) {
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
 
     if (isset($variables['element']['#original_link']['options']['content']['image'])) {
-    	$file = file_load($variables['element']['#original_link']['options']['content']['image']);
+        $file = file_load($variables['element']['#original_link']['options']['content']['image']);
         $image = theme('image_style', array('style_name' => 'menu', 'path' => $file->uri));
         $image = l($image, $element['#href'], array('html' => true));
-        $output = $output . '<div class="image-menu image-menu-'. $variables['element']['#original_link']['mlid'] .'">' . $image . '</div>';
+        $output = $output . '<div class="image-menu image-menu-' . $variables['element']['#original_link']['mlid'] . '">' . $image . '</div>';
         $element['#attributes']['class'][] = 'has-image';
     }
 

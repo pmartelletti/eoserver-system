@@ -1,4 +1,3 @@
-
         <!-- .header-wrapper start -->
         <div id="header-wrapper" class="clearfix">
             <!-- .top-bar start -->

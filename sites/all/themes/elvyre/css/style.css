@@ -5570,6 +5570,12 @@ body.page-productos-porcellanato {
 	margin-bottom: 40px;
 }
 
+.galeria #block-system-main .field-item {
+	float: left;
+    padding: 0 2% 2% 0;
+    width: 16%;
+}
+
 .institucional #block-system-main .left,
 .institucional .institucional_bot .left {
 	float: left;
@@ -5995,7 +6001,6 @@ body.page-productos-porcellanato {
 .view-galeria-de-imagenes .view-header {
 	float: left;
 	padding-top: 15px;
-	padding-left: 45px
 }
 
 .view-galeria-de-imagenes .view-header h1 {
@@ -6008,7 +6013,6 @@ body.page-productos-porcellanato {
 
 .view-galeria-de-imagenes ul{
     float: left;
-    padding-left: 45px;
     width: 988px;
 	margin: 0;
 }

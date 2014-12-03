@@ -5636,7 +5636,8 @@ body.page-productos-porcellanato {
 .node-type-novedades #page-title.page-title-3,
 .distribuidores #page-title.page-title-3,
 .biblioteca-archivos #page-title.page-title-3,
-.galerias #page-title.page-title-3 {
+.galerias #page-title.page-title-3,
+.galeria #page-title.page-title-3 {
     background: none repeat scroll 0 0 #f6f6f6;
     padding: 8px 0 0 !important;
     position: absolute;

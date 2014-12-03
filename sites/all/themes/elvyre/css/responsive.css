@@ -1029,6 +1029,15 @@ All this is done for any sub-level being entered.
 		width: 100%;
 	}
 	
+	#header-wrapper {
+		background: none repeat scroll 0 0 #fff;
+		height: 80px;
+	}
+	
+	#header-wrapper a {
+		display: none;
+	}
+	
 	#logo {
 		background: url("http://104.131.52.104/sites/all/themes/elvyre/logo_b.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 		height: 40px;

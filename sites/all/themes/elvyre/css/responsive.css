@@ -1679,6 +1679,11 @@ All this is done for any sub-level being entered.
 	.page-productos .productos_filtro_linea {
 		display: none;
 	}
+	
+	.node-type-novedades #block-system-main, .biblioteca-archivos #block-system-main {
+		padding-left: 0;
+		width: 100%;
+	}
 
 }
 
@@ -2146,6 +2151,12 @@ All this is done for any sub-level being entered.
 	.page-productos .block-system .view-id-productosbycategory div.item-list {
 		width: 100%;
 	}
+	
+	.node-type-novedades #block-system-main, .biblioteca-archivos #block-system-main {
+		padding-left: 20px;
+		padding-top: 13px;
+		width: 530px;
+	}
 
 }
 
@@ -2545,6 +2556,10 @@ All this is done for any sub-level being entered.
 	.item-list .pager li {
 		float: none;
     	margin: 0;
+	}
+	
+	.node-type-novedades #block-system-main, .biblioteca-archivos #block-system-main {
+		width: 670px;
 	}
 	
 }

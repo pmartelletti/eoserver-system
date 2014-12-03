@@ -1054,6 +1054,22 @@ All this is done for any sub-level being entered.
 	.front .tp-banner-container {
 		padding-top: 50px;
 	}
+	
+	.page-productos #page-title, .node-type-productos #page-title {
+		top: 130px;
+	}
+	
+	.productos #page-title {
+		display: none;
+	}
+	
+	.page-content {
+		padding-top: 40px;
+	}
+	
+	.page-productos .productos_filtro_linea {
+		display: none;
+	}
 
 }
 

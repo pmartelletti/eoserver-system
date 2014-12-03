@@ -62,50 +62,22 @@
     <div class="right">
         <?php
         $field = field_view_field('node', $node, 'field_imagenes_de_ambiente', 'full');
-        if (!empty($field['#items'])):
-            ?>
-            <div class="imagenes">
-                <ul id="ambientes-carousel">
-                    <?php
-                    foreach ($field['#items'] as $item):
-                        $image_principal = image_style_url('productos_imagen_ambientes', $item['uri']);
-                        $image_zoom = file_create_url($item['uri']);
-                        ?>
-                        <li><a rel="<?php print htmlentities("lightshow[field_ambientaciones][<p><a href=\"$image_zoom\"></a></p>]") ?>"><img class="images_zoom" src="<?php print $image_principal ?>"/></a></li>
-                    <?php endforeach; ?>
+        print render($field);
+        $block = module_invoke('views', 'block_view', 'productos_misma_categoria-block');
+        unset($block['subject']);
+        print render($block);
+        ?>
+        <?php if (false): ?>
+            <div class="colores">
+                <h3>colores disponibles:</h3>
+                <ul>
+                    <li><img alt="" src="http://dummyimage.com/98x98/000/fff&amp;text=colores" style="height:98px; width:98px" /><br />
+                        claro</li>
+                    <li><img alt="" src="http://dummyimage.com/98x98/000/fff&amp;text=colores" style="height:98px; width:98px" /><br />
+                        oscuro</li>
                 </ul>
-                <?php if (count($field['#items']) > 1): ?>
-                    <div class="clearfix"></div>    
-                    <ul class="carousel-nav">
-                        <li>
-                            <a class="c_prev"></a> 
-                        </li>
-                        <li>
-                            <a class="c_next"></a>
-                        </li>
-                    </ul>
-                <?php endif; ?>
-
-
-
-
-            <?php endif ?>
-            <?php
-            $block = module_invoke('views', 'block_view', 'productos_misma_categoria-block');
-            unset($block['subject']);
-            print render($block);
-            ?>
-            <?php if (false): ?>
-                <div class="colores">
-                    <h3>colores disponibles:</h3>
-                    <ul>
-                        <li><img alt="" src="http://dummyimage.com/98x98/000/fff&amp;text=colores" style="height:98px; width:98px" /><br />
-                            claro</li>
-                        <li><img alt="" src="http://dummyimage.com/98x98/000/fff&amp;text=colores" style="height:98px; width:98px" /><br />
-                            oscuro</li>
-                    </ul>
-                </div>
-            <?php endif ?>
-        </div>
+            </div>
+        <?php endif ?>
     </div>
+</div>
 </div>

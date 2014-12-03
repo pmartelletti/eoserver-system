@@ -68,8 +68,11 @@
                 <div class="triggerAnimation animated" data-animate="fadeInLeft">
                     <ul id='services-carousel' class='carousel-li'>
                         <?php
-                        foreach ($field['#items'] as $item):?>
-                            <li class="service-box-1"><?php print render($item) ?></li>
+                        foreach ($field['#items'] as $item):
+                            $image_principal = image_style_url('productos_imagen_ambientes', $item['uri']);
+                            $image_zoom = file_create_url($item['uri']);
+                            ?>
+                        <li class="service-box-1"><a rel="<?php print htmlentities("lightshow[field_ambientaciones][<p><a href=\"$image_zoom\"></a></p>]") ?>"><img class="images_zoom" src="<?php print $image_principal ?>"/></a></li>
                         <?php endforeach; ?>
                     </ul>
                     <div class="clearfix"></div>

@@ -356,13 +356,3 @@
 
                             <a href="#" class="scroll-up">Scroll</a>
                         </section><!-- .footer-wrapper end -->
-                        <script>
-                            jQuery(function ($) {
-                                $(".images_zoom").elevateZoom({
-                                    cursor: 'cross',
-                                    galleryActiveClass: 'active',
-                                    imageCrossfade: true,
-                                    zoomWindowPosition: 9
-                                });
-                            });
-                        </script>

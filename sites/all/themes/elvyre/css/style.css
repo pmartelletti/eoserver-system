@@ -5948,7 +5948,8 @@ body.page-productos-porcellanato {
     padding: 0;
 }
 
-.distribuidores .views-widget-filter-country select {
+.distribuidores .views-widget-filter-province select,
+.distribuidores .views-widget-filter-country select{
     background: none repeat scroll 0 0 #f6f6f6;
     border: 1px solid #ddd;
     border-radius: 2px;

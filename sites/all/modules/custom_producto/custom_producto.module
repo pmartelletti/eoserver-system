@@ -106,9 +106,9 @@ function custom_producto_block_view($delta = '') {
             $list = array();
             if ($type == 'tonos') {
                 foreach ($items as $item) {
-                    $name = theme('image_style', array('style_name'=>'125x125', 'path'=>$item->field_icono[LANGUAGE_NONE][0]['uri']));
+                    $name = theme('image_style', array('style_name' => '125x125', 'path' => $item->field_icono[LANGUAGE_NONE][0]['uri']));
                     $url = str_replace(array(' '), array('-'), $item->name);
-                    $list[] = l($name, "productos/$arg/$type/$url", array('html'=>true));
+                    $list[] = l($name, "productos/$arg/$type/$url", array('html' => true));
                 }
             } else {
                 foreach ($items as $item) {
@@ -160,4 +160,37 @@ function custom_producto_theme() {
             'variables' => array('list' => '',),
         ),
     );
+}
+
+function custom_producto_form_alter(&$form, $form_state, $form_id) {
+    switch ($form_id) {
+        case 'views_exposed_form':
+            if ($form['#id'] == 'views-exposed-form-distribuidores-page') {
+                if (!empty($form['province'])) {
+                    $form['province']['#type'] = 'select';
+                    $provinces = location_get_provinces('ar');
+                    if (!empty($provinces)) {
+                        while (list($code, $name) = each($provinces)) {
+                            $matches[$name] = $name;
+                        }
+                    }
+                    $form['province']['#multiple'] = FALSE;
+                    $form['province']['#type'] = 'select';
+                    $form['province']['#options'] = $matches;
+                    $form['province']['#prefix'] = '<div id="dropdown-second-replace">';
+                    $form['province']['#suffix'] = '</div>';
+                    unset($form['province']['#size']);
+                }
+                if (!empty($form['country'])) {
+                    $form['country']['#ajax'] = array(
+                        'callback' => 'ajax_example_dependent_dropdown_callback',
+                        'wrapper' => 'dropdown-second-replace',
+                    );
+                }
+            }
+    }
+}
+
+function ajax_example_dependent_dropdown_callback($form, $form_state) {
+    return $form['dropdown_second'];
 }

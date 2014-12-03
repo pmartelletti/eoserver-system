@@ -6095,3 +6095,10 @@ body.page-productos-porcellanato {
     width: 100%;
     text-align: center;
 }
+.page-distribuidores input.form-autocomplete {
+    background-position: 100% 10px!important;
+}
+
+.page-distribuidores input.throbbing {
+  background-position: 100% -14px!important;
+}

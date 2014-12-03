@@ -976,7 +976,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	.institucional #block-system-main h2,
-	.galeria #block-system-main h2,
+	.galeria #block-system-main h1,
 	.galerias #block-system-main h2 {
 		font-size: 32px;
 		margin-bottom: 30px;

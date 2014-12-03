@@ -1580,6 +1580,15 @@ All this is done for any sub-level being entered.
 	.view-galeria-de-imagenes ul li {
 		width: 45%;
 	}
+	
+	#header-wrapper {
+		background: none repeat scroll 0 0 #fff;
+	}
+	
+	#header-wrapper a {
+		background: url(http://104.131.52.104/sites/all/themes/elvyre/logo.png);
+	}
+	
 
 }
 
@@ -1966,7 +1975,8 @@ All this is done for any sub-level being entered.
 	}
 	
 	.productos .prod_destacados .left img {
-		width: 90%;
+		height: auto !important;
+    	width: 85% !important;
 	}
 	
 	.productos .prod_destacados .right h1 {
@@ -2345,8 +2355,8 @@ All this is done for any sub-level being entered.
 	}
 	
 	.productos .prod_destacados .left img {
-		width: 95%;
-		height: auto;
+		height: auto !important;
+    	width: 85% !important;
 	}
 	
 	.page-productos .productos_filtro_linea {

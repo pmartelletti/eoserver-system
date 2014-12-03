@@ -75,8 +75,8 @@
                     <?php endforeach; ?>
                 </ul>
                 <?php if (count($field['#items']) > 1): ?>
-                <div class="clearfix"></div>    
-                <ul class="carousel-nav">
+                    <div class="clearfix"></div>    
+                    <ul class="carousel-nav">
                         <li>
                             <a class="c_prev"></a> 
                         </li>
@@ -85,28 +85,27 @@
                         </li>
                     </ul>
                 <?php endif; ?>
-            </div><!-- .triggerAnimation animated end -->
 
+
+
+
+            <?php endif ?>
+            <?php
+            $block = module_invoke('views', 'block_view', 'productos_misma_categoria-block');
+            unset($block['subject']);
+            print render($block);
+            ?>
+            <?php if (false): ?>
+                <div class="colores">
+                    <h3>colores disponibles:</h3>
+                    <ul>
+                        <li><img alt="" src="http://dummyimage.com/98x98/000/fff&amp;text=colores" style="height:98px; width:98px" /><br />
+                            claro</li>
+                        <li><img alt="" src="http://dummyimage.com/98x98/000/fff&amp;text=colores" style="height:98px; width:98px" /><br />
+                            oscuro</li>
+                    </ul>
+                </div>
+            <?php endif ?>
         </div>
-
-
-
-    <?php endif ?>
-    <?php
-    $block = module_invoke('views', 'block_view', 'productos_misma_categoria-block');
-    unset($block['subject']);
-    print render($block);
-    ?>
-    <?php if (false): ?>
-        <div class="colores">
-            <h3>colores disponibles:</h3>
-            <ul>
-                <li><img alt="" src="http://dummyimage.com/98x98/000/fff&amp;text=colores" style="height:98px; width:98px" /><br />
-                    claro</li>
-                <li><img alt="" src="http://dummyimage.com/98x98/000/fff&amp;text=colores" style="height:98px; width:98px" /><br />
-                    oscuro</li>
-            </ul>
-        </div>
-    <?php endif ?>
-</div>
+    </div>
 </div>

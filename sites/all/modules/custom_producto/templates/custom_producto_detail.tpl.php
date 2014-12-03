@@ -65,16 +65,25 @@
         if (!empty($field['#items'])):
             ?>
             <div class="imagenes">
-                <ul id="testimonial-carousel" class="carousel-li">
+                <ul id="ambientes-carousel">
                     <?php
                     foreach ($field['#items'] as $item):
                         $image_principal = image_style_url('productos_imagen_ambientes', $item['uri']);
                         $image_zoom = file_create_url($item['uri']);
                         ?>
-                        <li class="testimonial"><a rel="<?php print htmlentities("lightshow[field_ambientaciones][<p><a href=\"$image_zoom\"></a></p>]") ?>"><img class="images_zoom" src="<?php print $image_principal ?>"/></a></li>
+                        <li><a rel="<?php print htmlentities("lightshow[field_ambientaciones][<p><a href=\"$image_zoom\"></a></p>]") ?>"><img class="images_zoom" src="<?php print $image_principal ?>"/></a></li>
                     <?php endforeach; ?>
                 </ul>
                 <?php if (count($field['#items']) > 1): ?>
+                <div class="clearfix"></div>    
+                <ul class="carousel-nav">
+                        <li>
+                            <a class="c_prev"></a> 
+                        </li>
+                        <li>
+                            <a class="c_next"></a>
+                        </li>
+                    </ul>
                 <?php endif; ?>
             </div><!-- .triggerAnimation animated end -->
 

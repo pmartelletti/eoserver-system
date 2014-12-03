@@ -202,7 +202,28 @@
                         }
                     }
                 });
-
+                
+                //  Testimonial carousel Responsive layout, resizing the items
+                $('#ambientes-carousel').carouFredSel({
+                    responsive: true,
+                    width: '100%',
+                    auto: true,
+                    scroll: 1,
+                    prev: '.c_prev',
+                    next: '.c_next',
+                    swipe: {
+                        onMouse: true,
+                        onTouch: true
+                    },
+                    items: {
+                        width: 485,
+                        height: 'auto',
+                        visible: {
+                            min: 1,
+                            max: 1
+                        }
+                    }
+                });
                
 
 
@@ -335,10 +356,12 @@
                     width: '100%',
                     auto: true,
                     scroll: 1,
-                    swipe: {
+                    /*swipe: {
                         onMouse: true,
                         onTouch: true
-                    },
+                    },*/
+                    prev: '.c_prev_amb',
+                    next: '.c_next_amb',
                     items: {
                         width: '770',
                         height: 'variable',

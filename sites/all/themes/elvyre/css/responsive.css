@@ -2407,7 +2407,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	.page-productos .block-system {
-		width: 350px;
+		width: 340px;
 	}
 	
 	.page-productos .block-system .view-id-productosbycategory ul li:nth-child(2n+2) {
@@ -2419,8 +2419,8 @@ All this is done for any sub-level being entered.
 	}
 	
 	.page-productos .block-system .view-id-productosbycategory ul li {
-		margin: 0 10% 0 0;
-		width: 45%;
+		margin: 0;
+   		width: 44%;
 	}
 	
 	.page-productos .block-system .view-id-productosbycategory .views-field-field-image img {
@@ -2485,6 +2485,13 @@ All this is done for any sub-level being entered.
 	
 	.view-galeria-de-imagenes ul {
 		width: 690px;
+	}
+	
+	.item-list .pager {
+		width: 250px;
+	}
+	
+	.item-list .pager li {
 	}
 	
 }

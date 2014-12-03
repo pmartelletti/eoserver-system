@@ -65,49 +65,39 @@
         if (!empty($field['#items'])):
             ?>
             <div class="imagenes">
-                <div class="triggerAnimation animated" data-animate="fadeInLeft">
-                    <ul id='services-carousel' class='carousel-li'>
-                        <?php
-                        foreach ($field['#items'] as $item):
-                            $image_principal = image_style_url('productos_imagen_ambientes', $item['uri']);
-                            $image_zoom = file_create_url($item['uri']);
-                            ?>
-                        <li class="service-box-1"><a rel="<?php print htmlentities("lightshow[field_ambientaciones][<p><a href=\"$image_zoom\"></a></p>]") ?>"><img class="images_zoom" src="<?php print $image_principal ?>"/></a></li>
-                        <?php endforeach; ?>
-                    </ul>
-                    <div class="clearfix"></div>
-                    <?php if(count($field['#items'])> 1):?>
-                    <ul class="carousel-nav">
-                        <li>
-                            <a class="c_prev" href="#"></a> 
-                        </li>
-                        <li>
-                            <a class="c_next" href="#"></a>
-                        </li>
-                    </ul>
-                    <?php endif;?>
-                </div><!-- .triggerAnimation animated end -->
-
-            </div>
-
-
-
-        <?php endif ?>
-        <?php
-        $block = module_invoke('views', 'block_view', 'productos_misma_categoria-block');
-        unset($block['subject']);
-        print render($block);
-        ?>
-        <?php if (false): ?>
-            <div class="colores">
-                <h3>colores disponibles:</h3>
-                <ul>
-                    <li><img alt="" src="http://dummyimage.com/98x98/000/fff&amp;text=colores" style="height:98px; width:98px" /><br />
-                        claro</li>
-                    <li><img alt="" src="http://dummyimage.com/98x98/000/fff&amp;text=colores" style="height:98px; width:98px" /><br />
-                        oscuro</li>
+                <ul id="testimonial-carousel" class="carousel-li">
+                    <?php
+                    foreach ($field['#items'] as $item):
+                        $image_principal = image_style_url('productos_imagen_ambientes', $item['uri']);
+                        $image_zoom = file_create_url($item['uri']);
+                        ?>
+                        <li class="testimonial"><a rel="<?php print htmlentities("lightshow[field_ambientaciones][<p><a href=\"$image_zoom\"></a></p>]") ?>"><img class="images_zoom" src="<?php print $image_principal ?>"/></a></li>
+                    <?php endforeach; ?>
                 </ul>
-            </div>
-        <?php endif ?>
-    </div>
+                <?php if (count($field['#items']) > 1): ?>
+                <?php endif; ?>
+            </div><!-- .triggerAnimation animated end -->
+
+        </div>
+
+
+
+    <?php endif ?>
+    <?php
+    $block = module_invoke('views', 'block_view', 'productos_misma_categoria-block');
+    unset($block['subject']);
+    print render($block);
+    ?>
+    <?php if (false): ?>
+        <div class="colores">
+            <h3>colores disponibles:</h3>
+            <ul>
+                <li><img alt="" src="http://dummyimage.com/98x98/000/fff&amp;text=colores" style="height:98px; width:98px" /><br />
+                    claro</li>
+                <li><img alt="" src="http://dummyimage.com/98x98/000/fff&amp;text=colores" style="height:98px; width:98px" /><br />
+                    oscuro</li>
+            </ul>
+        </div>
+    <?php endif ?>
+</div>
 </div>

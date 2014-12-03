@@ -5233,8 +5233,8 @@ body.page-productos-porcellanato {
 }
 
 .detalle_producto p {
-	font-size: 24px;
-    line-height: 26px;
+	font-size: 19px;
+    line-height: 26px;;
 }
 
 .detalle_producto li {
@@ -5246,7 +5246,7 @@ body.page-productos-porcellanato {
 }
 
 .detalle_producto li b {
-	font-size: 21px !important;
+	font-size: 19px !important;
 	font-weight: 400 !important;
 }
 

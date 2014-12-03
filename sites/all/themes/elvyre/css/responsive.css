@@ -1054,6 +1054,22 @@ All this is done for any sub-level being entered.
 	.front .tp-banner-container {
 		padding-top: 50px;
 	}
+	
+	.page-productos #page-title, .node-type-productos #page-title {
+		top: 130px;
+	}
+	
+	.productos #page-title {
+		display: none;
+	}
+	
+	.page-content {
+		padding-top: 40px;
+	}
+	
+	.page-productos .productos_filtro_linea {
+		display: none;
+	}
 
 }
 
@@ -1337,7 +1353,7 @@ All this is done for any sub-level being entered.
     }
 	
 	.not-front #logo {
-		background: url("http://www-sistema-durlock.com.ar/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center #000;
+		background: url("http://www-sistema-durlock.com.ar/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center #fff;
 		float: none;
 		margin: 0 auto;
 		padding: 12px 0;
@@ -1631,6 +1647,22 @@ All this is done for any sub-level being entered.
 	
 	.front .tp-banner-container {
 		padding-top: 50px;
+	}
+	
+	.page-productos #page-title, .node-type-productos #page-title {
+		top: 130px;
+	}
+	
+	.productos #page-title {
+		display: none;
+	}
+	
+	.page-content {
+		padding-top: 40px;
+	}
+	
+	.page-productos .productos_filtro_linea {
+		display: none;
 	}
 
 }
@@ -2095,6 +2127,10 @@ All this is done for any sub-level being entered.
 	.view-galeria-de-imagenes ul li {
 		width: 30.5%;
 	}
+	
+	.page-productos .block-system .view-id-productosbycategory div.item-list {
+		width: 100%;
+	}
 
 }
 
@@ -2492,6 +2528,8 @@ All this is done for any sub-level being entered.
 	}
 	
 	.item-list .pager li {
+		float: none;
+    	margin: 0;
 	}
 	
 }

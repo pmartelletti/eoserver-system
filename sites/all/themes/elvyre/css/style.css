@@ -6075,3 +6075,22 @@ body.page-productos-porcellanato {
     margin: 0 !important;
 }
 #ambientes-carousel{height: 485px;}
+#ambientes-pagination a {
+    border-radius: 15px;
+    border: 1px solid gray;
+    background-color: gray;
+    color: gray;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    text-indent: -9999px;
+    margin-left: 2px;
+}
+#ambientes-pagination a.selected {background-color: white;}
+.field-imagenes-de-ambientes{ position: relative;}
+.field-imagenes-de-ambientes #ambientes-pagination { 
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}

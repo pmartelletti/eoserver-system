@@ -5036,7 +5036,7 @@ body.page-productos-porcellanato {
 .productos_filtro_linea {
 	background: none repeat scroll 0 0 #fff;
     float: left;
-    padding: 40px 30px 180px;
+    padding: 40px 30px 150px;
     width: 174px;
 }
 
@@ -5257,8 +5257,9 @@ body.page-productos-porcellanato {
 
 .detalle_producto .cont_detalle {
 	float: left;
-	height: 473px;
+    height: 445px;
     position: relative;
+    top: 28px;
 }
 
 .detalle_producto .imagen {

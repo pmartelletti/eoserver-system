@@ -1700,6 +1700,35 @@ All this is done for any sub-level being entered.
 		padding-left: 0;
 		width: 100%;
 	}
+	
+	.distribuidores #page-title {
+		height: 220px !important;
+		padding: 42px 0 0 !important;
+	}
+	
+	.distribuidores #block-views-exp-distribuidores-page {
+		float: left !important;
+		margin-left: 0 !important;
+		padding: 11px 0 !important;
+		width: 430px !important;
+	}
+	
+	.distribuidores .productos_filtro_categoria, .productos_filtro_linea {
+		padding: 15px 30px;
+		width: 370px !important;
+	}
+	
+	.distribuidores .page-content {
+		padding-top: 200px;
+	}
+	
+	.distribuidores .container {
+		max-width: 430px;
+	}
+	
+	.distribuidores .page-content .container #block-system-main {
+		width: 100% !important;
+	}
 
 }
 
@@ -2179,6 +2208,14 @@ All this is done for any sub-level being entered.
 		padding-top: 13px;
 		width: 530px;
 	}
+	
+	.distribuidores .page-content .container #block-system-main {
+		width: 530px !important;
+	}
+	
+	.distribuidores #block-views-exp-distribuidores-page {
+		margin-left: 10px;
+	}
 
 }
 
@@ -2584,6 +2621,22 @@ All this is done for any sub-level being entered.
 	
 	.node-type-novedades #block-system-main, .biblioteca-archivos #block-system-main {
 		width: 670px;
+	}
+	
+	.distribuidores #page-title {
+		height: 180px !important;
+	}
+	
+	.distribuidores #block-views-exp-distribuidores-page {
+		width: 480px !important;
+	}
+	
+	.distribuidores .page-content .container #block-system-main {
+		width: 698px !important;
+	}
+	
+	.distribuidores .page-content .container #block-views-distribuidores-block-1 {
+		width: 100% !important;
 	}
 	
 }

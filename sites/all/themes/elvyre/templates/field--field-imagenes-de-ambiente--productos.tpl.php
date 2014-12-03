@@ -1,17 +1,9 @@
-<ul id="ambientes-carousel">
-    <?php
-    foreach ($items as $item):?>
-        <li><?php print render($item) ?></li>
-    <?php endforeach; ?>
-</ul>
-<?php if (count($items) > 1): ?>
-    <div class="clearfix"></div>    
-    <ul class="carousel-nav">
-        <li>
-            <a class="c_prev"></a> 
-        </li>
-        <li>
-            <a class="c_next"></a>
-        </li>
+<div class="field-imagenes-de-ambientes">
+    <ul id="ambientes-carousel">
+        <?php foreach ($items as $item): ?>
+            <li><?php print render($item) ?></li>
+        <?php endforeach; ?>
     </ul>
-<?php endif; ?>
+    <div class="clearfix"></div>
+    <div id="ambientes-pagination"></div>
+</div>

@@ -62,6 +62,12 @@ function custom_producto_block_info() {
         'pages' => 'productos/*
 producto/*',
     );
+    $blocks['filter_distribuidores'] = array(
+        'info' => t('Filtro distribuidores'),
+        'cache' => DRUPAL_CACHE_PER_PAGE,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'distribuidores',
+    );
     return $blocks;
 }
 
@@ -141,6 +147,10 @@ function custom_producto_block_view($delta = '') {
                 );
             }
             break;
+        case 'filter_distribuidores':
+            $block['subject'] = '';
+            $block['content'] = drupal_get_form('custom_producto_filter_distribuidores_form');
+            break;
     }
     return $block;
 }
@@ -162,35 +172,107 @@ function custom_producto_theme() {
     );
 }
 
-function custom_producto_form_alter(&$form, $form_state, $form_id) {
-    switch ($form_id) {
-        case 'views_exposed_form':
-            if ($form['#id'] == 'views-exposed-form-distribuidores-page') {
-                if (!empty($form['province'])) {
-                    $form['province']['#type'] = 'select';
-                    $provinces = location_get_provinces('ar');
-                    if (!empty($provinces)) {
-                        while (list($code, $name) = each($provinces)) {
-                            $matches[$name] = $name;
-                        }
-                    }
-                    $form['province']['#multiple'] = FALSE;
-                    $form['province']['#type'] = 'select';
-                    $form['province']['#options'] = $matches;
-                    $form['province']['#prefix'] = '<div id="dropdown-second-replace">';
-                    $form['province']['#suffix'] = '</div>';
-                    unset($form['province']['#size']);
-                }
-                if (!empty($form['country'])) {
-                    $form['country']['#ajax'] = array(
-                        'callback' => 'ajax_example_dependent_dropdown_callback',
-                        'wrapper' => 'dropdown-second-replace',
-                    );
-                }
-            }
+function custom_producto_filter_distribuidores_form($form, &$form_state) {
+    $_countries = country_get_list();
+    $_countries = array_merge(array('' => 'Seleccionar'), $_countries);
+    $countries = array();
+    if (!empty($_countries)) {
+        while (list($code, $name) = each($_countries)) {
+            $countries[strtolower($code)] = $name;
+        }
     }
+
+    $form['country'] = array(
+        '#type' => 'select',
+        '#title' => 'País',
+        '#options' => $countries,
+        '#ajax' => array(
+            'callback' => 'ajax_example_dependent_dropdown_callback',
+            'wrapper' => 'dropdown-second-replace',
+        ),
+    );
+    $province = array();
+    $country_selected = isset($form_state['values']['country']) ? $form_state['values']['country'] : (isset($_GET['country']) ? $_GET['country'] : 'ar');
+    $_province = location_get_provinces($country_selected);
+    $_province = array_merge(array('' => 'Seleccionar'), $_province);
+    if (!empty($_province)) {
+        while (list($code, $name) = each($_province)) {
+            $name = trim(str_replace('Distrito Federal', 'CABA', $name));
+            $name = trim(str_replace('Province', '', $name));
+            $province[$name] = $name;
+        }
+    }
+    $form['country']['#default_value'] = $country_selected;
+
+    $form['province'] = array(
+        '#type' => 'select',
+        '#title' => 'Provincia',
+        '#prefix' => '<div id="dropdown-second-replace">',
+        '#suffix' => '</div>',
+        '#options' => $province,
+    );
+    if (isset($_GET['province'])) {
+        $form['province']['#default_value'] = $_GET['province'];
+    } else {
+        $form['province']['#default_value'] = 'Buenos Aires Province';
+    }
+    $form['city'] = array(
+        '#type' => 'textfield',
+        '#title' => 'Ciudad',
+        '#default_value' => isset($_GET['city']) ? $_GET['city'] : '',
+    );
+    $category = taxonomy_get_tree(8);
+    $categorias = array('All' => 'Todas');
+    foreach ($category as $c) {
+        $categorias[$c->tid] = $c->name;
+    }
+
+    $form['field_categor_a_tid'] = array(
+        '#type' => 'select',
+        '#title' => 'Categoría',
+        '#options' => $categorias,
+        '#default_value' => isset($_GET['field_categor_a_tid']) ? $_GET['field_categor_a_tid'] : 'All',
+    );
+    $form['submit'] = array(
+        '#type' => 'submit',
+        '#value' => 'Aplicar',
+    );
+    return $form;
+}
+
+function custom_producto_filter_distribuidores_form_submit($form, &$form_state) {
+    $form_state['redirect'] = array(
+        'distribuidores',
+        array(
+            'query' => array(
+                'country' => $form_state['values']['country'],
+                'province' => $form_state['values']['province'],
+                'city' => $form_state['values']['city'],
+                'field_categor_a_tid' => $form_state['values']['field_categor_a_tid'],
+            ),
+        )
+    );
 }
 
 function ajax_example_dependent_dropdown_callback($form, $form_state) {
-    return $form['dropdown_second'];
+    return $form['province'];
+}
+
+function custom_producto_views_query_alter(&$view, &$query) {
+    if ($view->name == 'distribuidores') {
+        //&& is_numeric($view->exposed_raw_input['title']) && $view->exposed_raw_input['title'] > 0
+        // Traverse through the 'where' part of the query.
+        foreach ($query->where as &$condition_group) {
+            foreach ($condition_group['conditions'] as &$condition) {
+                if ($condition['field'] == 'location.province') {
+                    //$view->exposed_raw_input['title']
+                    $condition['value']= isset($_GET['provincia']) ? $_GET['provincia'] : 'Buenos Aires';
+                }
+                if ($condition['field'] == 'location.country') {
+                    //$view->exposed_raw_input['title']
+                    $condition['value']= isset($_GET['country']) ? $_GET['country'] : 'ar';
+                }
+            }
+        }
+    }
 }

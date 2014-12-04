@@ -5850,7 +5850,7 @@ body.page-productos-porcellanato {
     top: 112px;
 }
 
-.distribuidores #block-views-exp-distribuidores-page {
+.distribuidores #block-custom-producto-filter-distribuidores {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     float: right !important;
     padding: 15px !important;
@@ -5858,7 +5858,7 @@ body.page-productos-porcellanato {
 	margin-left: 25px;
 }
 
-.distribuidores #block-views-exp-distribuidores-page h2 {
+.distribuidores #block-custom-producto-filter-distribuidores h2 {
 	color: #000000;
     font-family: "PT Sans Narrow",sans-serif !important;
     font-size: 18px !important;
@@ -5934,22 +5934,18 @@ body.page-productos-porcellanato {
 	text-transform: uppercase;
 }
 
-.distribuidores .views-widget-filter-city,
-.distribuidores .views-widget-filter-province,
-.distribuidores .views-widget-filter-country {
+.distribuidores #block-custom-producto-filter-distribuidores .form-item {
 	float: left;
     padding: 0 10px 0 0;
     width: 174px;
 }
 
-.distribuidores .views-widget-filter-city input,
-.distribuidores .views-widget-filter-province input,
-.distribuidores .views-widget-filter-country select {
+.distribuidores #block-custom-producto-filter-distribuidores .form-select ,
+.distribuidores #block-custom-producto-filter-distribuidores .form-input {
     padding: 0;
 }
 
-.distribuidores .views-widget-filter-province select,
-.distribuidores .views-widget-filter-country select{
+.distribuidores #block-custom-producto-filter-distribuidores .form-select{
     background: none repeat scroll 0 0 #f6f6f6;
     border: 1px solid #ddd;
     border-radius: 2px;

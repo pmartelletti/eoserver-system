@@ -3725,6 +3725,7 @@ input, textarea, .chosen-container-single .chosen-single, #edit-field-categor-a-
     transition: all 0.3s ease 0s;
 }
 .form-textarea-wrapper textarea {height: 200px;}
+.webform-client-form-1313 .form-textarea-wrapper textarea{height: auto;}
 
 #respond .message{
     float: left;

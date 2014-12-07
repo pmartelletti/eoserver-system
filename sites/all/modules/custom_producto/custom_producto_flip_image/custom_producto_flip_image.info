@@ -1,0 +1,6 @@
+name = Custom Producto Flip Image
+description = Efecto FLIP en las imagenes que tienen descripcion
+package = Custom
+core = 7.x
+
+dependencies[] = lightbox2

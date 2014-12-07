@@ -1399,19 +1399,25 @@ All this is done for any sub-level being entered.
 		padding-top: 10px;
 	}
 	
-	
-	.productos_filtro_categoria,
 	.productos_filtro_linea {
 		padding: 15px 30px;
 	}
 	
-	.productos_filtro_categoria h2,
+	.productos_filtro_categoria {
+		background: none repeat scroll 0 0 #292828;
+		padding: 1% 3%;
+		width: 94%;
+	}
+	
 	.productos_filtro_linea h2 {
 		margin-bottom: 0;
 	}
 	
+	.productos_filtro_categoria h2 {
+		color: #ffffff;
+    	font-size: 18px;
+	}
 	
-	.productos_filtro_categoria ul,
 	.productos_filtro_linea ul {
 		background: none repeat scroll 0 0 #fff;
 		display: none;
@@ -1420,6 +1426,33 @@ All this is done for any sub-level being entered.
 		position: absolute;
 		top: 74px;
 		width: 174px;
+	}
+	
+	.productos_filtro_categoria ul {
+		background: none repeat scroll 0 0 #474645;
+		display: none;
+		left: 0;
+		padding: 1% 3%;
+		position: absolute;
+		top: 55px;
+		width: 94%;
+		margin: 0 !important;
+	}
+	
+	.productos_filtro_categoria ul li {
+		border-bottom: medium none;
+	}
+	
+	.productos_filtro_categoria ul li a {
+		color: #ffffff;
+		padding: 0 !important;
+	}
+	
+	
+	.productos_filtro_categoria ul li a.active,
+	.productos_filtro_categoria ul li a:hover {
+		color: #ffffff !important;
+		font-weight: 700;
 	}
 	
 	.detalle_producto {
@@ -1585,7 +1618,11 @@ All this is done for any sub-level being entered.
 	}
 	
 	.page-productos .container {
-		max-width: 430px;
+		max-width: 100%;
+	}
+	
+	.page-productos  article.grid_12 {
+		width: 100% !important;
 	}
 	
 	.page-productos .productos_filtro_linea .view-id-filter_categorias li:nth-child(2n) {

@@ -19,7 +19,6 @@ function custom_producto_flip_image_field_formatter_view($entity_type, $entity, 
     $element = array();
     drupal_add_css(drupal_get_path('module', 'custom_producto_flip_image') . '/css/fliper.css');
     foreach ($items as $delta => $item) {
-        if ($index === NULL || $index === $delta) {
             $element[$delta] = array(
                 '#theme' => 'custom_producto_flip_image_image_formatter',
                 '#item' => $item,
@@ -30,7 +29,6 @@ function custom_producto_flip_image_field_formatter_view($entity_type, $entity, 
                 '#display_settings' => $display['settings'],
                 '#delta' => $delta,
             );
-        }
     }
 
     return $element;

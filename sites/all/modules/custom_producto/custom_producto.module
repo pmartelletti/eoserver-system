@@ -259,7 +259,7 @@ function ajax_example_dependent_dropdown_callback($form, $form_state) {
 }
 
 function custom_producto_views_query_alter(&$view, &$query) {
-    if ($view->name == 'distribuidores') {
+   /* if ($view->name == 'distribuidores') {
         //&& is_numeric($view->exposed_raw_input['title']) && $view->exposed_raw_input['title'] > 0
         // Traverse through the 'where' part of the query.
         foreach ($query->where as &$condition_group) {
@@ -274,5 +274,5 @@ function custom_producto_views_query_alter(&$view, &$query) {
                 }
             }
         }
-    }
+    }*/
 }

@@ -9,6 +9,7 @@
 
 .flip-container, .front, .back {
 	height: auto;
+	min-height: 145px;
     width: 100%;
 }
 

@@ -40,11 +40,11 @@ function _custom_producto_get_items_filtro_all($term_name) {
     $items = array();
     $term_name = pathauto_cleanstring($term_name);
 
-    $items['ambientes'] = l('Ambientes', "productos/$term_name/ambientes");
-    $items['colores'] = l('Colores', "productos/$term_name/tonos");
     $items['lineas'] = l('Lineas', "productos/$term_name/lineas");
     $items['medidas'] = l('Medidas', "productos/$term_name/medidas");
+    $items['colores'] = l('Tonos', "productos/$term_name/tonos");
     $items['usos'] = l('Usos', "productos/$term_name/usos");
+    $items['ambientes'] = l('Ambientes', "productos/$term_name/ambientes");
 
     return $items;
 }

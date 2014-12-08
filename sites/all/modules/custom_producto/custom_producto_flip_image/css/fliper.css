@@ -8,6 +8,7 @@
 	}
 
 .flip-container, .front, .back {
+	cursor: pointer;
 	height: auto;
 	min-height: 145px;
     width: 100%;
@@ -40,4 +41,7 @@
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+	background: none repeat scroll 0 0 #000;
+    color: #fff;
+    padding: 5px;
 }

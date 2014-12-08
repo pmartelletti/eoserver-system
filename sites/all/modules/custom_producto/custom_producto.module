@@ -239,6 +239,38 @@ function custom_producto_filter_distribuidores_form($form, &$form_state) {
         '#suffix'=>'</div>',
     );
     return $form;
+    //Drupal.gmap.getMap('gmap-auto1map-gmap0').map.setCenter(Drupal.gmap.getMap('gmap-auto1map-gmap0').map.markers[1].getPosition())
+    /*
+// Loop through all gmap instances.
+jQuery(".gmap").each(function() {
+
+  // Get a map reference using the element ID.
+  gmapID = jQuery(this).attr("id");
+  var gmap = Drupal.gmap.getMap(gmapID).map;
+
+  // Ensure map exists.
+  if (gmap) {
+    alert(gmap.toSource());
+    // Create a new map boundary.
+    var bounds = new google.maps.LatLngBounds();
+    // Iterate though the current maps marker collection.
+    jQuery.each(gmap.markers, function(index) {
+      // Find the current markers position (latitude, longitude).
+      var data = gmap.markers[index];
+      var pos = data.getPosition();
+
+      // Extend the new boundary so the new marker/pin will be in view.
+      bounds.extend(new google.maps.LatLng(pos.lat(), pos.lng()));
+    });
+    // Set the current maps bounding box to our new defined boundary.
+    gmap.fitBounds(bounds);
+  }
+  else {
+    // GMap was not initialised in time.
+  }
+
+});
+     *      */
 }
 
 function custom_producto_filter_distribuidores_form_submit($form, &$form_state) {

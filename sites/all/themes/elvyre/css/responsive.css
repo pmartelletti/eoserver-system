@@ -1418,15 +1418,16 @@ All this is done for any sub-level being entered.
     	font-size: 18px;
 		margin-bottom: 0 !important;
 	}
-	
+
 	.productos_filtro_linea ul {
-		background: none repeat scroll 0 0 #fff;
+		background: none repeat scroll 0 0 #656463;
 		display: none;
 		left: 0;
-		padding: 0 30px 15px;
+		padding: 1% 3%;
 		position: absolute;
 		top: 74px;
-		width: 174px;
+		width: 94%;
+		margin-top: 202px;
 	}
 	
 	.productos_filtro_categoria ul {
@@ -1452,10 +1453,6 @@ All this is done for any sub-level being entered.
 	.page-productos .productos_filtro_linea {
 		padding-top: 0;
 		width: 100% !important;
-	}
-	
-	.productos_filtro_linea ul {
-		margin-top: 202px;
 	}
 	
 	.page-productos .productos_filtro_linea .view-id-filter_categorias li {
@@ -1693,11 +1690,6 @@ All this is done for any sub-level being entered.
 	
 	.contact .btn_display {
 		display: none;
-	}
-	
-	.productos_filtro_linea ul {
-		display: block;
-    	margin-top: 40px;
 	}
 	
 	.view-novedades ul {

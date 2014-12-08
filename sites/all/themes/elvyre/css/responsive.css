@@ -1418,6 +1418,10 @@ All this is done for any sub-level being entered.
     	font-size: 18px;
 		margin-bottom: 0 !important;
 	}
+	
+	.productos_filtro_categoria h2 a {
+		color: #ffffff !important;
+	}
 
 	.productos_filtro_linea ul {
 		background: none repeat scroll 0 0 #656463;
@@ -1643,7 +1647,8 @@ All this is done for any sub-level being entered.
 		max-width: 100%;
 	}
 	
-	.page-productos  article.grid_12 {
+	.page-productos  article.grid_12,
+	.page-novedades  article.grid_12 {
 		width: 100% !important;
 	}
 	

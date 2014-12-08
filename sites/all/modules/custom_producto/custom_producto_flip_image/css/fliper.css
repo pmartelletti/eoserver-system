@@ -10,7 +10,7 @@
 .flip-container, .front, .back {
 	cursor: pointer;
 	height: auto;
-	min-height: 145px;
+	min-height: 135px;
     width: 100%;
 }
 

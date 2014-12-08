@@ -1449,6 +1449,30 @@ All this is done for any sub-level being entered.
 		padding: 0 !important;
 	}
 	
+	.page-productos .productos_filtro_linea {
+		padding-top: 0;
+		width: 100% !important;
+	}
+	
+	.productos_filtro_linea ul {
+		margin-top: 202px;
+	}
+	
+	.page-productos .productos_filtro_linea .view-id-filter_categorias li {
+		border-bottom: medium none;
+		padding: 10px 0;
+		width: 33%;
+	}
+	
+	.page-productos .productos_filtro_linea .view-id-filter_categorias ul li a {
+		color: #fff;
+		padding: 0;
+	}
+	
+	.page-productos .productos_filtro_linea .view-id-filter_categorias ul li a:hover {
+		color: #ffffff;
+		font-weight: 700;
+	}
 	
 	.productos_filtro_categoria ul li a.active,
 	.productos_filtro_categoria ul li a:hover {

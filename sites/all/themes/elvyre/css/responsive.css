@@ -1467,7 +1467,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	.page-productos .productos_filtro_linea .view-id-filter_categorias ul li a:hover {
-		color: #ffffff;
+		color: #ffffff !important;
 		font-weight: 700;
 	}
 	

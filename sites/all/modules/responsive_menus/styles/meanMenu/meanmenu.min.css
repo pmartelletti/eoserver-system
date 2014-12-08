@@ -9,10 +9,10 @@
 .mean-container .mean-bar{width:auto;position:absolute;right:0;top:66px;background:none repeat scroll 0 0 rgba(0, 0, 0, 0);padding:4px 0;min-height:42px;z-index:999999}
 .mean-container a.meanmenu-reveal{width:22px;height:22px;padding:13px 13px 11px;position:absolute;top:0;right:0;cursor:pointer;color:#fff;text-decoration:none;font-size:16px;text-indent:-9999em;line-height:22px;font-size:1px;display:block;font-family:Arial,Helvetica,sans-serif;font-weight:700}
 .mean-container a.meanmenu-reveal span{display:block;background:#fff;height:3px;margin-top:3px}
-.mean-container .mean-nav{float:right;width:150px;background:#0c1923;margin-top:42px}
+.mean-container .mean-nav{float:right;width:100%;background:#0c1923;margin-top:42px}
 .mean-container .mean-nav ul{padding:0;margin:0;width:100%;list-style-type:none}
 .mean-container .mean-nav ul li{position:relative;float:left;width:100%}
-.mean-container .mean-nav ul li a{display:block;float:right;width:80%;padding:4% 9%;margin:0;text-align:left;color:#fff;border-top:none;text-decoration:none;text-transform:uppercase;text-align:right;font:700 16px "PT Sans Narrow", Arial, sans-serif;}
+.mean-container .mean-nav ul li a{display:block;float:left;width:94%;padding:1% 3%;margin:0;text-align:left;color:#fff;border-top:none;text-decoration:none;text-transform:uppercase;text-align:right;font:700 16px "PT Sans Narrow", Arial, sans-serif;}
 .mean-container .mean-nav ul li li a{width:80%;padding:1em 10%;border-top:1px solid #f1f1f1;border-top:1px solid rgba(255,255,255,.25);opacity:.75;filter:alpha(opacity=75);text-shadow:none!important;visibility:visible}
 .mean-container .mean-nav ul li.mean-last a{border-bottom:0;margin-bottom:0}
 .mean-container .mean-nav ul li li li a{width:70%;padding:1em 15%}
@@ -24,9 +24,9 @@
     border: 0 !important;
     font-weight: 700;
     height: auto;
-    left: 0;
+    right: 0;
     margin-top: 1px;
-    padding: 3% 9%;
+    padding: 1% 3%;
     position: absolute;
     text-align: center;
     top: 0;

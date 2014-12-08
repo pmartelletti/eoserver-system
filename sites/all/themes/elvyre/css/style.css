@@ -5782,10 +5782,10 @@ body.page-productos-porcellanato {
 .btn_display {
 	display: none;
     height: 42px;
-    left: 180px;
-    padding-top: 20px;
+    padding-top: 7px;
     position: absolute;
     width: 42px;
+	right: 12px;
 }
 
 .btn_display .display {

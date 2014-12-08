@@ -1643,6 +1643,7 @@ All this is done for any sub-level being entered.
 		width: 100%;
 	}
 	
+	.page-productos .container,
 	.page-productos .container {
 		max-width: 100%;
 	}

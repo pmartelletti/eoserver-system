@@ -3711,11 +3711,9 @@ input, textarea, .chosen-container-single .chosen-single, #edit-field-categor-a-
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     height: 30px;
-   /* width: 308px;*/
+    padding: 0;
     max-width: 100%;
     font: 13px 'Open Sans', Arial, sans-serif; 
-    padding-left: 10px;
-    padding-right: 10px;
     color: #666;
 
     -webkit-transition: all 0.3s ease 0s;
@@ -5857,6 +5855,10 @@ body.page-productos-porcellanato {
     width: 980px !important;
 	margin-left: 25px;
 }
+.distribuidores #block-custom-producto-filter-distribuidores .submit-button{
+    float: left;
+    padding: 0 1em 0 0 !important;
+}
 
 .distribuidores #block-custom-producto-filter-distribuidores h2 {
 	color: #000000;
@@ -5936,8 +5938,10 @@ body.page-productos-porcellanato {
 
 .distribuidores #block-custom-producto-filter-distribuidores .form-item {
 	float: left;
-    padding: 0 10px 0 0;
+    padding: 0 1em 0 0 !important;
     width: 174px;
+    margin-top: 0;
+     margin-bottom: 0;
 }
 
 .distribuidores #block-custom-producto-filter-distribuidores .form-select ,

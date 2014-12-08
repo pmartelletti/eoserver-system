@@ -691,7 +691,7 @@ All this is done for any sub-level being entered.
 		background: none repeat scroll 0 0 #000;
 		float: none;
 		margin: 0 auto;
-		padding: 12px 0;
+		padding: 12px 0 !important;
 		position: relative;
 	}
 	
@@ -835,7 +835,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	.not-front #logo {
-		background: url("http://www-sistema-durlock.com.ar/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center #000;
+		background: url("http://www-sistema-durlock.com.ar/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center #fff;
 	}
 	
 	#logo img {
@@ -940,9 +940,16 @@ All this is done for any sub-level being entered.
 		margin: 0;
 	}
 	
-	.institucional #block-system-main {
+	.institucional #block-system-main,
+	.galeria #block-system-main,
+	.galerias #block-system-main {
 		padding-left: 0;
 		width: 100%;
+	}
+	
+	.galeria #block-system-main .field-item {
+		padding: 0 5% 5% 0;
+		width: 45%;
 	}
 	
 	.institucional #block-system-main .left, .institucional .institucional_bot .left {
@@ -973,7 +980,9 @@ All this is done for any sub-level being entered.
 		display: block;
 	}
 	
-	.institucional #block-system-main h2 {
+	.institucional #block-system-main h2,
+	.galeria #block-system-main h1,
+	.galerias #block-system-main h2 {
 		font-size: 32px;
 		margin-bottom: 30px;
 	}
@@ -1053,6 +1062,42 @@ All this is done for any sub-level being entered.
 	
 	.front .tp-banner-container {
 		padding-top: 50px;
+	}
+	
+	.page-productos #page-title, .node-type-productos #page-title {
+		top: 130px;
+	}
+	
+	.productos #page-title {
+		display: none;
+	}
+	
+	.page-content {
+		padding-top: 40px;
+	}
+	
+	.page-productos .productos_filtro_linea {
+		display: none;
+	}
+	
+	.page-productos .block-system .view-id-productosbycategory ul li {
+		margin: 0;
+		width: 100%;
+	}
+	
+	.item-list .pager {
+		width: 250px;
+	}
+	
+	.item-list .pager li {
+		float: none;
+    	margin: 0;
+		width: auto !important;
+	}
+	
+	.node-type-novedades #block-system-main, .biblioteca-archivos #block-system-main {
+		padding-left: 0;
+		width: 100%;
 	}
 
 }
@@ -1337,10 +1382,10 @@ All this is done for any sub-level being entered.
     }
 	
 	.not-front #logo {
-		background: url("http://www-sistema-durlock.com.ar/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center #000;
+		background: url("http://www-sistema-durlock.com.ar/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center #fff;
 		float: none;
 		margin: 0 auto;
-		padding: 12px 0;
+		padding: 12px 0 !important;
 		position: relative;
 	}
 	
@@ -1354,27 +1399,86 @@ All this is done for any sub-level being entered.
 		padding-top: 10px;
 	}
 	
-	
-	.productos_filtro_categoria,
 	.productos_filtro_linea {
 		padding: 15px 30px;
 	}
 	
-	.productos_filtro_categoria h2,
+	.productos_filtro_categoria {
+		background: none repeat scroll 0 0 #292828;
+		padding: 1% 3%;
+		width: 94%;
+	}
+	
 	.productos_filtro_linea h2 {
 		margin-bottom: 0;
 	}
 	
+	.productos_filtro_categoria h2 {
+		color: #ffffff;
+    	font-size: 18px;
+		margin-bottom: 0 !important;
+	}
 	
-	.productos_filtro_categoria ul,
+	.productos_filtro_categoria h2 a {
+		color: #ffffff !important;
+	}
+
 	.productos_filtro_linea ul {
-		background: none repeat scroll 0 0 #fff;
+		background: none repeat scroll 0 0 #656463;
 		display: none;
 		left: 0;
-		padding: 0 30px 15px;
+		padding: 1% 3%;
 		position: absolute;
 		top: 74px;
-		width: 174px;
+		width: 94%;
+		margin-top: 202px;
+	}
+	
+	.productos_filtro_categoria ul {
+		background: none repeat scroll 0 0 #474645;
+		display: none;
+		left: 0;
+		padding: 1% 3%;
+		position: absolute;
+		top: 55px;
+		width: 94%;
+		margin: 0 !important;
+	}
+	
+	.productos_filtro_categoria ul li {
+		border-bottom: medium none;
+	}
+	
+	.productos_filtro_categoria ul li a {
+		color: #ffffff;
+		padding: 0 !important;
+	}
+	
+	.page-productos .productos_filtro_linea {
+		padding-top: 0;
+		width: 100% !important;
+	}
+	
+	.page-productos .productos_filtro_linea .view-id-filter_categorias li {
+		border-bottom: medium none;
+		padding: 10px 0;
+		width: 33%;
+	}
+	
+	.page-productos .productos_filtro_linea .view-id-filter_categorias ul li a {
+		color: #fff;
+		padding: 0;
+	}
+	
+	.page-productos .productos_filtro_linea .view-id-filter_categorias ul li a:hover {
+		color: #ffffff !important;
+		font-weight: 700;
+	}
+	
+	.productos_filtro_categoria ul li a.active,
+	.productos_filtro_categoria ul li a:hover {
+		color: #ffffff !important;
+		font-weight: 700;
 	}
 	
 	.detalle_producto {
@@ -1462,9 +1566,9 @@ All this is done for any sub-level being entered.
 		padding-top: 30px;
 	}
 	
-	.productos #logo {
+	/*.productos #logo {
 		padding: 12px 0 !important;
-	}
+	}*/
 	
 	.productos #page-title {
 		padding: 40px 0 200px !important;
@@ -1539,8 +1643,14 @@ All this is done for any sub-level being entered.
 		width: 100%;
 	}
 	
+	.page-productos .container,
 	.page-productos .container {
-		max-width: 430px;
+		max-width: 100%;
+	}
+	
+	.page-productos  article.grid_12,
+	.page-novedades  article.grid_12 {
+		width: 100% !important;
 	}
 	
 	.page-productos .productos_filtro_linea .view-id-filter_categorias li:nth-child(2n) {
@@ -1551,7 +1661,9 @@ All this is done for any sub-level being entered.
 		display: block;
 	}
 
-	.institucional #block-system-main {
+	.institucional #block-system-main,
+	.galeria #block-system-main,
+	.galerias #block-system-main {
 		padding-left: 0;
 		width: 100%;
 	}
@@ -1584,11 +1696,6 @@ All this is done for any sub-level being entered.
 	
 	.contact .btn_display {
 		display: none;
-	}
-	
-	.productos_filtro_linea ul {
-		display: block;
-    	margin-top: 40px;
 	}
 	
 	.view-novedades ul {
@@ -1631,6 +1738,56 @@ All this is done for any sub-level being entered.
 	
 	.front .tp-banner-container {
 		padding-top: 50px;
+	}
+	
+	.page-productos #page-title, .node-type-productos #page-title {
+		top: 130px;
+	}
+	
+	.productos #page-title {
+		display: none;
+	}
+	
+	.page-content {
+		padding-top: 40px;
+	}
+	
+	.page-productos .productos_filtro_linea {
+		display: none;
+	}
+	
+	.node-type-novedades #block-system-main, .biblioteca-archivos #block-system-main {
+		padding-left: 0;
+		width: 100%;
+	}
+	
+	.distribuidores #page-title {
+		height: 220px !important;
+		padding: 42px 0 0 !important;
+	}
+	
+	.distribuidores #block-custom-producto-filter-distribuidores {
+		float: left !important;
+		margin-left: 0 !important;
+		padding: 11px 0 !important;
+		width: 430px !important;
+	}
+	
+	.distribuidores .productos_filtro_categoria, .productos_filtro_linea {
+		padding: 15px 30px;
+		width: 370px !important;
+	}
+	
+	.distribuidores .page-content {
+		padding-top: 200px;
+	}
+	
+	.distribuidores .container {
+		max-width: 430px;
+	}
+	
+	.distribuidores .page-content .container #block-system-main {
+		width: 100% !important;
 	}
 
 }
@@ -2056,9 +2213,15 @@ All this is done for any sub-level being entered.
 		width: 30%;
 	}
 	
-	.institucional #block-system-main {
+	.institucional #block-system-main,
+	.galeria #block-system-main,
+	.galerias #block-system-main {
 		padding-left: 20px;
 		width: 530px;
+	}
+	
+	.galeria #block-system-main .field-item {
+		width: 31%;
 	}
 	
 	.institucional .parallax-4 {
@@ -2094,6 +2257,24 @@ All this is done for any sub-level being entered.
 	
 	.view-galeria-de-imagenes ul li {
 		width: 30.5%;
+	}
+	
+	.page-productos .block-system .view-id-productosbycategory div.item-list {
+		width: 100%;
+	}
+	
+	.node-type-novedades #block-system-main, .biblioteca-archivos #block-system-main {
+		padding-left: 20px;
+		padding-top: 13px;
+		width: 530px;
+	}
+	
+	.distribuidores .page-content .container #block-system-main {
+		width: 530px !important;
+	}
+	
+	.distribuidores #block-custom-producto-filter-distribuidores {
+		margin-left: 10px;
 	}
 
 }
@@ -2466,7 +2647,9 @@ All this is done for any sub-level being entered.
 		width: 296px;
 	}
 	
-	.institucional #block-system-main {
+	.institucional #block-system-main,
+	.galerias #block-system-main,
+	.galeria #block-system-main {
 		padding-left: 20px;
 		width: 710px;
 	}
@@ -2492,6 +2675,28 @@ All this is done for any sub-level being entered.
 	}
 	
 	.item-list .pager li {
+		float: none;
+    	margin: 0;
+	}
+	
+	.node-type-novedades #block-system-main, .biblioteca-archivos #block-system-main {
+		width: 670px;
+	}
+	
+	.distribuidores #page-title {
+		height: 180px !important;
+	}
+	
+	.distribuidores #block-custom-producto-filter-distribuidores {
+		width: 480px !important;
+	}
+	
+	.distribuidores .page-content .container #block-system-main {
+		width: 698px !important;
+	}
+	
+	.distribuidores .page-content .container #block-views-distribuidores-block-1 {
+		width: 100% !important;
 	}
 	
 }

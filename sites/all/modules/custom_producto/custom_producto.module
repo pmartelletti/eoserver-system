@@ -174,7 +174,6 @@ function custom_producto_theme() {
 
 function custom_producto_filter_distribuidores_form($form, &$form_state) {
     $_countries = country_get_list();
-    $_countries = array_merge(array('' => 'Seleccionar'), $_countries);
     $countries = array();
     if (!empty($_countries)) {
         while (list($code, $name) = each($_countries)) {
@@ -194,12 +193,11 @@ function custom_producto_filter_distribuidores_form($form, &$form_state) {
     $province = array();
     $country_selected = isset($form_state['values']['country']) ? $form_state['values']['country'] : (isset($_GET['country']) ? $_GET['country'] : 'ar');
     $_province = location_get_provinces($country_selected);
-    $_province = array_merge(array('' => 'Seleccionar'), $_province);
     if (!empty($_province)) {
         while (list($code, $name) = each($_province)) {
             $name = trim(str_replace('Distrito Federal', 'CABA', $name));
             $name = trim(str_replace('Province', '', $name));
-            $province[$name] = $name;
+            $province[$code] = $name;
         }
     }
     $form['country']['#default_value'] = $country_selected;
@@ -214,12 +212,13 @@ function custom_producto_filter_distribuidores_form($form, &$form_state) {
     if (isset($_GET['province'])) {
         $form['province']['#default_value'] = $_GET['province'];
     } else {
-        $form['province']['#default_value'] = 'Buenos Aires Province';
+        $form['province']['#default_value'] = 'B';
     }
     $form['city'] = array(
         '#type' => 'textfield',
         '#title' => 'Ciudad',
         '#default_value' => isset($_GET['city']) ? $_GET['city'] : '',
+        '#size' => 30,
     );
     $category = taxonomy_get_tree(8);
     $categorias = array('All' => 'Todas');
@@ -236,6 +235,8 @@ function custom_producto_filter_distribuidores_form($form, &$form_state) {
     $form['submit'] = array(
         '#type' => 'submit',
         '#value' => 'Aplicar',
+        '#prefix'=>'<div class="submit-button">',
+        '#suffix'=>'</div>',
     );
     return $form;
 }
@@ -259,20 +260,25 @@ function ajax_example_dependent_dropdown_callback($form, $form_state) {
 }
 
 function custom_producto_views_query_alter(&$view, &$query) {
-   /* if ($view->name == 'distribuidores') {
-        //&& is_numeric($view->exposed_raw_input['title']) && $view->exposed_raw_input['title'] > 0
-        // Traverse through the 'where' part of the query.
+    if ($view->name == 'distribuidores') {
         foreach ($query->where as &$condition_group) {
             foreach ($condition_group['conditions'] as &$condition) {
-                if ($condition['field'] == 'location.province') {
-                    //$view->exposed_raw_input['title']
-                    $condition['value']= isset($_GET['provincia']) ? $_GET['provincia'] : 'Buenos Aires';
+                if ($condition['field'] == 'field_data_field_categor_a.field_categor_a_tid' && filter_input(INPUT_GET, 'field_categor_a_tid', FILTER_DEFAULT)) {
+                    $condition['value'] = filter_input(INPUT_GET, 'city', FILTER_DEFAULT, array('options' => array('default' => 'All')));
+                }
+                if ($condition['field'] == 'location.city' && filter_input(INPUT_GET, 'city', FILTER_DEFAULT) != 'All') {
+                    if (filter_input(INPUT_GET, 'city', FILTER_DEFAULT)) {
+                        $condition['value'] = filter_input(INPUT_GET, 'city', FILTER_DEFAULT, array('options' => array('default' => '%')));
+                    }
                 }
                 if ($condition['field'] == 'location.country') {
-                    //$view->exposed_raw_input['title']
-                    $condition['value']= isset($_GET['country']) ? $_GET['country'] : 'ar';
+                    $condition['value'] = filter_input(INPUT_GET, 'country', FILTER_DEFAULT, array('options' => array('default' => 'ar')));
                 }
             }
         }
-    }*/
+        /* @var $query views_plugin_query_default */
+        if ($value = filter_input(INPUT_GET, 'province', FILTER_DEFAULT, array('options' => array('default' => 'B')))) {
+            $query->add_where(1, 'location.province', $value);
+        }
+    }
 }

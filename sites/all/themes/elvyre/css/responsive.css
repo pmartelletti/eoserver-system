@@ -1765,8 +1765,7 @@ All this is done for any sub-level being entered.
 		height: 220px !important;
 		padding: 42px 0 0 !important;
 	}
-	
-	.distribuidores #block-views-exp-distribuidores-page {
+	.distribuidores #block-custom-producto-filter-distribuidores {
 		float: left !important;
 		margin-left: 0 !important;
 		padding: 11px 0 !important;
@@ -2272,8 +2271,7 @@ All this is done for any sub-level being entered.
 	.distribuidores .page-content .container #block-system-main {
 		width: 530px !important;
 	}
-	
-	.distribuidores #block-views-exp-distribuidores-page {
+	.distribuidores #block-custom-producto-filter-distribuidores {
 		margin-left: 10px;
 	}
 
@@ -2686,8 +2684,7 @@ All this is done for any sub-level being entered.
 	.distribuidores #page-title {
 		height: 180px !important;
 	}
-	
-	.distribuidores #block-views-exp-distribuidores-page {
+        .distribuidores #block-custom-producto-filter-distribuidores {
 		width: 480px !important;
 	}
 	

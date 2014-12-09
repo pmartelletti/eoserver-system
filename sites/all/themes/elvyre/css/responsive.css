@@ -1152,6 +1152,10 @@ All this is done for any sub-level being entered.
 		color: #ffffff;
 		padding: 0 !important;
 	}
+	
+	.productos_filtro_categoria h2 a, .productos_filtro_linea h2 a {
+		color: #ffffff !important;
+	}
 
 }
 

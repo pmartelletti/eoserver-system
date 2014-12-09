@@ -1403,7 +1403,8 @@ All this is done for any sub-level being entered.
 		padding: 15px 30px;
 	}
 	
-	.productos_filtro_categoria {
+	.productos_filtro_categoria,
+	.productos_filtro_linea {
 		background: none repeat scroll 0 0 #292828;
 		padding: 1% 3%;
 		width: 94%;
@@ -1644,12 +1645,14 @@ All this is done for any sub-level being entered.
 	}
 	
 	.page-productos .container,
-	.page-novedades .container {
+	.page-novedades .container,
+	.institucional .container {
 		max-width: 100%;
 	}
 	
-	.page-productos  article.grid_12,
-	.page-novedades  article.grid_12 {
+	.page-productos article.grid_12,
+	.page-novedades article.grid_12,
+	.institucional article.grid_12 {
 		width: 100% !important;
 	}
 	

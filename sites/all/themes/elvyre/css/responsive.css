@@ -1659,7 +1659,9 @@ All this is done for any sub-level being entered.
 	
 	.page-productos article.grid_12,
 	.novedades article.grid_12,
-	.institucional article.grid_12 {
+	.institucional article.grid_12,
+	.galeria article.grid_12,
+	.galerias article.grid_12 {
 		width: 100% !important;
 	}
 	

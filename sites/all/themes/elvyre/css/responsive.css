@@ -1672,6 +1672,11 @@ All this is done for any sub-level being entered.
 	.btn_display {
 		display: block;
 	}
+	
+	.galeria .btn_display,
+	.galerias .btn_display {
+		display: none;
+	}
 
 	.institucional #block-system-main,
 	.galeria #block-system-main,

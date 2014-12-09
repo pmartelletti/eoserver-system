@@ -1190,6 +1190,17 @@ All this is done for any sub-level being entered.
 		padding-left: 1%;
 		width: 98%;
 	}
+	
+	.galeria .btn_display,
+	.galerias .btn_display,
+	.contacto .btn_display {
+		display: none;
+	}
+	
+	.galeria #block-system-main .field-item {
+		padding: 0 5% 5% 0;
+		width: 45%;
+	}
 
 }
 
@@ -2366,11 +2377,6 @@ All this is done for any sub-level being entered.
 	.galerias #block-system-main {
 		padding-left: 20px;
 		width: 530px;
-	}
-
-	.galeria #block-system-main .field-item {
-		padding: 0 5% 5% 0;
-		width: 45%;
 	}
 	
 	.institucional .parallax-4 {

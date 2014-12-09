@@ -1701,6 +1701,7 @@ All this is done for any sub-level being entered.
 	.mean-container .mean-nav ul li li a {
 		opacity: 1;
 		border-top: medium none;
+		padding: 1% 10%;
 	}
 	
 	.mean-container .mean-nav ul li li > div {

@@ -1703,7 +1703,7 @@ All this is done for any sub-level being entered.
 		border-top: medium none;
 	}
 	
-	.mean-container .mean-nav ul li li div {
+	.mean-container .mean-nav ul li li > div {
 		display: none;
 	}
 

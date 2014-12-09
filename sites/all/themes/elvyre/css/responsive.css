@@ -947,11 +947,6 @@ All this is done for any sub-level being entered.
 		width: 100%;
 	}
 	
-	.galeria #block-system-main .field-item {
-		padding: 0 5% 5% 0;
-		width: 45%;
-	}
-	
 	.institucional #block-system-main .left, .institucional .institucional_bot .left {
 		padding-right: 0;
 		width: 100%;
@@ -1806,6 +1801,10 @@ All this is done for any sub-level being entered.
 	.distribuidores .page-content .container #block-system-main {
 		width: 100% !important;
 	}
+	
+	.galeria #block-system-main .field-item {
+		width: 31%;
+	}
 
 }
 
@@ -2236,9 +2235,10 @@ All this is done for any sub-level being entered.
 		padding-left: 20px;
 		width: 530px;
 	}
-	
+
 	.galeria #block-system-main .field-item {
-		width: 31%;
+		padding: 0 5% 5% 0;
+		width: 45%;
 	}
 	
 	.institucional .parallax-4 {

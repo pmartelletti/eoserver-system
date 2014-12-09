@@ -1156,6 +1156,16 @@ All this is done for any sub-level being entered.
 	.productos_filtro_categoria h2 a, .productos_filtro_linea h2 a {
 		color: #ffffff !important;
 	}
+	
+	.mean-container .mean-nav ul li li > div {
+		display: none;
+	}
+	
+	.mean-container .mean-nav ul li li a {
+		border-top: medium none;
+		opacity: 1;
+		padding: 1% 10%;
+	}
 
 }
 

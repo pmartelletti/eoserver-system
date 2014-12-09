@@ -1697,6 +1697,15 @@ All this is done for any sub-level being entered.
 		margin-right: 81px !important;
 		width: 333px !important;
 	}
+	
+	.mean-container .mean-nav ul li li a {
+		opacity: 1;
+		border-top: medium none;
+	}
+	
+	.mean-container .mean-nav ul li li div {
+		display: none;
+	}
 
 	.institucional #block-system-main,
 	.galeria #block-system-main,

@@ -1166,6 +1166,27 @@ All this is done for any sub-level being entered.
 		opacity: 1;
 		padding: 1% 10%;
 	}
+	
+	.contacto .productos_filtro_linea ul li {
+		color: #ffffff;
+	}
+	
+	.productos_filtro_categoria ul,
+	.productos_filtro_linea ul {
+		background: none repeat scroll 0 0 #474645;
+		display: none;
+		left: 0;
+		margin: 0 !important;
+		padding: 1% 3%;
+		position: absolute;
+		top: 54px;
+		width: 94%;
+	}
+	
+	
+	.contacto .productos_filtro_linea ul li {
+		color: #ffffff;
+	}
 
 }
 

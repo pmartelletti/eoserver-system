@@ -1448,11 +1448,13 @@ All this is done for any sub-level being entered.
 		margin: 0 !important;
 	}
 	
-	.productos_filtro_categoria ul li {
+	.productos_filtro_categoria ul li,
+	.productos_filtro_linea ul li {
 		border-bottom: medium none;
 	}
 	
-	.productos_filtro_categoria ul li a {
+	.productos_filtro_categoria ul li a,
+	.productos_filtro_linea ul li a {
 		color: #ffffff;
 		padding: 0 !important;
 	}

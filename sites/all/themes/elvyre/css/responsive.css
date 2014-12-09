@@ -1104,6 +1104,31 @@ All this is done for any sub-level being entered.
 	.contacto .container {
 		max-width: 100%;
 	}
+	
+	.page-productos article.grid_12,
+	.novedades article.grid_12,
+	.institucional article.grid_12,
+	.galeria article.grid_12,
+	.galerias article.grid_12,
+	.biblioteca-archivos article.grid_12,
+	.contacto article.grid_12 {
+		width: 100% !important;
+	}
+	
+	.productos_filtro_categoria,
+	.productos_filtro_linea,
+	.contacto .productos_filtro_linea {
+		background: none repeat scroll 0 0 #292828;
+		padding: 1% 3%;
+		width: 94%;
+	}
+	
+	.productos_filtro_categoria h2,
+	.productos_filtro_linea h2 {
+		color: #ffffff;
+		font-size: 18px;
+		margin-bottom: 0 !important;
+	}
 
 }
 

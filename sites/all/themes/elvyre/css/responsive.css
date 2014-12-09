@@ -1436,7 +1436,8 @@ All this is done for any sub-level being entered.
 		margin-top: 202px;
 	}
 	
-	.productos_filtro_categoria ul {
+	.productos_filtro_categoria ul,
+	.productos_filtro_linea ul {
 		background: none repeat scroll 0 0 #474645;
 		display: none;
 		left: 0;

@@ -1649,7 +1649,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	.page-productos .container,
-	.page-novedades .container,
+	.novedades .container,
 	.institucional .container {
 		max-width: 100%;
 	}

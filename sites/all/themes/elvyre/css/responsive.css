@@ -1648,7 +1648,8 @@ All this is done for any sub-level being entered.
 	.novedades .container,
 	.institucional .container,
 	.galeria .container,
-	.galerias .container {
+	.galerias .container,
+	.biblioteca-archivos .container {
 		max-width: 100%;
 	}
 	
@@ -1804,6 +1805,7 @@ All this is done for any sub-level being entered.
 	
 	.galeria #block-system-main .field-item {
 		width: 31%;
+		overflow: hidden;
 	}
 
 }

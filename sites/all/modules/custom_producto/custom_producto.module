@@ -62,6 +62,12 @@ function custom_producto_block_info() {
         'pages' => 'productos/*
 producto/*',
     );
+    $blocks['filter_distribuidores'] = array(
+        'info' => t('Filtro distribuidores'),
+        'cache' => DRUPAL_CACHE_PER_PAGE,
+        'visibility' => BLOCK_VISIBILITY_LISTED,
+        'pages' => 'distribuidores',
+    );
     return $blocks;
 }
 
@@ -106,9 +112,9 @@ function custom_producto_block_view($delta = '') {
             $list = array();
             if ($type == 'tonos') {
                 foreach ($items as $item) {
-                    $name = theme('image_style', array('style_name'=>'125x125', 'path'=>$item->field_icono[LANGUAGE_NONE][0]['uri']));
+                    $name = theme('image_style', array('style_name' => '125x125', 'path' => $item->field_icono[LANGUAGE_NONE][0]['uri']));
                     $url = str_replace(array(' '), array('-'), $item->name);
-                    $list[] = l($name, "productos/$arg/$type/$url", array('html'=>true));
+                    $list[] = l($name, "productos/$arg/$type/$url", array('html' => true));
                 }
             } else {
                 foreach ($items as $item) {
@@ -141,6 +147,10 @@ function custom_producto_block_view($delta = '') {
                 );
             }
             break;
+        case 'filter_distribuidores':
+            $block['subject'] = '';
+            $block['content'] = drupal_get_form('custom_producto_filter_distribuidores_form');
+            break;
     }
     return $block;
 }
@@ -160,4 +170,147 @@ function custom_producto_theme() {
             'variables' => array('list' => '',),
         ),
     );
+}
+
+function custom_producto_filter_distribuidores_form($form, &$form_state) {
+    $_countries = country_get_list();
+    $countries = array();
+    if (!empty($_countries)) {
+        while (list($code, $name) = each($_countries)) {
+            $countries[strtolower($code)] = $name;
+        }
+    }
+
+    $form['country'] = array(
+        '#type' => 'select',
+        '#title' => 'País',
+        '#options' => $countries,
+        '#ajax' => array(
+            'callback' => 'ajax_example_dependent_dropdown_callback',
+            'wrapper' => 'dropdown-second-replace',
+        ),
+    );
+    $province = array();
+    $country_selected = isset($form_state['values']['country']) ? $form_state['values']['country'] : (isset($_GET['country']) ? $_GET['country'] : 'ar');
+    $_province = location_get_provinces($country_selected);
+    if (!empty($_province)) {
+        while (list($code, $name) = each($_province)) {
+            $name = trim(str_replace('Distrito Federal', 'CABA', $name));
+            $name = trim(str_replace('Province', '', $name));
+            $province[$code] = $name;
+        }
+    }
+    $form['country']['#default_value'] = $country_selected;
+
+    $form['province'] = array(
+        '#type' => 'select',
+        '#title' => 'Provincia',
+        '#prefix' => '<div id="dropdown-second-replace">',
+        '#suffix' => '</div>',
+        '#options' => $province,
+    );
+    if (isset($_GET['province'])) {
+        $form['province']['#default_value'] = $_GET['province'];
+    } else {
+        $form['province']['#default_value'] = 'B';
+    }
+    $form['city'] = array(
+        '#type' => 'textfield',
+        '#title' => 'Ciudad',
+        '#default_value' => isset($_GET['city']) ? $_GET['city'] : '',
+        '#size' => 30,
+    );
+    $category = taxonomy_get_tree(8);
+    $categorias = array('All' => 'Todas');
+    foreach ($category as $c) {
+        $categorias[$c->tid] = $c->name;
+    }
+
+    $form['field_categor_a_tid'] = array(
+        '#type' => 'select',
+        '#title' => 'Categoría',
+        '#options' => $categorias,
+        '#default_value' => isset($_GET['field_categor_a_tid']) ? $_GET['field_categor_a_tid'] : 'All',
+    );
+    $form['submit'] = array(
+        '#type' => 'submit',
+        '#value' => 'Aplicar',
+        '#prefix'=>'<div class="submit-button">',
+        '#suffix'=>'</div>',
+    );
+    return $form;
+    //  
+    /*
+// Loop through all gmap instances.
+jQuery(".gmap").each(function() {
+
+  // Get a map reference using the element ID.
+  gmapID = jQuery(this).attr("id");
+  var gmap = Drupal.gmap.getMap(gmapID).map;
+
+  // Ensure map exists.
+  if (gmap) {
+    alert(gmap.toSource());
+    // Create a new map boundary.
+    var bounds = new google.maps.LatLngBounds();
+    // Iterate though the current maps marker collection.
+    jQuery.each(gmap.markers, function(index) {
+      // Find the current markers position (latitude, longitude).
+      var data = gmap.markers[index];
+      var pos = data.getPosition();
+
+      // Extend the new boundary so the new marker/pin will be in view.
+      bounds.extend(new google.maps.LatLng(pos.lat(), pos.lng()));
+    });
+    // Set the current maps bounding box to our new defined boundary.
+    gmap.fitBounds(bounds);
+  }
+  else {
+    // GMap was not initialised in time.
+  }
+
+});
+     *      */
+}
+
+function custom_producto_filter_distribuidores_form_submit($form, &$form_state) {
+    $form_state['redirect'] = array(
+        'distribuidores',
+        array(
+            'query' => array(
+                'country' => $form_state['values']['country'],
+                'province' => $form_state['values']['province'],
+                'city' => $form_state['values']['city'],
+                'field_categor_a_tid' => $form_state['values']['field_categor_a_tid'],
+            ),
+        )
+    );
+}
+
+function ajax_example_dependent_dropdown_callback($form, $form_state) {
+    return $form['province'];
+}
+
+function custom_producto_views_query_alter(&$view, &$query) {
+    if ($view->name == 'distribuidores') {
+        foreach ($query->where as &$condition_group) {
+            foreach ($condition_group['conditions'] as &$condition) {
+                if ($condition['field'] == 'field_data_field_categor_a.field_categor_a_tid' && filter_input(INPUT_GET, 'field_categor_a_tid', FILTER_DEFAULT)) {
+                    $condition['value'] = filter_input(INPUT_GET, 'city', FILTER_DEFAULT, array('options' => array('default' => 'All')));
+                }
+                if ($condition['field'] == 'location.city' && filter_input(INPUT_GET, 'city', FILTER_DEFAULT) != 'All') {
+                    if (filter_input(INPUT_GET, 'city', FILTER_DEFAULT)) {
+                        $condition['value'] = filter_input(INPUT_GET, 'city', FILTER_DEFAULT, array('options' => array('default' => '%')));
+                    }
+                }
+                if ($condition['field'] == 'location.country') {
+                    $condition['value'] = filter_input(INPUT_GET, 'country', FILTER_DEFAULT, array('options' => array('default' => 'ar')));
+                }
+            }
+        }
+        /* @var $query views_plugin_query_default */
+        if ($value = filter_input(INPUT_GET, 'province', FILTER_DEFAULT, array('options' => array('default' => 'B')))) {
+            $query->add_where(1, 'location.province', $value);
+        }
+    }
 }

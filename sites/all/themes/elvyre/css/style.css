@@ -3711,11 +3711,9 @@ input, textarea, .chosen-container-single .chosen-single, #edit-field-categor-a-
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     height: 30px;
-   /* width: 308px;*/
+    padding: 0;
     max-width: 100%;
     font: 13px 'Open Sans', Arial, sans-serif; 
-    padding-left: 10px;
-    padding-right: 10px;
     color: #666;
 
     -webkit-transition: all 0.3s ease 0s;
@@ -5863,15 +5861,19 @@ body.page-productos-porcellanato {
     top: 112px;
 }
 
-.distribuidores #block-views-exp-distribuidores-page {
+.distribuidores #block-custom-producto-filter-distribuidores {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     float: right !important;
     padding: 15px !important;
     width: 980px !important;
 	margin-left: 25px;
 }
+.distribuidores #block-custom-producto-filter-distribuidores .submit-button{
+    float: left;
+    padding: 0 1em 0 0 !important;
+}
 
-.distribuidores #block-views-exp-distribuidores-page h2 {
+.distribuidores #block-custom-producto-filter-distribuidores h2 {
 	color: #000000;
     font-family: "PT Sans Narrow",sans-serif !important;
     font-size: 18px !important;
@@ -5947,21 +5949,20 @@ body.page-productos-porcellanato {
 	text-transform: uppercase;
 }
 
-.distribuidores .views-widget-filter-city,
-.distribuidores .views-widget-filter-province,
-.distribuidores .views-widget-filter-country {
+.distribuidores #block-custom-producto-filter-distribuidores .form-item {
 	float: left;
-    padding: 0 10px 0 0;
+    padding: 0 1em 0 0 !important;
     width: 174px;
+    margin-top: 0;
+     margin-bottom: 0;
 }
 
-.distribuidores .views-widget-filter-city input,
-.distribuidores .views-widget-filter-province input,
-.distribuidores .views-widget-filter-country select {
+.distribuidores #block-custom-producto-filter-distribuidores .form-select ,
+.distribuidores #block-custom-producto-filter-distribuidores .form-input {
     padding: 0;
 }
 
-.distribuidores .views-widget-filter-country select {
+.distribuidores #block-custom-producto-filter-distribuidores .form-select{
     background: none repeat scroll 0 0 #f6f6f6;
     border: 1px solid #ddd;
     border-radius: 2px;

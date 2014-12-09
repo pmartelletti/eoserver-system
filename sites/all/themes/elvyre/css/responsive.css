@@ -1657,7 +1657,8 @@ All this is done for any sub-level being entered.
 	.novedades article.grid_12,
 	.institucional article.grid_12,
 	.galeria article.grid_12,
-	.galerias article.grid_12 {
+	.galerias article.grid_12,
+	.biblioteca-archivos article.grid_12 {
 		width: 100% !important;
 	}
 	

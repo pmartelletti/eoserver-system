@@ -1682,8 +1682,20 @@ All this is done for any sub-level being entered.
 	}
 	
 	.galeria .btn_display,
-	.galerias .btn_display {
+	.galerias .btn_display,
+	.contacto .btn_display {
 		display: none;
+	}
+	
+	.contacto #block-system-main {
+		margin-top: 130px;
+		padding-left: 1%;
+		width: 98%;
+	}
+	
+	.contacto .wpcf7-submit {
+		margin-right: 81px !important;
+		width: 333px !important;
 	}
 
 	.institucional #block-system-main,

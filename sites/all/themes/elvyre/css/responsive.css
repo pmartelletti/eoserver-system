@@ -1414,7 +1414,8 @@ All this is done for any sub-level being entered.
 		margin-bottom: 0;
 	}
 	
-	.productos_filtro_categoria h2 {
+	.productos_filtro_categoria h2,
+	.productos_filtro_linea h2 {
 		color: #ffffff;
     	font-size: 18px;
 		margin-bottom: 0 !important;
@@ -1775,7 +1776,7 @@ All this is done for any sub-level being entered.
 		width: 430px !important;
 	}
 	
-	.distribuidores .productos_filtro_categoria, .productos_filtro_linea {
+	.distribuidores .productos_filtro_categoria {
 		padding: 15px 30px;
 		width: 370px;
 	}

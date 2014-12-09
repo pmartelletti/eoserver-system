@@ -1445,6 +1445,14 @@ All this is done for any sub-level being entered.
 		margin: 0 !important;
 	}
 	
+	.contacto .productos_filtro_linea ul {
+		display: block !important;
+	}
+	
+	.contacto .productos_filtro_linea ul li {
+		color: #ffffff;
+	}
+	
 	.productos_filtro_categoria ul li,
 	.productos_filtro_linea ul li {
 		border-bottom: medium none;

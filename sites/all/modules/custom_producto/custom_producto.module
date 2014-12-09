@@ -239,7 +239,7 @@ function custom_producto_filter_distribuidores_form($form, &$form_state) {
         '#suffix'=>'</div>',
     );
     return $form;
-    //Drupal.gmap.getMap('gmap-auto1map-gmap0').map.setCenter(Drupal.gmap.getMap('gmap-auto1map-gmap0').map.markers[1].getPosition())
+    //  
     /*
 // Loop through all gmap instances.
 jQuery(".gmap").each(function() {

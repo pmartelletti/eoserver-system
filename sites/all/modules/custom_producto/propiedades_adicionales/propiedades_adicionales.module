@@ -1,0 +1,169 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function propiedades_adicionales_menu() {
+    $items['prop-adi/autocomplete'] = array(
+        'title' => 'Autocomplete taxonomy',
+        'page callback' => 'propiedades_adicionales_taxonomy_autocomplete',
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+    return $items;
+}
+
+function propiedades_adicionales_field_widget_info() {
+    return array(
+        'propiedades_adicionales_sa' => array(
+            'label' => t('Propiedades adicionales'),
+            'field types' => array('taxonomy_term_reference'),
+        ),
+    );
+}
+
+function propiedades_adicionales_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+    // Get value.
+    $element_value = NULL;
+    if (!empty($items[$delta]['tid'])) {
+        // Use saved value from database or cache.
+        $element_value = $items[$delta]['tid'];
+    } elseif (!empty($form_state['values'][$element['#field_name']][$element['#language']][$delta]['tid'])) {
+        // Use value from form_state (for example for fields with cardinality = -1).
+        $element_value = $form_state['values'][$element['#field_name']][$element['#language']][$delta]['tid'];
+    }
+
+    // Get vocabulary.
+    $allowed_values = reset($field['settings']['allowed_values']);
+    if (empty($allowed_values['vocabulary']) || ($vocabulary = taxonomy_vocabulary_machine_name_load($allowed_values['vocabulary'])) === FALSE) {
+        // No vocabulary selected yet or vocabulary not found.
+        return array();
+    }
+
+    // Check if term exists (may be deleted).
+    if ($element_value && (($term = taxonomy_term_load($element_value)) === FALSE)) {
+        $element_value = 0;
+    }
+    $_options = taxonomy_get_tree($vocabulary->vid, 0, 1);
+    $options = array();
+    foreach ($_options as $k => $v) {
+        $options[$v->tid] = $v->name;
+    }
+
+    /* $element['tid'] = $element;
+      /$element['tid'][] = array(
+      '#type' => 'select',
+      '#title' => 'Ejemplo First',
+      '#default_value' => $element_value,
+      '#options' => $options,
+      );
+      $element['tid'][] = array(
+      '#type' => 'textfield',
+      '#autocomplete_path' => 'prop-adi/autocomplete/' . $field['field_name'] . '/' . $element_value,
+      ); */
+    $element['first'] = $element;
+    $element['first'] += array(
+        '#type' => 'select',
+        '#title' => 'Ejemplo First',
+        '#default_value' => $element_value,
+        '#options' => $options,
+    );
+    $element['second'] = $element;
+    $element['second'] += array(
+        '#type' => 'textfield',
+        '#autocomplete_path' => 'prop-adi/autocomplete/' . $field['field_name'] . '/' . $element_value,
+    );
+
+    return $element;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function propiedades_adicionales_form_taxonomy_form_term_alter(&$form, &$form_state, $form_id) {
+    if (isset($form_state['confirm_delete']) && isset($form_state['values']['vid'])) {
+        // Add custom submit handler to update cache.
+        array_unshift($form['#submit'], 'shs_form_taxonomy_form_term_submit');
+    }
+}
+
+/**
+ * Implements hook_hook_taxonomy_term_delete().
+ */
+function propiedades_adicionales_form_taxonomy_form_term_submit(&$form, &$form_state) {
+    // Update vocabulary cache for the terms parents.
+    $parents = db_select('taxonomy_term_hierarchy', 'tth')
+            ->fields('tth', array('parent'))
+            ->condition('tid', $form_state['term']->tid)
+            ->execute()
+            ->fetchAll();
+    if ($parents) {
+        // Update vocabulary cache for the terms parents.
+        foreach ($parents as $parent) {
+            shs_term_get_children($form_state['term']->vid, $parent->parent, array('node_count' => TRUE), TRUE);
+        }
+    }
+}
+
+function propiedades_adicionales_taxonomy_autocomplete($field_name = '', $parent_tid = NULL, $tags_typed = '') {
+    // If the request has a '/' in the search text, then the menu system will have
+    // split it into multiple arguments, recover the intended $tags_typed.
+    $args = func_get_args();
+    // Shift off the $field_name argument.
+    array_shift($args);
+    array_shift($args);
+    $tags_typed = implode('/', $args);
+
+    // Make sure the field exists and is a taxonomy field.
+    if (!($field = field_info_field($field_name)) || $field['type'] !== 'taxonomy_term_reference') {
+        // Error string. The JavaScript handler will realize this is not JSON and
+        // will display it as debugging information.
+        print t('Taxonomy field @field_name not found.', array('@field_name' => $field_name));
+        exit;
+    }
+
+    // The user enters a comma-separated list of tags. We only autocomplete the last tag.
+    $tags_typed = drupal_explode_tags($tags_typed);
+    $tag_last = drupal_strtolower(array_pop($tags_typed));
+
+    $term_matches = array();
+    if ($tag_last != '') {
+
+        // Part of the criteria for the query come from the field's own settings.
+        $vids = array();
+        $vocabularies = taxonomy_vocabulary_get_names();
+        foreach ($field['settings']['allowed_values'] as $tree) {
+            $vids[] = $vocabularies[$tree['vocabulary']]->vid;
+        }
+
+        $query = db_select('taxonomy_term_data', 't');
+        $query->addTag('translatable');
+        $query->addTag('term_access');
+
+        // Do not select already entered terms.
+        if (!empty($tags_typed)) {
+            $query->condition('t.name', $tags_typed, 'NOT IN');
+        }
+        // Select rows that match by term name.
+        $query->fields('t', array('tid', 'name'))
+                ->condition('t.vid', $vids);
+        $query->innerJoin('taxonomy_term_hierarchy', 'taxonomy_term_hierarchy', 'taxonomy_term_hierarchy.tid = t.tid');
+        $tags_return = $query->condition('t.name', '%' . db_like($tag_last) . '%', 'LIKE')
+                ->condition('taxonomy_term_hierarchy.parent', $parent_tid)
+                ->execute()
+                ->fetchAllKeyed();
+
+        $prefix = count($tags_typed) ? drupal_implode_tags($tags_typed) . ', ' : '';
+
+        foreach ($tags_return as $tid => $name) {
+            $n = $name;
+            // Term names containing commas or quotes must be wrapped in quotes.
+            if (strpos($name, ',') !== FALSE || strpos($name, '"') !== FALSE) {
+                $n = '"' . str_replace('"', '""', $name) . '"';
+            }
+            $term_matches[$prefix . $tid] = check_plain($name);
+        }
+    }
+
+    drupal_json_output($term_matches);
+}

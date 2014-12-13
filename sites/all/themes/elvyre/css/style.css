@@ -5904,44 +5904,44 @@ body.page-productos-porcellanato {
 	height: 350px !important;
 }
 
-.distribuidores .page-content .container #block-views-distribuidores-block-1 {
+.view.view-distribuidores.view-display-id-attachment_1 {
 	float: right;
     margin: 0 auto !important;
     padding-top: 40px !important;
     width: 995px !important;
 }
 
-.distribuidores .page-content .container #block-views-distribuidores-block-1 table {
+.view.view-distribuidores.view-display-id-attachment_1 table {
 	width: 100%;
 }
 
-.distribuidores .page-content .container #block-views-distribuidores-block-1 thead {
+.view.view-distribuidores.view-display-id-attachment_1 thead {
 	border-bottom: 1px solid #000;
     border-top: 1px solid #000;
 }
 
-.distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-title-1,
-.distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-field-location,
-.distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-field-tel-fono {
+.view.view-distribuidores.view-display-id-attachment_1 table .views-field-title-1,
+.view.view-distribuidores.view-display-id-attachment_1 table .views-field-field-location,
+.view.view-distribuidores.view-display-id-attachment_1 table .views-field-field-tel-fono {
 	padding: 15px 20px;
     width: 250px;
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
-.distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-field-email {
+.view.view-distribuidores.view-display-id-attachment_1 table .views-field-field-email {
 	padding: 15px 20px;
     width: 335px;
 }
 
-.distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-nothing {
+.view.view-distribuidores.view-display-id-attachment_1 table .views-field-nothing {
 	padding: 15px 20px;
 	text-align: center;
     width: 100px;
 }
 
-.distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-title-1 a,
-.distribuidores .page-content .container #block-views-distribuidores-block-1 table .views-field-field-location a,
-.distribuidores .page-content .container #block-views-distribuidores-block-1 table th {
+.view.view-distribuidores.view-display-id-attachment_1 table .views-field-title-1 a,
+.view.view-distribuidores.view-display-id-attachment_1 table .views-field-field-location a,
+.view.view-distribuidores.view-display-id-attachment_1 table th {
 	color: #000;
     font-family: "PT Sans Narrow",sans-serif !important;
     font-size: 18px;
@@ -5973,7 +5973,7 @@ body.page-productos-porcellanato {
     width: 100%;
 }
 
-.distribuidores .page-content .container #block-views-distribuidores-block-1 table td {
+.view.view-distribuidores.view-display-id-attachment_1 table td {
 	color: #000;
     font-family: verdana;
     font-size: 12px;

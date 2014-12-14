@@ -1853,8 +1853,9 @@ All this is done for any sub-level being entered.
 	.institucional #block-system-main,
 	.galeria #block-system-main,
 	.galerias #block-system-main {
-		padding-left: 1%;
-    	width: 98%;
+		padding-left: 2.5%;
+		padding-top: 2.5%;
+		width: 95%;
 	}
 	
 	.institucional #block-system-main .left, .institucional .institucional_bot .left {

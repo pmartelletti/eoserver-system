@@ -1766,7 +1766,8 @@ All this is done for any sub-level being entered.
 	.galeria .container,
 	.galerias .container,
 	.biblioteca-archivos .container,
-	.contacto .container {
+	.contacto .container,
+	.producto .container {
 		max-width: 100%;
 	}
 	
@@ -1808,7 +1809,7 @@ All this is done for any sub-level being entered.
 	.mean-container .mean-nav ul li li a {
 		opacity: 1;
 		border-top: medium none;
-		padding: 1% 10%;
+		padding: 2% 10%;
 	}
 	
 	.mean-container .mean-nav ul li li > div {

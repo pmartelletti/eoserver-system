@@ -1646,24 +1646,27 @@ All this is done for any sub-level being entered.
 	
 	.detalle_producto .imagen img {
 		height: auto;
-		max-width: 280px;
+		max-width: 100%;
+	}
+	
+	.muestra_producto {
+		margin-left: 2.5% !important;
+		margin-right: 0 !important;
+		width: 95% !important;
 	}
 	
 	.muestra_producto .opciones {
 		background: none repeat scroll 0 0 #fff;
-		display: none;
-		position: absolute;
-		top: 303px;
 	}
 	
 	.muestra_producto .opciones li {
-		margin: 10px !important;
+		margin: 10px 0 !important;
 	}
 	
 	.muestra_producto .detalle {
 		margin-left: 0;
-		width: 430px;
-		padding-top: 120px;
+		width: 100%;
+		padding-top: 20px;
 	}
 	
 	.node-type-productos .muestra_producto .imagenes {
@@ -1803,7 +1806,8 @@ All this is done for any sub-level being entered.
 	
 	.galeria .btn_display,
 	.galerias .btn_display,
-	.contacto .btn_display {
+	.contacto .btn_display,
+	.producto .btn_display {
 		display: none;
 	}
 	

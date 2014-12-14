@@ -1650,7 +1650,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	.muestra_producto {
-		margin-left: 2.5% !important;
+		padding-left: 2.5% !important;
 		margin-right: 0 !important;
 		width: 95% !important;
 	}
@@ -1667,6 +1667,16 @@ All this is done for any sub-level being entered.
 		margin-left: 0;
 		width: 100%;
 		padding-top: 20px;
+	}
+	
+	.muestra_producto .right {
+		float: left;
+		padding-left: 0 !important;
+		width: 100%;
+	}
+	
+	.muestra_producto .right .caroufredsel_wrapper {
+		width: 100% !important;
 	}
 	
 	.node-type-productos .muestra_producto .imagenes {

@@ -1,0 +1,4 @@
+name = Field para las Propiedades adicionales
+description = Propiedades adicionales
+package = Custom
+core = 7.x

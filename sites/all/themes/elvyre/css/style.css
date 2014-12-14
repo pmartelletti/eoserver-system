@@ -5921,10 +5921,27 @@ body.page-productos-porcellanato {
 }
 
 .distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-title-1,
-.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-field-location,
-.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-field-tel-fono {
+.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-street {
 	padding: 15px 20px;
-    width: 250px;
+    width: 230px;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-city {
+	padding: 15px 20px;
+    width: 150px;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-province {
+	padding: 15px 20px;
+    width: 190px;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-country {
+	padding: 15px 20px;
+    width: 110px;
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 

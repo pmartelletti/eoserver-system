@@ -1483,6 +1483,7 @@ All this is done for any sub-level being entered.
         margin-bottom: 10px;
     }
 	
+	#logo,
 	.not-front #logo {
 		background: url("http://www-sistema-durlock.com.ar/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center #fff;
 		float: none;
@@ -1547,7 +1548,7 @@ All this is done for any sub-level being entered.
 		left: 0;
 		padding: 1% 3%;
 		position: absolute;
-		top: 54px;
+		top: 53px;
 		width: 94%;
 		margin: 0 !important;
 	}
@@ -1831,13 +1832,16 @@ All this is done for any sub-level being entered.
 	
 	.contacto #block-system-main {
 		margin-top: 130px;
-		padding-left: 1%;
-		width: 98%;
+		padding-left: 2.5%;
+    	width: 95%;
+	}
+	
+	.contacto #block-system-main select {
+		width: 330px;
 	}
 	
 	.contacto .wpcf7-submit {
-		margin-right: 81px !important;
-		width: 333px !important;
+		width: 330px !important;
 	}
 	
 	.mean-container .mean-nav ul li li a {
@@ -1856,6 +1860,11 @@ All this is done for any sub-level being entered.
 		padding-left: 2.5%;
 		padding-top: 2.5%;
 		width: 95%;
+	}
+	
+	.flip-container .back {
+		height: 130px;
+		width: 92%;
 	}
 	
 	.institucional #block-system-main .left, .institucional .institucional_bot .left {
@@ -1878,7 +1887,9 @@ All this is done for any sub-level being entered.
 	}
 	
 	.contacto #block-block-21 {
-		margin-left: 0;
+		margin-left: 2.5%;
+		margin-top: 50px;
+		width: 95%;
 	}
 	
 	.biblioteca-archivos #block-system-main {
@@ -1914,12 +1925,12 @@ All this is done for any sub-level being entered.
 		display: none;
 	}
 	
-	#logo {
+	/*#logo {
 		background: url("http://104.131.52.104/sites/all/themes/elvyre/logo_b.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 		height: 40px;
 		margin: 20px 0;
 		padding: 0 !important;
-	}
+	}*/
 	
 	.mean-container .mean-bar {
 		background: none repeat scroll 0 0 #000;

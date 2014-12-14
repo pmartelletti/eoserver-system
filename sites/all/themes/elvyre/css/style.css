@@ -5896,7 +5896,7 @@ body.page-productos-porcellanato {
 
 .distribuidores .page-content .container #block-system-main {
 	float: right;
-    height: 350px !important;
+    /*height: 350px !important;*/
     width: 995px !important;
 }
 
@@ -5922,14 +5922,14 @@ body.page-productos-porcellanato {
 
 .distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-title-1,
 .distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-street {
-	padding: 15px 20px;
-    width: 230px;
+	padding: 15px;
+    width: 270px;
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
 .distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-city {
 	padding: 15px 20px;
-    width: 150px;
+    width: 120px;
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
@@ -5948,6 +5948,10 @@ body.page-productos-porcellanato {
 .distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-field-email {
 	padding: 15px 20px;
     width: 335px;
+}
+
+.distribuidores .page-content .container .view-display-id-attachment_1 table tr td:last-child {
+	padding: 9px 0;
 }
 
 .distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-nothing {

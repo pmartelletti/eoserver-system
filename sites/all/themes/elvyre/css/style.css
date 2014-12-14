@@ -5896,7 +5896,7 @@ body.page-productos-porcellanato {
 
 .distribuidores .page-content .container #block-system-main {
 	float: right;
-    height: 350px !important;
+    /*height: 350px !important;*/
     width: 995px !important;
 }
 
@@ -5904,44 +5904,65 @@ body.page-productos-porcellanato {
 	height: 350px !important;
 }
 
-.view.view-distribuidores.view-display-id-attachment_1 {
+.distribuidores .page-content .container .view-display-id-attachment_1 {
 	float: right;
     margin: 0 auto !important;
     padding-top: 40px !important;
     width: 995px !important;
 }
 
-.view.view-distribuidores.view-display-id-attachment_1 table {
+.distribuidores .page-content .container .view-display-id-attachment_1 table {
 	width: 100%;
 }
 
-.view.view-distribuidores.view-display-id-attachment_1 thead {
+.distribuidores .page-content .container .view-display-id-attachment_1 thead {
 	border-bottom: 1px solid #000;
     border-top: 1px solid #000;
 }
 
-.view.view-distribuidores.view-display-id-attachment_1 table .views-field-title-1,
-.view.view-distribuidores.view-display-id-attachment_1 table .views-field-field-location,
-.view.view-distribuidores.view-display-id-attachment_1 table .views-field-field-tel-fono {
-	padding: 15px 20px;
-    width: 250px;
+.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-title-1,
+.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-street {
+	padding: 15px;
+    width: 270px;
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
-.view.view-distribuidores.view-display-id-attachment_1 table .views-field-field-email {
+.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-city {
+	padding: 15px 20px;
+    width: 120px;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-province {
+	padding: 15px 20px;
+    width: 190px;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-country {
+	padding: 15px 20px;
+    width: 110px;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-field-email {
 	padding: 15px 20px;
     width: 335px;
 }
 
-.view.view-distribuidores.view-display-id-attachment_1 table .views-field-nothing {
+.distribuidores .page-content .container .view-display-id-attachment_1 table tr td:last-child {
+	padding: 9px 0;
+}
+
+.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-nothing {
 	padding: 15px 20px;
 	text-align: center;
     width: 100px;
 }
 
-.view.view-distribuidores.view-display-id-attachment_1 table .views-field-title-1 a,
-.view.view-distribuidores.view-display-id-attachment_1 table .views-field-field-location a,
-.view.view-distribuidores.view-display-id-attachment_1 table th {
+.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-title-1 a,
+.distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-field-location a,
+.distribuidores .page-content .container .view-display-id-attachment_1 table th {
 	color: #000;
     font-family: "PT Sans Narrow",sans-serif !important;
     font-size: 18px;

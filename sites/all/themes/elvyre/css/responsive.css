@@ -2023,6 +2023,10 @@ All this is done for any sub-level being entered.
         width: 656px;
         margin-left: 0;
     }
+	
+	.mean-container .mean-nav ul li li > div {
+		display: none;
+	}
     
     #nav{
         /*float: left;*/

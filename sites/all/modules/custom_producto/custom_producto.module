@@ -224,6 +224,7 @@ function _custom_producto_get_province($country) {
     $query->groupBy('province');
     $query->condition('node.status', 1);
     $query->condition('node.type', 'distribuidores');
+    $query->orderBy('province', 'ASC');
     $provinces = $query->execute()->fetchAll();
     $_province = location_get_provinces($country);
     $result = array();
@@ -238,13 +239,14 @@ function _custom_producto_get_province($country) {
             }
         }
     }
+    asort($result);
     return $result;
 }
 
 function custom_producto_filter_distribuidores_form($form, &$form_state) {
     $countries = _custom_producto_get_country();
 
-    $form['country'] = array(
+    /*$form['country'] = array(
         '#type' => 'select',
         '#title' => 'País',
         '#options' => $countries,
@@ -252,10 +254,11 @@ function custom_producto_filter_distribuidores_form($form, &$form_state) {
             'callback' => 'ajax_example_dependent_dropdown_callback',
             'wrapper' => 'dropdown-second-replace',
         ),
-    );
-    $country_selected = isset($form_state['values']['country']) ? $form_state['values']['country'] : (isset($_GET['country']) ? $_GET['country'] : 'ar');
+    );*/
+    //$country_selected = isset($form_state['values']['country']) ? $form_state['values']['country'] : (isset($_GET['country']) ? $_GET['country'] : 'ar');
+    $country_selected = 'ar';
     $province = _custom_producto_get_province($country_selected);
-    $form['country']['#default_value'] = $country_selected;
+    //$form['country']['#default_value'] = $country_selected;
 
     $form['province'] = array(
         '#type' => 'select',
@@ -297,7 +300,7 @@ function custom_producto_filter_distribuidores_form_submit($form, &$form_state) 
         'distribuidores',
         array(
             'query' => array(
-                'country' => $form_state['values']['country'],
+                //'country' => $form_state['values']['country'],
                 'province' => $form_state['values']['province'],
                 'city' => $form_state['values']['city'],
                 'field_categor_a_tid' => $form_state['values']['field_categor_a_tid'],
@@ -323,9 +326,9 @@ function custom_producto_views_query_alter(&$view, &$query) {
                         $condition['value'] = filter_input(INPUT_GET, 'city', FILTER_DEFAULT, array('options' => array('default' => '%')));
                     }
                 }
-                if ($condition['field'] == 'location.country') {
+                /*if ($condition['field'] == 'location.country') {
                     $condition['value'] = filter_input(INPUT_GET, 'country', FILTER_DEFAULT, array('options' => array('default' => 'ar')));
-                }
+                }*/
             }
         }
         /* @var $query views_plugin_query_default */

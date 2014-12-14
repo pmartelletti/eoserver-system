@@ -1679,6 +1679,10 @@ All this is done for any sub-level being entered.
 		width: 100% !important;
 	}
 	
+	.muestra_producto .right #ambientes-carousel {
+		left: 0 !important;
+	}
+	
 	.node-type-productos .muestra_producto .imagenes {
 		height: 430px;
 		padding-top: 30px;

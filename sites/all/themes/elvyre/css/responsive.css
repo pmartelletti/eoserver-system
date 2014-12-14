@@ -1650,6 +1650,7 @@ All this is done for any sub-level being entered.
 	
 	.detalle_producto .imagen img {
 		height: auto;
+		max-width: auto !important;
 	}
 	
 	.muestra_producto .opciones {

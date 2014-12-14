@@ -1672,6 +1672,7 @@ All this is done for any sub-level being entered.
 	.muestra_producto .right {
 		float: left;
 		padding-left: 0 !important;
+		padding-top: 20px;
 		width: 100%;
 	}
 	
@@ -1790,6 +1791,7 @@ All this is done for any sub-level being entered.
 	
 	.page-productos .container,
 	.novedades .container,
+	.novedad .container,
 	.institucional .container,
 	.galeria .container,
 	.galerias .container,
@@ -1801,6 +1803,7 @@ All this is done for any sub-level being entered.
 	
 	.page-productos article.grid_12,
 	.novedades article.grid_12,
+	.novedad article.grid_12,
 	.institucional article.grid_12,
 	.galeria article.grid_12,
 	.galerias article.grid_12,
@@ -1821,7 +1824,8 @@ All this is done for any sub-level being entered.
 	.galeria .btn_display,
 	.galerias .btn_display,
 	.contacto .btn_display,
-	.producto .btn_display {
+	.producto .btn_display,
+	.novedad .btn_display {
 		display: none;
 	}
 	
@@ -1942,9 +1946,15 @@ All this is done for any sub-level being entered.
 		display: none;
 	}
 	
-	.node-type-novedades #block-system-main, .biblioteca-archivos #block-system-main {
+	.biblioteca-archivos #block-system-main {
 		padding-left: 0;
 		width: 100%;
+	}
+	
+	.node-type-novedades #block-system-main {
+		padding-left: 2.5%;
+		padding-top: 2.5%;
+		width: 95%;
 	}
 	
 	.distribuidores #page-title {

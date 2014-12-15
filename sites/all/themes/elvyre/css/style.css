@@ -6155,3 +6155,12 @@ body.page-productos-porcellanato {
 .small-only {
 	display: none;
 }
+
+.view-bloque-biblioteca-archivos-categorias .view-content li > div {
+	border-bottom: 1px solid #cecece;
+}
+
+
+.biblioteca-archivos .productos_filtro_categoria ul li a {
+    padding: 0 5px !important;
+}

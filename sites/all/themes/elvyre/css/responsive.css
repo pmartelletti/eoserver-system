@@ -1983,8 +1983,8 @@ All this is done for any sub-level being entered.
 	}
 	
 	.biblioteca-archivos #block-system-main {
-		padding-left: 0;
-		width: 100%;
+		padding-left: 2.5%;
+    	width: 95%;
 	}
 	
 	.node-type-novedades #block-system-main {
@@ -2024,6 +2024,28 @@ All this is done for any sub-level being entered.
 	.galeria #block-system-main .field-item {
 		width: 31%;
 		overflow: hidden;
+	}
+	
+	.large-only {
+		display: none;
+	}
+	
+	.small-only {
+		display: block;
+	}
+	
+	.small-only tr td:first-child {
+		color: #000;
+		font-family: "PT Sans Narrow",sans-serif !important;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	
+	.small-only tr td:last-child {
+		color: #000;
+		font-family: Verdana,Geneva,sans-serif;
+		font-size: 12px;
 	}
 
 }

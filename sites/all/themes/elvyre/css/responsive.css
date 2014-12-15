@@ -1236,17 +1236,25 @@ All this is done for any sub-level being entered.
 	
 	.galeria #block-system-main .field-item {
 		padding: 0 5% 5% 0;
-		width: 170px;
+		width: 150px;
 	}
 	
 	.flip-container, .front, .back {
 		cursor: pointer;
-		height: 170px;
-		width: 170px;
+		height: 150px;
+		width: 150px;
 	}
 	
 	.back {
 		padding: 0 !important;
+	}
+	
+	.small-only {
+		display: block;
+	}
+	
+	.large-only {
+		display: none;
 	}
 
 }

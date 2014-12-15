@@ -6156,10 +6156,18 @@ body.page-productos-porcellanato {
 	display: none;
 }
 
-/*.view-bloque-biblioteca-archivos-categorias .view-content li > div {
-	border-bottom: 1px solid #cecece;
-}*/
+.view-bloque-biblioteca-archivos-categorias .view-content li > div.views-field {
+    border-bottom: 1px solid #cecece;
+    padding: 10px 5px;
+}
 
+.view-bloque-biblioteca-archivos-categorias .view-content .item-list ul {
+	padding-left: 20px;
+}
+
+.view-bloque-biblioteca-archivos-categorias .view-content .item-list ul > li > a {
+	text-transform: none;
+}
 
 .biblioteca-archivos .productos_filtro_categoria ul li a {
     padding: 0 5px !important;

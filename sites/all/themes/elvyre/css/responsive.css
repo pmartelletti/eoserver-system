@@ -1292,6 +1292,15 @@ All this is done for any sub-level being entered.
 		width: 95% !important;
 	}
 	
+	.distribuidores .small-only tr td:first-child {
+		font-size: 16px !important;
+		padding: 9px 10px;
+	}
+	
+	.distribuidores .page-content .container .view-display-id-attachment_1 table tr td:last-child {
+		padding: 9px 10px;
+	}
+	
 	.distribuidores .productos_filtro_linea {
 		background: none repeat scroll 0 0 #ffffff;
 	}

@@ -92,6 +92,5 @@
 <script>
     jQuery(function($){
         $('.view-biblioteca-de-archivos table').stacktable();
-        $('table.stacktable tr:eq(1) td:first').html('Titulo');
     });
 </script>

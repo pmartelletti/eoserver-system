@@ -28,9 +28,9 @@
           //markup += '<tr><th class="st-head-row st-head-row-main" colspan="2">'+$(this).find('th,td').eq(0).html()+'</th></tr>';
         } else {
           $(this).find('td,th').each(function(index,value) {
-            if (index===0) {
+            /*if (index===0) {
               markup += '<tr class="st-space"><td></td><td></td></tr><tr class="st-new-item"><td class="st-key"></td><td class="st-val st-head-row">'+$(this).html()+'</td></tr>';
-            } else {
+            } else {*/
               if ($(this).html() !== ''){
                 markup += '<tr>';
                 if ($topRow.find('td,th').eq(index).html()){
@@ -41,7 +41,7 @@
                 markup += '<td class="st-val">'+$(this).html()+'</td>';
                 markup += '</tr>';
               }
-            }
+            //}
           });
         }
       });

@@ -691,7 +691,7 @@ All this is done for any sub-level being entered.
 		background: none repeat scroll 0 0 #000;
 		float: none;
 		margin: 0 auto;
-		padding: 12px 0 !important;
+		padding: 20px 0 !important;
 		position: relative;
 	}
 	
@@ -722,12 +722,18 @@ All this is done for any sub-level being entered.
 	}
 	
 	.detalle_producto {
-		padding-left: 0;
-		width: 270px;
+		padding-left: 2.5%;
+    	width: 95%;
+	}
+	
+	.detalle_producto .cont_detalle {
+		height: 460px;
+		top: 0;
+		width: 60%;
 	}
 	
 	.detalle_producto .nombre {
-		width: 135px;
+		width: 100%;
 	}
 	
 	.detalle_producto h3 {
@@ -765,8 +771,8 @@ All this is done for any sub-level being entered.
 	}
 	
 	.detalle_producto .imagen {
-		height: 134px;
-		width: 134px;
+		height: 330px;
+    	width: 40%;
 	}
 	
 	.zoomWrapper {
@@ -775,33 +781,46 @@ All this is done for any sub-level being entered.
 	}
 	
 	.detalle_producto .imagen img {
-		width: 94px;
+		width: 100%;
 	}
 	
 	.node-type-productos #block-block-20 {
 		padding-top: 150px;
 	}
 	
-	.muestra_producto .opciones {
+	/*.muestra_producto .opciones {
 		display: none;
 		background: none repeat scroll 0 0 #fff;
 		position: absolute;
 		top: 288px;
 		width: 164px;
-	}
+	}*/
 	
 	.muestra_producto .opciones li {
-		margin: 10px !important;
+		margin: 10px 0 !important;
 	}
 	
 	.muestra_producto .detalle {
 		margin-left: 0;
-		width: 270px;
+		width: 100%;
+	}
+	
+	.muestra_producto .right {
+		float: left;
+		width: 100%;
 	}
 	
 	.node-type-productos .muestra_producto .imagenes {
 		height: 270px;
 		width: 270px;
+	}
+	
+	.caroufredsel_wrapper {
+		width: 100% !important;
+	}
+	
+	#ambientes-carousel {
+		width: 100% !important;
 	}
 	
 	.relacionados .rel_int {
@@ -910,7 +929,11 @@ All this is done for any sub-level being entered.
 	}
 	
 	.muestra_producto {
-		padding-top: 200px;
+		float: left;
+		margin-right: 0 !important;
+		padding-left: 2.5% !important;
+		padding-top: 20px;
+		width: 95% !important;
 	}
 	
 	.page-productos .productos_filtro_linea {
@@ -1105,6 +1128,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	.page-productos .container,
+	.productos .container,
 	.novedades .container,
 	.novedad .container,
 	.institucional .container,
@@ -1116,6 +1140,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	.page-productos article.grid_12,
+	.productos article.grid_12,
 	.novedades article.grid_12,
 	.novedad article.grid_12,
 	.institucional article.grid_12,
@@ -1206,7 +1231,8 @@ All this is done for any sub-level being entered.
 	
 	.galeria .btn_display,
 	.galerias .btn_display,
-	.contacto .btn_display {
+	.contacto .btn_display,
+	.producto .btn_display {
 		display: none;
 	}
 	

@@ -843,6 +843,7 @@ All this is done for any sub-level being entered.
 		width: 180px;
 	}
 	
+	#logo,
 	.not-front #logo {
 		background: url("http://www-sistema-durlock.com.ar/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center;
 		float: none;
@@ -1068,12 +1069,12 @@ All this is done for any sub-level being entered.
 		display: none;
 	}
 	
-	#logo {
+	/*#logo {
 		background: url("http://104.131.52.104/sites/all/themes/elvyre/logo_b.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 		height: 40px;
 		margin: 20px 0;
 		padding: 0 !important;
-	}
+	}*/
 	
 	.mean-container .mean-bar {
 		background: none repeat scroll 0 0 #000;

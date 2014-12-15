@@ -6151,3 +6151,7 @@ body.page-productos-porcellanato {
     font-weight: 700;
     padding: 5px 10px;
 }
+
+.small-only {
+	display: none;
+}

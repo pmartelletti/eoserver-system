@@ -1256,6 +1256,29 @@ All this is done for any sub-level being entered.
 	.large-only {
 		display: none;
 	}
+	
+	.distribuidores #page-title > .container {
+		width: 100%;
+	}
+	
+	.distribuidores #block-custom-producto-filter-distribuidores {
+		float: left !important;
+		margin-left: 2.5%;
+		padding: 60px 0 20px !important;
+		width: 95% !important;
+	}
+	
+	.distribuidores #page-title {
+		height: 180px !important;
+	}
+	
+	.distribuidores .productos_filtro_linea {
+		background: none repeat scroll 0 0 #ffffff;
+	}
+	
+	.distribuidores .page-content {
+		padding-top: 150px;
+	}
 
 }
 
@@ -2067,10 +2090,6 @@ All this is done for any sub-level being entered.
 	
 	.distribuidores .page-content .container .view-display-id-attachment_1 table tr td:last-child {
 		padding: 9px 10px;
-	}
-	
-	.view.view-distribuidores.view-display-id-attachment_1 table tr:nth-child(5) {
-		padding-bottom: 15px;
 	}
 	
 	.distribuidores .container {

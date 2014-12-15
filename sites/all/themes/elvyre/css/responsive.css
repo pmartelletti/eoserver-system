@@ -822,7 +822,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	#ambientes-carousel {
-		left: 0;
+		left: 0 !important;
 	}
 	
 	.relacionados .rel_int {

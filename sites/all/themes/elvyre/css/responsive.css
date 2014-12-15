@@ -850,6 +850,7 @@ All this is done for any sub-level being entered.
 		margin: 0 auto;
 		padding: 20px 0 !important;
 		position: relative;
+		height: 40px;
 	}
 	
 	#logo img {
@@ -919,8 +920,10 @@ All this is done for any sub-level being entered.
 	}
 	
 	.productos #logo {
-		width: 190px !important;
-		padding: 12px 0 !important;
+		height: 40px;
+		margin: 0 auto;
+		padding: 20px 0 !important;
+		width: 234px !important;
 	}
 	
 	.muestra_producto {
@@ -1236,7 +1239,7 @@ All this is done for any sub-level being entered.
 		width: 150px;
 	}
 	
-	.flip-container, .front, .back {
+	.flip-container, .flip-container .front, .flip-container .back {
 		cursor: pointer;
 		height: 150px;
 		width: 150px;

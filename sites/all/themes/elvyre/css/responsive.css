@@ -2029,11 +2029,16 @@ All this is done for any sub-level being entered.
 		height: 220px !important;
 		padding: 42px 0 0 !important;
 	}
+	
 	.distribuidores #block-custom-producto-filter-distribuidores {
 		float: left !important;
-		margin-left: 0 !important;
-		padding: 11px 0 !important;
-		width: 430px !important;
+		margin-left: 2.5% !important;
+		padding: 30px 0 !important;
+		width: 80% !important;
+	}
+	
+	.distribuidores .productos_filtro_linea {
+		background: none repeat scroll 0 0 #ffffff;
 	}
 	
 	.distribuidores .productos_filtro_categoria {
@@ -2042,11 +2047,34 @@ All this is done for any sub-level being entered.
 	}
 	
 	.distribuidores .page-content {
-		padding-top: 200px;
+		padding-top: 60px;
+	}
+	
+	.distribuidores .page-content .container article.grid_12 {
+		margin-left: 2.5% !important;
+		width: 95% !important;
+	}
+	
+	.distribuidores .page-content .container .view-display-id-attachment_1 {
+		float: left;
+		width: 100%;
+	}
+	
+	.distribuidores .small-only tr td:first-child {
+		font-size: 16px !important;
+		padding: 9px 10px;
+	}
+	
+	.distribuidores .page-content .container .view-display-id-attachment_1 table tr td:last-child {
+		padding: 9px 10px;
+	}
+	
+	.view.view-distribuidores.view-display-id-attachment_1 table tr:nth-child(5) {
+		padding-bottom: 15px;
 	}
 	
 	.distribuidores .container {
-		max-width: 430px;
+		max-width: 100%;
 	}
 	
 	.distribuidores .page-content .container #block-system-main {

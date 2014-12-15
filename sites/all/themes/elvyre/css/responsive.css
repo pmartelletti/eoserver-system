@@ -1258,6 +1258,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	.distribuidores #page-title > .container {
+		max-width: 100% !important;
 		width: 100%;
 	}
 	
@@ -1270,6 +1271,25 @@ All this is done for any sub-level being entered.
 	
 	.distribuidores #page-title {
 		height: 230px !important;
+	}
+	
+	.distribuidores .page-content .container {
+		max-width: 95% !important;
+		width: 95%;
+	}
+	
+	.distribuidores .page-content .container article.grid_12 {
+		width: 100% !important;
+	}
+	
+	.distribuidores .page-content .container #block-system-main {
+		width: 100% !important;
+	}
+	
+	.distribuidores .page-content .container .view-display-id-attachment_1 {
+		float: left;
+		margin-left: 2.5%;
+		width: 95% !important;
 	}
 	
 	.distribuidores .productos_filtro_linea {

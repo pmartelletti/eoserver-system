@@ -26,6 +26,7 @@
  * @ingroup views_templates
  */
 ?>
+<script src="/sites/all/themes/elvyre/js/stacktable.js"></script>
 <script src="/sites/all/modules/custom_producto/js/distribuidores.js"></script>
 <div class="<?php print $classes; ?>">
     <?php print render($title_prefix); ?>
@@ -88,3 +89,9 @@
     <?php endif; ?>
 
 </div><?php /* class view */ ?>
+<script>
+    jQuery(function($){
+        $('.view-distribuidores table').stacktable();
+        $('table.stacktable tr:eq(1) td:first').html('Titulo');
+    });
+</script>

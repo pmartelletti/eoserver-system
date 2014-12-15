@@ -1,0 +1,7 @@
+.ember .content-field-propiedades{
+    float: left;
+}
+.ember .content-field-propiedades select{
+    min-width: 250px;
+    min-height: 180px;
+}

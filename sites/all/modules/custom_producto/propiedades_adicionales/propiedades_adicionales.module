@@ -1,0 +1,104 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+/* function propiedades_adicionales_menu() {
+  $items['prop-adi/autocomplete'] = array(
+  'title' => 'Autocomplete taxonomy',
+  'page callback' => 'propiedades_adicionales_taxonomy_autocomplete',
+  'access arguments' => array('access content'),
+  'type' => MENU_CALLBACK,
+  );
+  return $items;
+  }
+
+  function propiedades_adicionales_field_widget_info() {
+  return array(
+  'propiedades_adicionales_sa' => array(
+  'label' => t('Propiedades adicionales'),
+  'field types' => array('taxonomy_term_reference'),
+  'behaviors' => array(
+  'multiple values' => FIELD_BEHAVIOR_CUSTOM,
+  ),
+  ),
+  );
+  } */
+function propiedades_adicionales_field_widget_form_alter(&$element, &$form_state, $context) {
+    // Add a css class to widget form elements for all fields of type mytype.
+    if ($context['field']['field_name'] == 'field_propiedad_adicional') {
+        $element['#after_build'] = array('propiedades_adicionales_field_widget_afterbuild');
+    }/*
+      if ($context['field']['type'] == 'mytype') {
+      // Be sure not to overwrite existing attributes.
+      $element['#attributes']['class'][] = 'myclass';
+      } */
+}
+
+/*
+  function propiedades_adicionales_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  $value_key = key($field['columns']);
+
+  $type = str_replace('options_', '', $instance['widget']['type']);
+  $multiple = $field['cardinality'] > 1 || $field['cardinality'] == FIELD_CARDINALITY_UNLIMITED;
+  $required = $element['#required'];
+  $has_value = isset($items[0][$value_key]);
+  $properties = _options_properties($type, $multiple, $required, $has_value);
+
+  $entity_type = $element['#entity_type'];
+  $entity = $element['#entity'];
+
+  // Prepare the list of options.
+  $options = _options_get_options($field, $instance, $properties, $entity_type, $entity);
+
+  // Put current field values in shape.
+  $default_value = _options_storage_to_form($items, $options, $value_key, $properties);
+  $element += array(
+  '#type' => 'select',
+  '#default_value' => $default_value,
+  // Do not display a 'multiple' select box if there is only one option.
+  '#multiple' => $multiple && count($options) > 1,
+  '#options' => $options,
+  //'#after_build' => array('propiedades_adicionales_field_widget_afterbuild'),
+  );
+  return $element;
+  } */
+
+/**
+ * Afterbuild callback for widgets of type "taxonomy_shs".
+ */
+function propiedades_adicionales_field_widget_afterbuild($element, &$form_state) {
+    $js_added = &drupal_static(__FUNCTION__ . '_js_added', array());
+    // Add main Javascript behavior and style only once.
+    if (count($js_added) == 0) {
+        drupal_add_js(drupal_get_path('module', 'propiedades_adicionales') . '/js/widget.js');
+        drupal_add_css(drupal_get_path('module', 'propiedades_adicionales') . '/css/widget.css');
+    }
+    $parents = array();
+    $childrens = array();
+    $parent_id = NULL;
+    foreach ($element['#options'] as $tid => $option) {
+
+        if (strpos($option, '-') === 0) {
+            $childrens[$parent_id][$tid] = trim($option, '-');
+        } else {
+            $parent_id = $tid;
+            $parents[$tid] = $option;
+        }
+    }
+    //asort($parents);
+    // Create settings needed for our js magic.
+    $settings_js = array(
+        'propAdWidgetCreate' => array(
+            "name" => $element['#name'],
+            "id" => $element['#id'],
+            "options" => $element['#options'],
+            "parents" => $parents,
+            "childrens" => $childrens,
+            "default_value" => $element['#default_value'],
+        ),
+    );
+    // Add settings.
+    drupal_add_js($settings_js, 'setting');
+    return $element;
+}

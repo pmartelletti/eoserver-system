@@ -2069,7 +2069,7 @@ All this is done for any sub-level being entered.
 		padding: 9px 10px;
 	}
 	
-	.view.view-distribuidores.view-display-id-attachment_1 table tbody:nth-child(5) {
+	.view.view-distribuidores.view-display-id-attachment_1 table tr:nth-child(5) {
 		padding-bottom: 15px;
 	}
 	

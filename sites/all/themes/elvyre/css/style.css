@@ -6161,12 +6161,16 @@ body.page-productos-porcellanato {
     padding: 10px 5px;
 }
 
-.view-bloque-biblioteca-archivos-categorias .view-content .item-list ul {
+.view-bloque-biblioteca-archivos-categorias .view-content .item-list ul li ul {
 	padding-left: 20px;
 }
 
-.view-bloque-biblioteca-archivos-categorias .view-content .item-list ul > li > a {
+.view-bloque-biblioteca-archivos-categorias .view-content .item-list ul li ul li a {
 	text-transform: none;
+}
+
+.biblioteca-archivos .productos_filtro_categoria ul li a {
+    padding: 0 !important;
 }
 
 .biblioteca-archivos .productos_filtro_categoria ul li a {

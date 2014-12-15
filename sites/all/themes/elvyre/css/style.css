@@ -6143,3 +6143,10 @@ body.page-productos-porcellanato {
     line-height: 42px;
 	margin-left: 12px;
 }
+
+.views-field-download {
+	background: none repeat scroll 0 0 #8e8e8e;
+    color: #fff;
+    font-weight: 700;
+    padding: 5px 10px;
+}

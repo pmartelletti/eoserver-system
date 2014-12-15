@@ -2037,7 +2037,7 @@ All this is done for any sub-level being entered.
 	.small-only tr td:first-child {
 		color: #000;
 		font-family: "PT Sans Narrow",sans-serif !important;
-		font-size: 18px;
+		font-size: 16px;
 		font-weight: 700;
 		text-transform: uppercase;
 	}

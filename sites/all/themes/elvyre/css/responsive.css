@@ -943,8 +943,8 @@ All this is done for any sub-level being entered.
 	.institucional #block-system-main,
 	.galeria #block-system-main,
 	.galerias #block-system-main {
-		padding-left: 2%;
-    	width: 96%;
+		padding-left: 2.5%;
+    	width: 95%;
 	}
 	
 	.institucional #block-system-main .left, .institucional .institucional_bot .left {
@@ -992,11 +992,11 @@ All this is done for any sub-level being entered.
 	}
 	
 	.contacto #block-system-main select {
-		width: 270px;
+		width: 100%;
 	}
 	
 	.contacto #block-system-main input {
-		width: 250px;
+		width: 100%;
 	}
 	
 	.contacto #block-system-main textarea {
@@ -1004,9 +1004,19 @@ All this is done for any sub-level being entered.
 	}
 	
 	.contacto #block-block-21 {
-		margin-left: 0;
+		margin-left: 2.5%;
 		margin-top: 60px;
-		width: 100%;
+		width: 95%;
+	}
+	
+	.webform-container-inline label {
+		margin-right: 0 !important;
+		width: 100% !important;
+	}
+	
+	.contacto .wpcf7-submit {
+		margin-right: 0 !important;
+		width: 100% !important;
 	}
 	
 	.contacto .productos_filtro_linea ul {
@@ -1014,7 +1024,8 @@ All this is done for any sub-level being entered.
 	}
 	
 	.view-novedades ul {
-		width: 100%;
+		margin-left: 2.5%;
+    	width: 95%;
 	}
 	
 	.view-novedades ul li {
@@ -1027,8 +1038,8 @@ All this is done for any sub-level being entered.
 	}
 	
 	.view-galeria-de-imagenes ul li {
-		margin: 0 0 10%;
-		width: 100%;
+		margin: 0 2.5% 5%;
+    	width: 45%;
 	}
 	
 	#header-wrapper {
@@ -1089,12 +1100,13 @@ All this is done for any sub-level being entered.
 	}
 	
 	.node-type-novedades #block-system-main, .biblioteca-archivos #block-system-main {
-		padding-left: 0;
-		width: 100%;
+		padding-left: 2.5%;
+    	width: 95%;
 	}
 	
 	.page-productos .container,
 	.novedades .container,
+	.novedad .container,
 	.institucional .container,
 	.galeria .container,
 	.galerias .container,
@@ -1105,6 +1117,7 @@ All this is done for any sub-level being entered.
 	
 	.page-productos article.grid_12,
 	.novedades article.grid_12,
+	.novedad article.grid_12,
 	.institucional article.grid_12,
 	.galeria article.grid_12,
 	.galerias article.grid_12,
@@ -1171,7 +1184,7 @@ All this is done for any sub-level being entered.
 	
 	.productos_filtro_categoria ul,
 	.productos_filtro_linea ul {
-		background: none repeat scroll 0 0 /*#474645*/#112277;
+		background: none repeat scroll 0 0 #474645;
 		display: none;
 		left: 0;
 		margin: 0 !important;
@@ -1187,8 +1200,8 @@ All this is done for any sub-level being entered.
 	
 	.contacto #block-system-main {
 		margin-top: 130px;
-		padding-left: 1%;
-		width: 98%;
+		padding-left: 2.5%;
+    	width: 95%;
 	}
 	
 	.galeria .btn_display,
@@ -1199,7 +1212,17 @@ All this is done for any sub-level being entered.
 	
 	.galeria #block-system-main .field-item {
 		padding: 0 5% 5% 0;
-		width: 45%;
+		width: 170px;
+	}
+	
+	.flip-container, .front, .back {
+		cursor: pointer;
+		height: 170px;
+		width: 170px;
+	}
+	
+	.back {
+		padding: 0 !important;
 	}
 
 }
@@ -1960,8 +1983,8 @@ All this is done for any sub-level being entered.
 	}
 	
 	.biblioteca-archivos #block-system-main {
-		padding-left: 0;
-		width: 100%;
+		padding-left: 2.5%;
+    	width: 95%;
 	}
 	
 	.node-type-novedades #block-system-main {
@@ -2001,6 +2024,28 @@ All this is done for any sub-level being entered.
 	.galeria #block-system-main .field-item {
 		width: 31%;
 		overflow: hidden;
+	}
+	
+	.large-only {
+		display: none;
+	}
+	
+	.small-only {
+		display: block;
+	}
+	
+	.small-only tr td:first-child {
+		color: #000;
+		font-family: "PT Sans Narrow",sans-serif !important;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	
+	.small-only tr td:last-child {
+		color: #000;
+		font-family: Verdana,Geneva,sans-serif;
+		font-size: 12px;
 	}
 
 }

@@ -853,6 +853,10 @@ All this is done for any sub-level being entered.
 	
 	.not-front #logo {
 		background: url("http://www-sistema-durlock.com.ar/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center #fff;
+		-webkit-background-size: 100%; 
+    -moz-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%;
 	}
 	
 	#logo img {

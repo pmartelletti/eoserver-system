@@ -808,6 +808,8 @@ All this is done for any sub-level being entered.
 	.muestra_producto .right {
 		float: left;
 		width: 100%;
+		padding-top: 40px;
+		padding-left: 0;
 	}
 	
 	.node-type-productos .muestra_producto .imagenes {
@@ -820,7 +822,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	#ambientes-carousel {
-		width: 100% !important;
+		left: 0;
 	}
 	
 	.relacionados .rel_int {
@@ -841,10 +843,6 @@ All this is done for any sub-level being entered.
 	
 	.muestra_producto .detalle .embalaje .unidad {
 		font-size: 16px;
-	}
-	
-	.muestra_producto .right {
-		padding-top: 40px;
 	}
 	
 	.productos_filtro_categoria,

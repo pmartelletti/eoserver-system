@@ -6145,7 +6145,7 @@ body.page-productos-porcellanato {
 	margin-left: 12px;
 }
 
-.views-field-download {
+.views-field-download a {
 	background: none repeat scroll 0 0 #8e8e8e;
     color: #fff;
     font-weight: 700;

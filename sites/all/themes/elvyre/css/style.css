@@ -5923,7 +5923,8 @@ body.page-productos-porcellanato {
 .distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-title-1,
 .distribuidores .page-content .container .view-display-id-attachment_1 table .views-field-street {
 	padding: 15px;
-    width: 270px;
+    
+	width: 180px;
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 

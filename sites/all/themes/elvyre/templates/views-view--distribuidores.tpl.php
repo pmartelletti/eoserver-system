@@ -92,6 +92,6 @@
 <script>
     jQuery(function($){
         $('.view-distribuidores table').stacktable();
-        $('table.stacktable tr:eq(1) td:first').html('Titulo');
+        //$('table.stacktable tr:eq(1) td:first').html('Titulo');
     });
 </script>

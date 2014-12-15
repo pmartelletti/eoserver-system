@@ -687,14 +687,6 @@ All this is done for any sub-level being entered.
 	
 	.post-body {margin-bottom: 40px;}
 	
-	.not-front #logo {
-		background: none repeat scroll 0 0 #000;
-		float: none;
-		margin: 0 auto;
-		padding: 20px 0 !important;
-		position: relative;
-	}
-	
 	.not-front .page-content article.grid_12 {
 		padding-top: 10px;
 	}
@@ -853,6 +845,10 @@ All this is done for any sub-level being entered.
 	
 	.not-front #logo {
 		background: url("http://www-sistema-durlock.com.ar/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center;
+		float: none;
+		margin: 0 auto;
+		padding: 20px 0 !important;
+		position: relative;
 	}
 	
 	#logo img {

@@ -6156,20 +6156,25 @@ body.page-productos-porcellanato {
 	display: none;
 }
 
-.view-bloque-biblioteca-archivos-categorias .view-content li > div.views-field {
+.view-bloque-biblioteca-archivos-categorias .view-content li > div.views-field,
+.view-novedades-block .view-content li > div.views-field {
     border-bottom: 1px solid #cecece;
     padding: 10px 5px;
 }
 
-.view-bloque-biblioteca-archivos-categorias .view-content .item-list ul li ul {
+.view-bloque-biblioteca-archivos-categorias .view-content .item-list ul li ul,
+.view-novedades-block .view-content .item-list ul li ul {
 	padding-left: 20px;
+	margin: 0 !important;
 }
 
-.view-bloque-biblioteca-archivos-categorias .view-content .item-list ul li ul li {
+.view-bloque-biblioteca-archivos-categorias .view-content .item-list ul li ul li,
+.view-novedades-block .view-content .item-list ul li ul li {
 	padding: 0 !important;
 }
 
-.view-bloque-biblioteca-archivos-categorias .view-content .item-list ul li ul li a {
+.view-bloque-biblioteca-archivos-categorias .view-content .item-list ul li ul li a,
+.view-novedades-block .view-content .item-list ul li ul li a {
 	text-transform: none;
 }
 
@@ -6179,4 +6184,11 @@ body.page-productos-porcellanato {
 
 .biblioteca-archivos .productos_filtro_categoria ul li a {
     padding: 0 5px !important;
+}
+
+
+.view-novedades-block ul li {
+    border-bottom: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }

@@ -16,4 +16,3 @@
         <?php endif ?>
     </div>
 </div>
-<!-- lightbox2__lightbox__thumbnail__original  -->

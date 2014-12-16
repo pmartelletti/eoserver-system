@@ -18,6 +18,7 @@ function custom_producto_flip_image_field_formatter_info() {
 function custom_producto_flip_image_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
     $element = array();
     drupal_add_css(drupal_get_path('module', 'custom_producto_flip_image') . '/css/fliper.css');
+    drupal_add_js(drupal_get_path('module', 'custom_producto_flip_image') . '/js/fliper.js');
     foreach ($items as $delta => $item) {
         $element[$delta] = array(
             '#theme' => 'custom_producto_flip_image_image_formatter',

@@ -272,12 +272,12 @@ function custom_producto_filter_distribuidores_form($form, &$form_state) {
     } else {
         $form['province']['#default_value'] = 'B';
     }
-    $form['city'] = array(
+    /*$form['city'] = array(
         '#type' => 'textfield',
         '#title' => 'Ciudad',
         '#default_value' => isset($_GET['city']) ? $_GET['city'] : '',
         '#size' => 30,
-    );
+    );*/
     $categorias = _custom_producto_get_category();
 
     $form['field_categor_a_tid'] = array(
@@ -302,7 +302,7 @@ function custom_producto_filter_distribuidores_form_submit($form, &$form_state) 
             'query' => array(
                 //'country' => $form_state['values']['country'],
                 'province' => $form_state['values']['province'],
-                'city' => $form_state['values']['city'],
+                //'city' => $form_state['values']['city'],
                 'field_categor_a_tid' => $form_state['values']['field_categor_a_tid'],
             ),
         )

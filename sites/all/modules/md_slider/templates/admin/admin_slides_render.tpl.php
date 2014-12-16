@@ -9,7 +9,7 @@
 <?php if (count($slides) > 0):?>
 <div id="md-tabs">
   <div class="md-tab-tools">
-    <ul class="md-tabs-head">
+    <ul class="md-tabs-head clearfix">
     <?php for ($index = 0; $index < count($slides); $index++):?>
       <li class="tab-item first clearfix">
         <a class="tab-link" href="#tabs-<?php print $index+1;?>"><span class="tab-text">Slide <?php print $index+1;?></span></a>
@@ -44,7 +44,7 @@
 <?php else:?>
 <div id="md-tabs">
   <div class="md-tab-tools">
-    <ul class="md-tabs-head">
+    <ul class="md-tabs-head clearfix">
         <li class="tab-item first clearfix">
             <a class="tab-link" href="#tabs-1"><span class="tab-text">Slide 1</span></a>
             <span class="ui-icon ui-icon-close">Remove Tab</span>

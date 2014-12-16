@@ -846,7 +846,7 @@ All this is done for any sub-level being entered.
 	
 	#logo,
 	.not-front #logo {
-		background: url("http://www-sistema-durlock.com.ar/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center;
+		background: url("http://www-sistema-durlock.com.ar/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center rgba(0, 0, 0, 0);
 		float: none;
 		margin: 0 auto;
 		padding: 20px 0 !important;

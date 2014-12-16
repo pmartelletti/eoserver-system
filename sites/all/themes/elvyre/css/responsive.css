@@ -1069,7 +1069,7 @@ All this is done for any sub-level being entered.
 		height: 80px;
 	}
 	
-	#header-wrapper a {
+	#header-wrapper a img {
 		display: none;
 	}
 	
@@ -2030,7 +2030,7 @@ All this is done for any sub-level being entered.
 		height: 80px;
 	}
 	
-	#header-wrapper a {
+	#header-wrapper a img {
 		display: none;
 	}
 	

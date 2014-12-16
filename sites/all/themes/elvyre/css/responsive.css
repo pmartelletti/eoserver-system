@@ -416,6 +416,7 @@ All this is done for any sub-level being entered.
     #header, 
     #top-bar{
         width: 270px;
+		height: 40px;
     }
     
     #top-bar .contact-info, 

@@ -1593,7 +1593,7 @@ All this is done for any sub-level being entered.
 	
 	.front #logo,
 	.not-front #logo {
-		background: url("http://www-sistema-durlock.com.ar/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center #fff;
+		background: url("/sites/all/themes/elvyre/logo_b.png") no-repeat scroll center center #fff;
 		float: none;
 		margin: 0 auto;
 		height: 40px;

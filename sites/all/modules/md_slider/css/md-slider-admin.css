@@ -204,8 +204,8 @@ ul.md-tabs-head {
 }
 .md-tabs-head .tab-item {
     position: relative;
-    display: block;
-    float: left !important;
+    /*display: block;
+    float: left !important;*/
     height: 49px;
     border-right: 1px solid #DEDEDE;
     overflow: hidden;

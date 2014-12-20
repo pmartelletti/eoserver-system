@@ -2,6 +2,7 @@
 
 function _custom_producto_get_term_from_arg($arg = 1, $vocabulary = 'categor_a') {
     $arg = pathauto_cleanstring(arg($arg));
+    $arg = str_replace('-', ' ', $arg);
     $term = taxonomy_get_term_by_name($arg, $vocabulary);
     $term = array_shift($term);
 

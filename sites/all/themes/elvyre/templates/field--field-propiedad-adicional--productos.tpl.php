@@ -13,7 +13,7 @@
             <?php if (!empty($list)): ?>
                 <?php
                 foreach ($list as $key => $value) :
-                    print "<li>$key: <b>$value</b></li>";
+                    print "<li><b>$value</b></li>";
                 endforeach;
                 ?>
             <?php endif; ?>

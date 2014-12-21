@@ -6179,12 +6179,9 @@ body.page-productos-porcellanato {
 
 .biblioteca-archivos .productos_filtro_categoria ul li a {
     padding: 0 !important;
+	border-bottom: medium none !important;
+	margin: 0 !important;
 }
-
-.biblioteca-archivos .productos_filtro_categoria ul li a {
-    padding: 0 5px !important;
-}
-
 
 .view-novedades-block ul li {
     border-bottom: 0 !important;

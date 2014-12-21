@@ -49,3 +49,9 @@
 	background: none repeat scroll 0 0 #656463;
 	display: none;
 }
+
+.display_mobile_menu {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}

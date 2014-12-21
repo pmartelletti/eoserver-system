@@ -143,10 +143,7 @@ function custom_producto_block_view($delta = '') {
             if ($term) {
                 $items = _custom_producto_get_items_filtro_all($term->name);
                 $block['subject'] = $term->name;
-                $block['content'] = array(
-                    '#theme' => 'custom_filter_all',
-                    '#list' => theme('item_list', array('items' => $items, 'type' => 'ul',)),
-                );
+                $block['content'] = elvyre_item_custom_list(array('categoria' => $term->name, 'type' => 'ul'));
             }
             break;
         case 'filter_distribuidores':

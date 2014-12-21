@@ -163,6 +163,13 @@ function elvyre_form_contact_site_form_alter(&$form, &$form_state) {
     drupal_set_title(' ');
 }
 
+function elvyre_item_custom_list($variables) {
+    $categoria = strtolower(str_replace(" ", "-", $variables['categoria']));
+    $menu = menu_tree_output(menu_tree_all_data(variable_get('menu_main_links_source', 'menu-filtros-' . $categoria), NULL, 3));
+    
+    return render($menu);
+}
+
 function elvyre_item_list($variables) {
     $items = $variables['items'];
     $title = $variables['title'];

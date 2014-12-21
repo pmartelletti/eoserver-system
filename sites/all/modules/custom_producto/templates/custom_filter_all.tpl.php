@@ -1,3 +1,5 @@
 <?php
 
-print $list ?>
+print $list;
+//var_dump($variables);
+?>

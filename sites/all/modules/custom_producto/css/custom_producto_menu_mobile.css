@@ -25,3 +25,17 @@
     top: 53px;
     width: 94%;
 }
+
+#block-custom-producto-filter-all-mobile ul li {
+    margin: 0 !important;
+    padding: 10px 0;
+}
+
+#block-custom-producto-filter-all-mobile ul li a {
+    color: #ffffff;
+    padding: 0 !important;
+    font-family: "PT Sans Narrow",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}

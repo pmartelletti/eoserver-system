@@ -5506,11 +5506,12 @@ body.page-productos-porcellanato {
     font-family: Verdana, Geneva, sans-serif;
     font-size: 10px;
     padding: 8% 8% 4%;
+    display: none;
 }
 
 .view-novedades .views-field-title-1,
 .view-novedades-con-productos-relacionados .views-field-title {
-	padding: 0 8%;
+	padding: 4% 0 0 8%;
 }
 
 .view-novedades .views-field-title-1 a,

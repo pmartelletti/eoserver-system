@@ -31,7 +31,7 @@ function _custom_producto_block_filter_show($type) {
         case 'usos':
         case 'medida':
         case 'medidas':
-            $term_name = arg(1);
+            $term_name = implode(" ", explode("-", arg(1)));
             $term = taxonomy_get_term_by_name($term_name, 'categor_a');
             $term = array_shift($term);
             if ($term && $term->vid == 8) {

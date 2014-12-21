@@ -40,6 +40,12 @@
     text-transform: uppercase;
 }
 
+#block-custom-producto-filter-all-mobile ul li a:hover,
+#block-custom-producto-filter-all-mobile ul li a.select {
+	font-weight: 700;
+}
+
 #block-custom-producto-filter-all-mobile ul li ul {
 	background: none repeat scroll 0 0 #656463;
+	display: none;
 }

@@ -34,16 +34,28 @@
     position: absolute;
     /*top: 53px;*/
     width: 94%;
+	color: #ffffff;
+    font-family: "PT Sans Narrow",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 !important;
+    text-transform: uppercase;
 }
 
 #block-custom-producto-filter-all-mobile .selected a:last-child {
     background: none repeat scroll 0 0 #656463;
     left: 0;
-    margin: 0 !important;
+    margin: 37px 0 0 !important;
     padding: 1% 3%;
     position: absolute;
     /*top: 53px;*/
     width: 94%;
+	color: #ffffff;
+    font-family: "PT Sans Narrow",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 !important;
+    text-transform: uppercase;
 }
 
 #block-custom-producto-filter-all-mobile ul li {

@@ -41,7 +41,7 @@
     text-transform: uppercase;
 }
 
-#block-custom-producto-filter-all-mobile .selected a:last-child {
+#block-custom-producto-filter-all-mobile .selected a:nth-child(2) {
     background: none repeat scroll 0 0 #656463;
     left: 0;
     margin: 37px 0 0 !important;

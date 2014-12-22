@@ -1314,6 +1314,14 @@ All this is done for any sub-level being entered.
 	.distribuidores .page-content {
 		padding-top: 150px;
 	}
+	
+	#block-custom-producto-filter-all {
+		display: none;
+	}
+	
+	#block-custom-producto-filter-all-mobile {
+		display: block;
+	}
 
 }
 
@@ -2165,6 +2173,14 @@ All this is done for any sub-level being entered.
 		color: #000;
 		font-family: Verdana,Geneva,sans-serif;
 		font-size: 12px;
+	}
+	
+	#block-custom-producto-filter-all {
+		display: none;
+	}
+	
+	#block-custom-producto-filter-all-mobile {
+		display: block;
 	}
 
 }

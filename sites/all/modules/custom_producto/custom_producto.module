@@ -136,7 +136,6 @@ function custom_producto_block_view($delta = '') {
             }
             break;
         case 'filter_all_mobile':
-            drupal_add_js('http://code.jquery.com/jquery-1.10.2.js');
             drupal_add_js(drupal_get_path('module', 'custom_producto') . '/js/custom_producto_menu_mobile.js');
             drupal_add_css(drupal_get_path('module', 'custom_producto') . '/css/custom_producto_menu_mobile.css');
             $term = _custom_producto_get_term_from_arg();
@@ -212,6 +211,7 @@ function _custom_producto_get_category() {
     $query->groupBy('field_categor_a_tid');
     $query->condition('node.status', 1);
     $query->condition('node.type', 'distribuidores');
+
     $categories = $query->execute()->fetchAll();
     $result = array();
     $result['All'] = 'Todas';

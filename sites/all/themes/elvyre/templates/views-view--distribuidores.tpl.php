@@ -60,6 +60,10 @@
         <div class="view-empty">
             <?php print $empty; ?>
         </div>
+    <?php elseif (empty($rows) && $display_id == 'page'): ?>
+        <div class="view-empty">
+            <p>No hay distribuidores con este criterio de busqueda. Pruebe con "Todas las provincias" para encontrar su distribuidor</p>
+        </div>
     <?php endif; ?>
 
     <?php if ($pager): ?>

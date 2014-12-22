@@ -173,7 +173,7 @@ function custom_producto_theme() {
         ),
         'custom_filter_all_mobile' => array(
             'template' => 'templates/custom_filter_all_mobile',
-            'variables' => array('list' => '','category'=>''),
+            'variables' => array('list' => '', 'category' => ''),
         ),
     );
 }
@@ -265,6 +265,7 @@ function custom_producto_filter_distribuidores_form($form, &$form_state) {
     //$country_selected = isset($form_state['values']['country']) ? $form_state['values']['country'] : (isset($_GET['country']) ? $_GET['country'] : 'ar');
     $country_selected = 'ar';
     $province = _custom_producto_get_province($country_selected);
+    $province = array_merge(array('All' => 'Todas las provincias'), $province);
     //$form['country']['#default_value'] = $country_selected;
 
     $form['province'] = array(
@@ -340,7 +341,9 @@ function custom_producto_views_query_alter(&$view, &$query) {
         }
         /* @var $query views_plugin_query_default */
         if ($value = filter_input(INPUT_GET, 'province', FILTER_DEFAULT, array('options' => array('default' => 'B')))) {
-            $query->add_where(1, 'location.province', $value);
+            if ($value != 'All') {
+                $query->add_where(1, 'location.province', $value);
+            }
         }
         /* @var $query views_plugin_query_default */
         /* if ($value = filter_input(INPUT_GET, 'field_categor_a_tid', FILTER_DEFAULT, array('options' => array('default' => 'All'))) && $value !='All') {

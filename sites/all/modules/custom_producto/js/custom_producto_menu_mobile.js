@@ -21,9 +21,18 @@
             if ($('.mobile_menu:not(.processed) a.active', context).length > 0) {
                 var div = $('<div>').addClass('selected');
 
-                $(div).append($('.mobile_menu a.active', context).parents().eq(3).find('>a').clone());
-                $(div).append($('.mobile_menu a.active', context).clone());
-
+                var a1 = $('.mobile_menu a.active', context).parents().eq(3).find('>a').clone();
+                var parents1 = $('.mobile_menu a.active', context).parents().eq(3);
+                $(div).append(a1);
+                var a2 = $('.mobile_menu a.active', context).clone();
+                $(div).append(a2);
+                
+                $(a1).click(function(e){
+                    e.preventDefault();
+                    $(parents1).parent().show('slow');
+                    $(parents1).find('div.item-list > ul').show('slow');
+                });
+                
                 $(div).insertAfter($('.mobile_menu', context));
                 $('.mobile_menu', context).addClass('processed');
             }

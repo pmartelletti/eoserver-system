@@ -12,20 +12,18 @@
                 $('> a', element).click(function (e) {
                     e.preventDefault();
                     var ul = $(this).next().find('> ul');
-                    $(ul).toggle('show', function(){
+                    $(ul).toggle('show', function () {
                         $('.mobile_menu > div.item-list > ul > li > div.item-list > ul').not(ul).hide();
                     });
-                    
+
                 });
             });
-            if($('.mobile_menu:not(.processed) a.active', context).length > 0 ){
+            if ($('.mobile_menu:not(.processed) a.active', context).length > 0) {
                 var div = $('<div>').addClass('selected');
-                
-                    $(div).append($('.mobile_menu a.active', context).parents().eq(3).find('>a').clone());
-                    $(div).append($('.mobile_menu a.active', context).clone());
-                
-                
-                
+
+                $(div).append($('.mobile_menu a.active', context).parents().eq(3).find('>a').clone());
+                $(div).append($('.mobile_menu a.active', context).clone());
+
                 $(div).insertAfter($('.mobile_menu', context));
                 $('.mobile_menu', context).addClass('processed');
             }

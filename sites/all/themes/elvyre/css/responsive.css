@@ -1910,6 +1910,7 @@ All this is done for any sub-level being entered.
 	
 	.page-productos .block-system {
 		width: 100%;
+		padding-top: 75px;
 	}
 	
 	.page-productos .container,

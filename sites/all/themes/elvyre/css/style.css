@@ -5025,8 +5025,11 @@ overflow: auto;
 	float: left;
 }
 
-body.page-productos-porcellanato {
-	background: none repeat scroll 0 0 #cbc9c6;
+body.page-productos-porcellanato,
+body.page-productos-ceramico,
+body.page-productos-deglass,
+body.page-productos-piezas-especiales {
+	background: none repeat scroll 0 0 #f7f7f7;
 	background-size: 100%
 }
 

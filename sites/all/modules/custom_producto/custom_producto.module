@@ -1,353 +1,384 @@
 <?php
-
 function _custom_producto_get_linea() {
-    $tid = false;
-    $node = menu_get_object();
-    if ($node && $node->type == 'productos') {
-        $tid = $node->field_linea[LANGUAGE_NONE][0]['tid'];
-    }
-    return $tid;
+	$tid = false;
+	$node = menu_get_object ();
+	if ($node && $node->type == 'productos') {
+		$tid = $node->field_lineas [LANGUAGE_NONE] [0] ['tid'];
+		
+	}
+	return $tid;
 }
-
 function _custom_producto_block_show() {
-    return true;
+	return true;
 }
-
 function _custom_producto_block_filter_show($type) {
-    $is_visible = false;
-    if ((arg(0) == 'productos' && arg(1) != '' && arg(2) == NULL)) {
-        $type = 'linea';
-    }
-    switch ($type) {
-        case 'linea':
-        case 'lineas':
-        case 'ambiente':
-        case 'ambientes':
-        case 'color':
-        case 'colores':
-        case 'tono':
-        case 'tonos':
-        case 'uso':
-        case 'usos':
-        case 'medida':
-        case 'medidas':
-            $term_name = implode(" ", explode("-", arg(1)));
-            $term = taxonomy_get_term_by_name($term_name, 'categor_a');
-            $term = array_shift($term);
-            if ($term && $term->vid == 8) {
-                $is_visible = true;
-            }
-            break;
-    }
-    return $is_visible;
+	$is_visible = false;
+	if ((arg ( 0 ) == 'productos' && arg ( 1 ) != '' && arg ( 2 ) == NULL)) {
+		$type = 'linea';
+	}
+	switch ($type) {
+		case 'linea' :
+		case 'lineas' :
+		case 'ambiente' :
+		case 'ambientes' :
+		case 'color' :
+		case 'colores' :
+		case 'tono' :
+		case 'tonos' :
+		case 'uso' :
+		case 'usos' :
+		case 'medida' :
+		case 'medidas' :
+			$term_name = implode ( " ", explode ( "-", arg ( 1 ) ) );
+			$term = taxonomy_get_term_by_name ( $term_name, 'categor_a' );
+			$term = array_shift ( $term );
+			if ($term && $term->vid == 8) {
+				$is_visible = true;
+			}
+			break;
+	}
+	return $is_visible;
 }
-
 function custom_producto_block_info() {
-    $blocks['detail_product'] = array(
-        'info' => t('Detalles de Producto'),
-        'cache' => DRUPAL_CACHE_PER_PAGE,
-        'visibility' => BLOCK_VISIBILITY_PHP,
-        'pages' => '<?php return _custom_producto_block_show();?>',
-    );
-    $blocks['filter_linea'] = array(
-        'info' => t('Filtro de producto por lineas'),
-        'cache' => DRUPAL_CACHE_PER_PAGE,
-        'visibility' => BLOCK_VISIBILITY_PHP,
-        'pages' => '<?php return _custom_producto_block_filter_show("linea");?>',
-    );
-    $blocks['filter_all'] = array(
-        'info' => t('Filtro de Categorias/Ambientes/Prop de Productos'),
-        'cache' => DRUPAL_CACHE_PER_PAGE,
-        'visibility' => BLOCK_VISIBILITY_LISTED,
-        'pages' => 'productos/*
-producto/*',
-    );
-    $blocks['filter_all_mobile'] = array(
-        'info' => t('Filtro de Categorias/Ambientes/Prop de Productos (Mobile)'),
-        'cache' => DRUPAL_CACHE_PER_PAGE,
-        'visibility' => BLOCK_VISIBILITY_LISTED,
-        'pages' => 'productos/*
-producto/*',
-    );
-    $blocks['filter_distribuidores'] = array(
-        'info' => t('Filtro distribuidores'),
-        'cache' => DRUPAL_CACHE_PER_PAGE,
-        'visibility' => BLOCK_VISIBILITY_LISTED,
-        'pages' => 'distribuidores',
-    );
-    return $blocks;
+	$blocks ['detail_product'] = array (
+			'info' => t ( 'Detalles de Producto' ),
+			'cache' => DRUPAL_CACHE_PER_PAGE,
+			'visibility' => BLOCK_VISIBILITY_PHP,
+			'pages' => '<?php return _custom_producto_block_show();?>' 
+	);
+	$blocks ['filter_linea'] = array (
+			'info' => t ( 'Filtro de producto por lineas' ),
+			'cache' => DRUPAL_CACHE_PER_PAGE,
+			'visibility' => BLOCK_VISIBILITY_PHP,
+			'pages' => '<?php return _custom_producto_block_filter_show("linea");?>' 
+	);
+	$blocks ['filter_all'] = array (
+			'info' => t ( 'Filtro de Categorias/Ambientes/Prop de Productos' ),
+			'cache' => DRUPAL_CACHE_PER_PAGE,
+			'visibility' => BLOCK_VISIBILITY_LISTED,
+			'pages' => 'productos/*
+producto/*' 
+	);
+	$blocks ['filter_all_mobile'] = array (
+			'info' => t ( 'Filtro de Categorias/Ambientes/Prop de Productos (Mobile)' ),
+			'cache' => DRUPAL_CACHE_PER_PAGE,
+			'visibility' => BLOCK_VISIBILITY_LISTED,
+			'pages' => 'productos/*
+producto/*' 
+	);
+	$blocks ['filter_distribuidores'] = array (
+			'info' => t ( 'Filtro distribuidores' ),
+			'cache' => DRUPAL_CACHE_PER_PAGE,
+			'visibility' => BLOCK_VISIBILITY_LISTED,
+			'pages' => 'distribuidores' 
+	);
+	return $blocks;
 }
-
 function custom_producto_block_view($delta = '') {
-    $block = array();
-    require_once drupal_get_path('module', 'custom_producto') . '/custom_producto.inc';
-    require_once drupal_get_path('module', 'pathauto') . '/pathauto.inc';
-    switch ($delta) {
-        case 'detail_product':
-            $node = node_load(arg(1));
-            $block['subject'] = '';
-            $block['content'] = array(
-                '#theme' => 'custom_producto_detail',
-                '#node' => $node,
-            );
-            break;
-        case 'filter_linea':
-            $arg = pathauto_cleanstring(arg(1));
-            $type = 'lineas';
-            $explode = false;
-            switch (arg(2)) {
-                case 'linea':
-                case 'lineas':
-                case 'color':
-                case 'colores':
-                case 'tono':
-                case 'tonos':
-                    $type = arg(2);
-                    break;
-                case 'ambiente':
-                case 'ambientes':
-                case 'uso':
-                case 'usos':
-                case 'medida':
-                case 'medidas':
-                    $explode = true;
-                    $type = arg(2);
-                    break;
-            }
-            $items = _custom_producto_get_items_filtro_linea($arg, $type);
-            $list = _custom_producto_format_items_filtro_all($items, $arg, $type, $explode);
-
-            $block['content'] = array(
-                '#theme' => 'custom_filter_linea',
-                '#list' => theme('item_list', array('items' => $list, 'type' => 'ul',)),
-                '#category' => $arg,
-            );
-            break;
-        case 'filter_all':
-            drupal_add_js(drupal_get_path('module', 'custom_producto') . '/js/custom_producto_menu.js');
-            $term = _custom_producto_get_term_from_arg();
-            if ($term) {
-                $items = _custom_producto_get_items_filtro_all($term->name);
-                $block['subject'] = $term->name;
-                $block['content'] = array(
-                    '#theme' => 'custom_filter_all',
-                    '#list' => theme('item_list', array('items' => $items, 'type' => 'ul',)),
-                );
-            }
-            break;
-        case 'filter_all_mobile':
-            drupal_add_js(drupal_get_path('module', 'custom_producto') . '/js/custom_producto_menu_mobile.js');
-            drupal_add_css(drupal_get_path('module', 'custom_producto') . '/css/custom_producto_menu_mobile.css');
-            $term = _custom_producto_get_term_from_arg();
-            if ($term) {
-                $items = _custom_producto_get_items_filtro_all_mobile($term->name);
-                $block['subject'] = '';
-                $block['content'] = array(
-                    '#category' => $term->name,
-                    '#theme' => 'custom_filter_all_mobile',
-                    '#list' => theme('item_list', array('items' => $items, 'type' => 'ul',)),
-                );
-            }
-            break;
-        case 'filter_distribuidores':
-            $block['subject'] = '';
-            $block['content'] = drupal_get_form('custom_producto_filter_distribuidores_form');
-            break;
-    }
-    return $block;
+	$block = array ();
+	require_once drupal_get_path ( 'module', 'custom_producto' ) . '/custom_producto.inc';
+	require_once drupal_get_path ( 'module', 'pathauto' ) . '/pathauto.inc';
+	switch ($delta) {
+		case 'detail_product' :
+			$node = node_load ( arg ( 1 ) );
+			$block ['subject'] = '';
+			$block ['content'] = array (
+					'#theme' => 'custom_producto_detail',
+					'#node' => $node 
+			);
+			break;
+		case 'filter_linea' :
+			$arg = pathauto_cleanstring ( arg ( 1 ) );
+			$type = 'lineas';
+			$explode = false;
+			switch (arg ( 2 )) {
+				case 'linea' :
+				case 'lineas' :
+				case 'color' :
+				case 'colores' :
+				case 'tono' :
+				case 'tonos' :
+					$type = arg ( 2 );
+					break;
+				case 'ambiente' :
+				case 'ambientes' :
+				case 'uso' :
+				case 'usos' :
+				case 'medida' :
+				case 'medidas' :
+					$explode = true;
+					$type = arg ( 2 );
+					break;
+			}
+			$items = _custom_producto_get_items_filtro_linea ( $arg, $type );
+			$list = _custom_producto_format_items_filtro_all ( $items, $arg, $type, $explode );
+			
+			$block ['content'] = array (
+					'#theme' => 'custom_filter_linea',
+					'#list' => theme ( 'item_list', array (
+							'items' => $list,
+							'type' => 'ul' 
+					) ),
+					'#category' => $arg 
+			);
+			break;
+		case 'filter_all' :
+			drupal_add_js ( drupal_get_path ( 'module', 'custom_producto' ) . '/js/custom_producto_menu.js' );
+			$term = _custom_producto_get_term_from_arg ();
+			if ($term) {
+				$items = _custom_producto_get_items_filtro_all ( $term->name );
+				$block ['subject'] = $term->name;
+				$block ['content'] = array (
+						'#theme' => 'custom_filter_all',
+						'#list' => theme ( 'item_list', array (
+								'items' => $items,
+								'type' => 'ul' 
+						) ) 
+				);
+			}
+			break;
+		case 'filter_all_mobile' :
+			drupal_add_js ( drupal_get_path ( 'module', 'custom_producto' ) . '/js/custom_producto_menu_mobile.js' );
+			drupal_add_css ( drupal_get_path ( 'module', 'custom_producto' ) . '/css/custom_producto_menu_mobile.css' );
+			$term = _custom_producto_get_term_from_arg ();
+			if ($term) {
+				$items = _custom_producto_get_items_filtro_all_mobile ( $term->name );
+				$block ['subject'] = '';
+				$block ['content'] = array (
+						'#category' => $term->name,
+						'#theme' => 'custom_filter_all_mobile',
+						'#list' => theme ( 'item_list', array (
+								'items' => $items,
+								'type' => 'ul' 
+						) ) 
+				);
+			}
+			break;
+		case 'filter_distribuidores' :
+			$block ['subject'] = '';
+			$block ['content'] = drupal_get_form ( 'custom_producto_filter_distribuidores_form' );
+			break;
+	}
+	return $block;
 }
-
 function custom_producto_theme() {
-    return array(
-        'custom_producto_detail' => array(
-            'template' => 'templates/custom_producto_detail',
-            'variables' => array('node' => NULL,),
-        ),
-        'custom_filter_linea' => array(
-            'template' => 'templates/custom_filter_linea',
-            'variables' => array('list' => '', 'category' => '',),
-        ),
-        'custom_filter_all' => array(
-            'template' => 'templates/custom_filter_all',
-            'variables' => array('list' => '',),
-        ),
-        'custom_filter_all_mobile' => array(
-            'template' => 'templates/custom_filter_all_mobile',
-            'variables' => array('list' => '', 'category' => ''),
-        ),
-    );
+	return array (
+			'custom_producto_detail' => array (
+					'template' => 'templates/custom_producto_detail',
+					'variables' => array (
+							'node' => NULL 
+					) 
+			),
+			'custom_filter_linea' => array (
+					'template' => 'templates/custom_filter_linea',
+					'variables' => array (
+							'list' => '',
+							'category' => '' 
+					) 
+			),
+			'custom_filter_all' => array (
+					'template' => 'templates/custom_filter_all',
+					'variables' => array (
+							'list' => '' 
+					) 
+			),
+			'custom_filter_all_mobile' => array (
+					'template' => 'templates/custom_filter_all_mobile',
+					'variables' => array (
+							'list' => '',
+							'category' => '' 
+					) 
+			) 
+	);
 }
-
 function _custom_producto_get_country() {
-    $query = db_select('location');
-    $query->addJoin('inner', 'location_instance', 'location_instance', 'location_instance.lid = location.lid ');
-    $query->addJoin('inner', 'node', 'node', 'node.vid = location_instance.vid');
-    $query->addField('location', 'country');
-    $query->groupBy('country');
-    $query->condition('node.status', 1);
-    $query->condition('node.type', 'distribuidores');
-    $countries = $query->execute()->fetchAll();
-    $_countries = country_get_list();
-    $result = array();
-    if (!empty($_countries)) {
-        while (list($code, $name) = each($_countries)) {
-            foreach ($countries as $v) {
-                if (strtolower($code) == $v->country) {
-                    $result[strtolower($code)] = $name;
-                }
-            }
-        }
-    }
-    return $result;
+	$query = db_select ( 'location' );
+	$query->addJoin ( 'inner', 'location_instance', 'location_instance', 'location_instance.lid = location.lid ' );
+	$query->addJoin ( 'inner', 'node', 'node', 'node.vid = location_instance.vid' );
+	$query->addField ( 'location', 'country' );
+	$query->groupBy ( 'country' );
+	$query->condition ( 'node.status', 1 );
+	$query->condition ( 'node.type', 'distribuidores' );
+	$countries = $query->execute ()->fetchAll ();
+	$_countries = country_get_list ();
+	$result = array ();
+	if (! empty ( $_countries )) {
+		while ( list ( $code, $name ) = each ( $_countries ) ) {
+			foreach ( $countries as $v ) {
+				if (strtolower ( $code ) == $v->country) {
+					$result [strtolower ( $code )] = $name;
+				}
+			}
+		}
+	}
+	return $result;
 }
-
 function _custom_producto_get_category() {
-    $query = db_select('field_data_field_categor_a');
-    $query->addJoin('inner', 'node', 'node', 'node.vid = field_data_field_categor_a.entity_id');
-    $query->addJoin('inner', 'taxonomy_term_data', 'taxonomy_term_data', 'taxonomy_term_data.tid = field_data_field_categor_a.field_categor_a_tid');
-    $query->addField('field_data_field_categor_a', 'field_categor_a_tid');
-    $query->addField('taxonomy_term_data', 'name');
-    $query->groupBy('name');
-    $query->groupBy('field_categor_a_tid');
-    $query->condition('node.status', 1);
-    $query->condition('node.type', 'distribuidores');
-
-    $categories = $query->execute()->fetchAll();
-    $result = array();
-    $result['All'] = 'Todas';
-    foreach ($categories as $v) {
-        if ($v->name) {
-            $result[$v->field_categor_a_tid] = $v->name;
-        }
-    }
-    return $result;
+	$query = db_select ( 'field_data_field_categor_a' );
+	$query->addJoin ( 'inner', 'node', 'node', 'node.vid = field_data_field_categor_a.entity_id' );
+	$query->addJoin ( 'inner', 'taxonomy_term_data', 'taxonomy_term_data', 'taxonomy_term_data.tid = field_data_field_categor_a.field_categor_a_tid' );
+	$query->addField ( 'field_data_field_categor_a', 'field_categor_a_tid' );
+	$query->addField ( 'taxonomy_term_data', 'name' );
+	$query->groupBy ( 'name' );
+	$query->groupBy ( 'field_categor_a_tid' );
+	$query->condition ( 'node.status', 1 );
+	$query->condition ( 'node.type', 'distribuidores' );
+	
+	$categories = $query->execute ()->fetchAll ();
+	$result = array ();
+	$result ['All'] = 'Todas';
+	foreach ( $categories as $v ) {
+		if ($v->name) {
+			$result [$v->field_categor_a_tid] = $v->name;
+		}
+	}
+	return $result;
 }
-
 function _custom_producto_get_province($country) {
-    $query = db_select('location');
-    $query->addJoin('inner', 'location_instance', 'location_instance', 'location_instance.lid = location.lid ');
-    $query->addJoin('inner', 'node', 'node', 'node.vid = location_instance.vid');
-    $query->addField('location', 'province');
-    $query->groupBy('province');
-    $query->condition('node.status', 1);
-    $query->condition('node.type', 'distribuidores');
-    $query->orderBy('province', 'ASC');
-    $provinces = $query->execute()->fetchAll();
-    $_province = location_get_provinces($country);
-    $result = array();
-    if (!empty($_province)) {
-        while (list($code, $name) = each($_province)) {
-            foreach ($provinces as $v) {
-                if ($code == $v->province) {
-                    $name = trim(str_replace('Distrito Federal', 'CABA', $name));
-                    $name = trim(str_replace('Province', '', $name));
-                    $result[$code] = $name;
-                }
-            }
-        }
-    }
-    asort($result);
-    return $result;
+	$query = db_select ( 'location' );
+	$query->addJoin ( 'inner', 'location_instance', 'location_instance', 'location_instance.lid = location.lid ' );
+	$query->addJoin ( 'inner', 'node', 'node', 'node.vid = location_instance.vid' );
+	$query->addField ( 'location', 'province' );
+	$query->groupBy ( 'province' );
+	$query->condition ( 'node.status', 1 );
+	$query->condition ( 'node.type', 'distribuidores' );
+	$query->orderBy ( 'province', 'ASC' );
+	$provinces = $query->execute ()->fetchAll ();
+	$_province = location_get_provinces ( $country );
+	$result = array ();
+	if (! empty ( $_province )) {
+		while ( list ( $code, $name ) = each ( $_province ) ) {
+			foreach ( $provinces as $v ) {
+				if ($code == $v->province) {
+					$name = trim ( str_replace ( 'Distrito Federal', 'CABA', $name ) );
+					$name = trim ( str_replace ( 'Province', '', $name ) );
+					$result [$code] = $name;
+				}
+			}
+		}
+	}
+	asort ( $result );
+	return $result;
 }
-
 function custom_producto_filter_distribuidores_form($form, &$form_state) {
-    $countries = _custom_producto_get_country();
-
-    /* $form['country'] = array(
-      '#type' => 'select',
-      '#title' => 'País',
-      '#options' => $countries,
-      '#ajax' => array(
-      'callback' => 'ajax_example_dependent_dropdown_callback',
-      'wrapper' => 'dropdown-second-replace',
-      ),
-      ); */
-    //$country_selected = isset($form_state['values']['country']) ? $form_state['values']['country'] : (isset($_GET['country']) ? $_GET['country'] : 'ar');
-    $country_selected = 'ar';
-    $province = _custom_producto_get_province($country_selected);
-    $province = array_merge(array('All' => 'Todas las provincias'), $province);
-    //$form['country']['#default_value'] = $country_selected;
-
-    $form['province'] = array(
-        '#type' => 'select',
-        '#title' => 'Provincia',
-        '#prefix' => '<div id="dropdown-second-replace">',
-        '#suffix' => '</div>',
-        '#options' => $province,
-    );
-    if (isset($_GET['province'])) {
-        $form['province']['#default_value'] = $_GET['province'];
-    } else {
-        $form['province']['#default_value'] = 'B';
-    }
-    /* $form['city'] = array(
-      '#type' => 'textfield',
-      '#title' => 'Ciudad',
-      '#default_value' => isset($_GET['city']) ? $_GET['city'] : '',
-      '#size' => 30,
-      ); */
-    $categorias = _custom_producto_get_category();
-
-    $form['field_categor_a_tid'] = array(
-        '#type' => 'select',
-        '#title' => 'Categoría',
-        '#options' => $categorias,
-        '#default_value' => isset($_GET['field_categor_a_tid']) ? $_GET['field_categor_a_tid'] : 'All',
-    );
-    $form['submit'] = array(
-        '#type' => 'submit',
-        '#value' => 'Aplicar',
-        '#prefix' => '<div class="submit-button">',
-        '#suffix' => '</div>',
-    );
-    return $form;
+	$countries = _custom_producto_get_country ();
+	
+	/*
+	 * $form['country'] = array(
+	 * '#type' => 'select',
+	 * '#title' => 'País',
+	 * '#options' => $countries,
+	 * '#ajax' => array(
+	 * 'callback' => 'ajax_example_dependent_dropdown_callback',
+	 * 'wrapper' => 'dropdown-second-replace',
+	 * ),
+	 * );
+	 */
+	// $country_selected = isset($form_state['values']['country']) ? $form_state['values']['country'] : (isset($_GET['country']) ? $_GET['country'] : 'ar');
+	$country_selected = 'ar';
+	$province = _custom_producto_get_province ( $country_selected );
+	$province = array_merge ( array (
+			'All' => 'Todas las provincias' 
+	), $province );
+	// $form['country']['#default_value'] = $country_selected;
+	
+	$form ['province'] = array (
+			'#type' => 'select',
+			'#title' => 'Provincia',
+			'#prefix' => '<div id="dropdown-second-replace">',
+			'#suffix' => '</div>',
+			'#options' => $province 
+	);
+	if (isset ( $_GET ['province'] )) {
+		$form ['province'] ['#default_value'] = $_GET ['province'];
+	} else {
+		$form ['province'] ['#default_value'] = 'B';
+	}
+	/*
+	 * $form['city'] = array(
+	 * '#type' => 'textfield',
+	 * '#title' => 'Ciudad',
+	 * '#default_value' => isset($_GET['city']) ? $_GET['city'] : '',
+	 * '#size' => 30,
+	 * );
+	 */
+	$categorias = _custom_producto_get_category ();
+	
+	$form ['field_categor_a_tid'] = array (
+			'#type' => 'select',
+			'#title' => 'Categoría',
+			'#options' => $categorias,
+			'#default_value' => isset ( $_GET ['field_categor_a_tid'] ) ? $_GET ['field_categor_a_tid'] : 'All' 
+	);
+	$form ['submit'] = array (
+			'#type' => 'submit',
+			'#value' => 'Aplicar',
+			'#prefix' => '<div class="submit-button">',
+			'#suffix' => '</div>' 
+	);
+	return $form;
 }
-
 function custom_producto_filter_distribuidores_form_submit($form, &$form_state) {
-    $form_state['redirect'] = array(
-        'distribuidores',
-        array(
-            'query' => array(
-                //'country' => $form_state['values']['country'],
-                'province' => $form_state['values']['province'],
-                //'city' => $form_state['values']['city'],
-                'field_categor_a_tid' => $form_state['values']['field_categor_a_tid'],
-            ),
-        )
-    );
+	$form_state ['redirect'] = array (
+			'distribuidores',
+			array (
+					'query' => array (
+							// 'country' => $form_state['values']['country'],
+							'province' => $form_state ['values'] ['province'],
+							// 'city' => $form_state['values']['city'],
+							'field_categor_a_tid' => $form_state ['values'] ['field_categor_a_tid'] 
+					) 
+			) 
+	);
 }
-
 function ajax_example_dependent_dropdown_callback($form, $form_state) {
-    return $form['province'];
+	return $form ['province'];
 }
-
 function custom_producto_views_query_alter(&$view, &$query) {
-    if ($view->name == 'distribuidores') {
-        foreach ($query->where as &$condition_group) {
-            foreach ($condition_group['conditions'] as &$condition) {
-                if ($condition['field'] == 'field_data_field_categor_a.field_categor_a_tid' && filter_input(INPUT_GET, 'field_categor_a_tid', FILTER_DEFAULT, array('options' => array('default' => 'All'))) != 'All') {
-                    $condition['value'] = array();
-                    $condition['value'] = array(filter_input(INPUT_GET, 'field_categor_a_tid', FILTER_DEFAULT) => filter_input(INPUT_GET, 'field_categor_a_tid', FILTER_DEFAULT));
-                }
-                if ($condition['field'] == 'location.city' && filter_input(INPUT_GET, 'city', FILTER_DEFAULT) != 'All') {
-                    if (filter_input(INPUT_GET, 'city', FILTER_DEFAULT)) {
-                        $condition['value'] = filter_input(INPUT_GET, 'city', FILTER_DEFAULT, array('options' => array('default' => '%')));
-                    }
-                }
-                /* if ($condition['field'] == 'location.country') {
-                  $condition['value'] = filter_input(INPUT_GET, 'country', FILTER_DEFAULT, array('options' => array('default' => 'ar')));
-                  } */
-            }
-        }
-        /* @var $query views_plugin_query_default */
-        if ($value = filter_input(INPUT_GET, 'province', FILTER_DEFAULT, array('options' => array('default' => 'B')))) {
-            if ($value != 'All') {
-                $query->add_where(1, 'location.province', $value);
-            }
-        }
-        /* @var $query views_plugin_query_default */
-        /* if ($value = filter_input(INPUT_GET, 'field_categor_a_tid', FILTER_DEFAULT, array('options' => array('default' => 'All'))) && $value !='All') {
-          $query->add_where(1, 'field_data_field_categor_a.field_categor_a_tid', $value);
-          } */
-    }
+	if ($view->name == 'distribuidores') {
+		foreach ( $query->where as &$condition_group ) {
+			foreach ( $condition_group ['conditions'] as &$condition ) {
+				if ($condition ['field'] == 'field_data_field_categor_a.field_categor_a_tid' && filter_input ( INPUT_GET, 'field_categor_a_tid', FILTER_DEFAULT, array (
+						'options' => array (
+								'default' => 'All' 
+						) 
+				) ) != 'All') {
+					$condition ['value'] = array ();
+					$condition ['value'] = array (
+							filter_input ( INPUT_GET, 'field_categor_a_tid', FILTER_DEFAULT ) => filter_input ( INPUT_GET, 'field_categor_a_tid', FILTER_DEFAULT ) 
+					);
+				}
+				if ($condition ['field'] == 'location.city' && filter_input ( INPUT_GET, 'city', FILTER_DEFAULT ) != 'All') {
+					if (filter_input ( INPUT_GET, 'city', FILTER_DEFAULT )) {
+						$condition ['value'] = filter_input ( INPUT_GET, 'city', FILTER_DEFAULT, array (
+								'options' => array (
+										'default' => '%' 
+								) 
+						) );
+					}
+				}
+				/*
+				 * if ($condition['field'] == 'location.country') {
+				 * $condition['value'] = filter_input(INPUT_GET, 'country', FILTER_DEFAULT, array('options' => array('default' => 'ar')));
+				 * }
+				 */
+			}
+		}
+		/* @var $query views_plugin_query_default */
+		if ($value = filter_input ( INPUT_GET, 'province', FILTER_DEFAULT, array (
+				'options' => array (
+						'default' => 'B' 
+				) 
+		) )) {
+			if ($value != 'All') {
+				$query->add_where ( 1, 'location.province', $value );
+			}
+		}
+		/* @var $query views_plugin_query_default */
+		/*
+		 * if ($value = filter_input(INPUT_GET, 'field_categor_a_tid', FILTER_DEFAULT, array('options' => array('default' => 'All'))) && $value !='All') {
+		 * $query->add_where(1, 'field_data_field_categor_a.field_categor_a_tid', $value);
+		 * }
+		 */
+	}
 }

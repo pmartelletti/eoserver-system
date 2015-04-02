@@ -5190,6 +5190,11 @@ body.page-productos-piezas-especiales {
 	color: #000000;
 }
 
+.pager li {
+	min-height: auto;
+    min-width: auto;
+}
+
 .detalle_producto {
 	float: left;
     padding-left: 40px;

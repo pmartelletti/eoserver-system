@@ -5154,7 +5154,7 @@ body.page-productos-piezas-especiales {
     height: auto;
 	min-height: 180px;
     margin: 0 0 20px;
-    max-width: 180px;
+    min-width: 180px;/**/
     padding: 0 10px;
     text-align: center;
     width: auto;

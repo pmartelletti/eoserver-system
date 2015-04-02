@@ -1112,8 +1112,10 @@ All this is done for any sub-level being entered.
 	}
 	
 	.page-productos .block-system .view-id-productosbycategory ul li {
+		height: auto;
 		margin: 0;
-		width: 100%;
+		padding: 0 10% 5%;
+		width: 80%;
 	}
 	
 	.item-list .pager {

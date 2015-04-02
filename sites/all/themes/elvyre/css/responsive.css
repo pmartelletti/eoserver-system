@@ -1323,6 +1323,7 @@ All this is done for any sub-level being entered.
 	
 	#block-custom-producto-filter-all-mobile {
 		display: block;
+		margin-bottom: 30px;
 	}
 
 }

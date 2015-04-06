@@ -5194,6 +5194,7 @@ body.page-productos-piezas-especiales {
 .pager li {
 	min-height: auto !important;
     min-width: auto !important;
+	height: auto !important;
 }
 
 .detalle_producto {

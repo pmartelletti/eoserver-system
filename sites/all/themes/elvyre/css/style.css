@@ -5149,6 +5149,12 @@ body.page-productos-piezas-especiales {
 	clear: both;
 }
 
+.pager li {
+	min-height: auto !important;
+    min-width: auto !important;
+	height: auto !important;
+}
+
 .page-productos .block-system .view-id-productosbycategory  ul li {
     float: left;
     height: auto;
@@ -5189,12 +5195,6 @@ body.page-productos-piezas-especiales {
 	font-weight: 400;
 	font-size: 16px;
 	color: #000000;
-}
-
-.pager li {
-	min-height: auto !important;
-    min-width: auto !important;
-	height: auto !important;
 }
 
 .detalle_producto {

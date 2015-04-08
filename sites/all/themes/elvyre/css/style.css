@@ -5153,6 +5153,7 @@ body.page-productos-piezas-especiales {
 	min-height: auto !important;
     min-width: auto !important;
 	height: auto !important;
+	width: auto !important;
 }
 
 .page-productos .block-system .view-id-productosbycategory  ul li {

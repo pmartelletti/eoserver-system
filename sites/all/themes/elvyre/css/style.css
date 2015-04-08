@@ -5149,7 +5149,7 @@ body.page-productos-piezas-especiales {
 	clear: both;
 }
 
-.page-productos .block-system .view-id-productosbycategory .pager li {
+.page-productos .block-system .view-id-productosbycategory li.pager {
 	min-height: auto !important;
     min-width: auto !important;
 	height: auto !important;

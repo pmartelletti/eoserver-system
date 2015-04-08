@@ -4011,7 +4011,7 @@ input, textarea, .chosen-container-single .chosen-single, #edit-field-categor-a-
     line-height: 11px;
     color: #fff;
     background-color: #333;
-    /*padding: 10px 17px;*/
+    padding: 0 5px;
     cursor: pointer;
 	margin-right: 6px;
 

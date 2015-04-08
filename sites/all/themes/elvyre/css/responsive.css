@@ -2994,9 +2994,9 @@ All this is done for any sub-level being entered.
 		margin: 0;
 	}
 	
-	.page-productos .block-system .view-id-productosbycategory ul li:nth-child(3n+3) {
+	/*.page-productos .block-system .view-id-productosbycategory ul li:nth-child(3n+3) {
 		margin: 0 10% 0 0;
-	}
+	}*/
 	
 	.page-productos .block-system .view-id-productosbycategory ul li {
 		margin: 0;

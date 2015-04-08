@@ -2982,10 +2982,12 @@ All this is done for any sub-level being entered.
 	
 	.page-productos .productos_filtro_linea {
 		padding-left: 20px;
+		padding-right: 20px;
+		width: 300px;
 	}
 	
 	.page-productos .block-system {
-		width: 340px;
+		width: 397px;
 	}
 	
 	.page-productos .block-system .view-id-productosbycategory ul li:nth-child(2n+2) {
@@ -2999,6 +3001,7 @@ All this is done for any sub-level being entered.
 	.page-productos .block-system .view-id-productosbycategory ul li {
 		margin: 0;
    		width: 44%;
+		padding: 0 6px;
 	}
 	
 	.page-productos .block-system .view-id-productosbycategory .views-field-field-image img {

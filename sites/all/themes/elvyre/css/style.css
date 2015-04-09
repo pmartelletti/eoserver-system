@@ -4011,7 +4011,7 @@ input, textarea, .chosen-container-single .chosen-single, #edit-field-categor-a-
     line-height: 11px;
     color: #fff;
     background-color: #333;
-    /*padding: 10px 17px;*/
+    padding: 0 5px;
     cursor: pointer;
 	margin-right: 6px;
 
@@ -4053,8 +4053,8 @@ input, textarea, .chosen-container-single .chosen-single, #edit-field-categor-a-
     font-size: 16px !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
-    width: 350px !important;
-	margin-right: 5px !important;
+    width: 330px !important;
+	margin-right: 24px !important;
 	height: 30px !important;
 }
 
@@ -5149,12 +5149,20 @@ body.page-productos-piezas-especiales {
 	clear: both;
 }
 
+.page-productos .block-system .view-id-productosbycategory li.pager {
+	min-height: auto !important;
+    min-width: auto !important;
+	height: auto !important;
+	width: auto !important;
+}
+
 .page-productos .block-system .view-id-productosbycategory  ul li {
     float: left;
     height: auto;
 	min-height: 180px;
     margin: 0 0 20px;
-    max-width: 180px;
+    min-width: 180px;/**/
+	height: 220px;/**/
     padding: 0 10px;
     text-align: center;
     width: auto;

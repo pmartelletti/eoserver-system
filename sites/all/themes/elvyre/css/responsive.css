@@ -1112,8 +1112,10 @@ All this is done for any sub-level being entered.
 	}
 	
 	.page-productos .block-system .view-id-productosbycategory ul li {
+		height: auto;
 		margin: 0;
-		width: 100%;
+		padding: 0 10% 5%;
+		width: 80%;
 	}
 	
 	.item-list .pager {
@@ -1321,6 +1323,7 @@ All this is done for any sub-level being entered.
 	
 	#block-custom-producto-filter-all-mobile {
 		display: block;
+		margin-bottom: 30px;
 	}
 
 }
@@ -2675,6 +2678,7 @@ All this is done for any sub-level being entered.
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .container {
         max-width: 972px;
+		background: #0CC;
     }
 	.container_12 {
  max-width: 972px;
@@ -2978,23 +2982,26 @@ All this is done for any sub-level being entered.
 	
 	.page-productos .productos_filtro_linea {
 		padding-left: 20px;
+		padding-right: 20px;
+		width: 300px;
 	}
 	
 	.page-productos .block-system {
-		width: 340px;
+		width: 397px;
 	}
 	
 	.page-productos .block-system .view-id-productosbycategory ul li:nth-child(2n+2) {
 		margin: 0;
 	}
 	
-	.page-productos .block-system .view-id-productosbycategory ul li:nth-child(3n+3) {
+	/*.page-productos .block-system .view-id-productosbycategory ul li:nth-child(3n+3) {
 		margin: 0 10% 0 0;
-	}
+	}*/
 	
 	.page-productos .block-system .view-id-productosbycategory ul li {
 		margin: 0;
    		width: 44%;
+		padding: 0 6px;
 	}
 	
 	.page-productos .block-system .view-id-productosbycategory .views-field-field-image img {
@@ -3064,7 +3071,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	.item-list .pager {
-		width: 250px;
+		width: 395px;
 	}
 	
 	.item-list .pager li {

@@ -1,5 +1,4 @@
 <?php
-
 print $list;
-//var_dump($variables);
+// var_dump($variables);
 ?>

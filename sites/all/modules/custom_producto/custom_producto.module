@@ -4,7 +4,6 @@ function _custom_producto_get_linea() {
 	$node = menu_get_object ();
 	if ($node && $node->type == 'productos') {
 		$tid = $node->field_lineas [LANGUAGE_NONE] [0] ['tid'];
-		
 	}
 	return $tid;
 }

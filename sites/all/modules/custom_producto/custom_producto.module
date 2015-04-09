@@ -2,7 +2,7 @@
 function _custom_producto_get_linea() {
 	$tid = false;
 	$node = menu_get_object ();
-	if ($node && ($node->type == 'productos' || $node->type == 'producto-basic-page') {
+	if ($node && ($node->type == 'productos' || $node->type == 'producto-basic-page')) {
 		$tid = $node->field_lineas [LANGUAGE_NONE] [0] ['tid'];
 	}
 	return $tid;
@@ -10,7 +10,7 @@ function _custom_producto_get_linea() {
 function _custom_producto_get_categoria() {
 	$tid = false;
 	$node = menu_get_object ();
-	if ($node && ($node->type == 'productos' || $node->type == 'producto-basic-page') {
+	if ($node && ($node->type == 'productos' || $node->type == 'producto-basic-page')) {
 		$tid = $node->field_categor_a[LANGUAGE_NONE] [0] ['tid'];
 	}
 	return $tid;

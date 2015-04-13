@@ -192,7 +192,7 @@ function _custom_producto_get_categorias_by_another_category($term_name, $output
 			$query->condition ( 'taxonomy_term_data.vid', $o_vocabulary->vid );
 		}
 		if($order){
-			$query->order($order);
+			//$query->order($order);
 		}
 		$result = $query->execute ()->fetchAll ();
 		$terms [$term_name] [$vocabulary] [$output_result] = array ();

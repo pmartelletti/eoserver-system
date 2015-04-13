@@ -148,6 +148,7 @@ function _custom_producto_get_categorias_by_another_category($term_name, $output
 		$query->join ( 'taxonomy_index', 'taxonomy_index', 'taxonomy_index.tid = taxonomy_term_data.tid' );
 		$query->join ( 'field_revision_field_categor_a', 'field_revision_field_categor_a', 'field_revision_field_categor_a.entity_id = taxonomy_index.nid' );
 		$filter_propiedades_adicionales = false;
+		$order = null;
 		switch (strtolower ( $output_result )) {
 			case 'linea' :
 			case 'lineas' :
@@ -162,6 +163,7 @@ function _custom_producto_get_categorias_by_another_category($term_name, $output
 			case 'tonos' :
 				$output_result = 'tono';
 				$o_vocabulary = taxonomy_vocabulary_machine_name_load ( $output_result );
+				$order ='taxonomy_term_data.weight ASC';
 				break;
 			case 'ambiente' :
 			case 'ambientes' :
@@ -188,6 +190,9 @@ function _custom_producto_get_categorias_by_another_category($term_name, $output
 		}
 		if ($o_vocabulary) {
 			$query->condition ( 'taxonomy_term_data.vid', $o_vocabulary->vid );
+		}
+		if($order){
+			$query->order($order);
 		}
 		$result = $query->execute ()->fetchAll ();
 		$terms [$term_name] [$vocabulary] [$output_result] = array ();

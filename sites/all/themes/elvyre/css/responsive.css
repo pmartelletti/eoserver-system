@@ -2767,7 +2767,11 @@ All this is done for any sub-level being entered.
     }
 	
 	#nav > ul > li > a {
-	  padding: 8px;
+		padding: 8px;
+	}
+	
+	#nav li ul {
+		top: 51px;
 	}
     
     .grid_3 .numbers-counter li{

@@ -2678,7 +2678,7 @@ All this is done for any sub-level being entered.
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .container {
         max-width: 972px;
-		background: #0CC;
+		/*background: #0CC;*/
     }
 	.container_12 {
  max-width: 972px;

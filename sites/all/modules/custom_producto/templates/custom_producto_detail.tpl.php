@@ -1,82 +1,84 @@
 <div class="muestra_producto grid_12 alpha">
-    <div class="opciones">
-        <ul>
+	<div class="opciones">
+		<ul>
             <?php
-            $field = field_view_field('node', $node, 'field_archivos_descargables', 'full');
-            print render($field);
-            ?>
+												$field = field_view_field ( 'node', $node, 'field_archivos_descargables', 'full' );
+												print render ( $field );
+												?>
             <li><a href="/distribuidores">&iquest;Donde comprar?</a></li>
 
             <?php
-            if (!empty($node->field_url)) {
-                $field = field_view_field('node', $node, 'field_url', 'full');
-                $html = render($field);
-                print $html;
-            }
-            ?>
+												if (! empty ( $node->field_url )) {
+													$field = field_view_field ( 'node', $node, 'field_url', 'full' );
+													$html = render ( $field );
+													print $html;
+												}
+												?>
         </ul>
         <?php
-        $block = module_invoke('views', 'block_view', 'productos_archivos-block');
-        unset($block['subject']);
-        print render($block);
-        ?>
+								$block = module_invoke ( 'views', 'block_view', 'productos_archivos-block' );
+								unset ( $block ['subject'] );
+								print render ( $block );
+								?>
     </div>
-    <div class="detalle">
+	<div class="detalle">
         <?php
-        $field = field_view_field('node', $node, 'body', 'full');
-        print render($field);
-        ?>
+								$field = field_view_field ( 'node', $node, 'body', 'full' );
+								print render ( $field );
+								?>
         <?php if (false): ?>
             <div class="embalaje">
-                <div class="titulo">pieza por caja</div>
+			<div class="titulo">pieza por caja</div>
 
-                <div class="unidad">10 u.</div>
-            </div>
+			<div class="unidad">10 u.</div>
+		</div>
 
-            <div class="embalaje">
-                <div class="titulo">peso por caja</div>
+		<div class="embalaje">
+			<div class="titulo">peso por caja</div>
 
-                <div class="unidad">100kg.</div>
-            </div>
+			<div class="unidad">100kg.</div>
+		</div>
 
-            <div class="embalaje">
-                <div class="titulo">sup. por caja</div>
+		<div class="embalaje">
+			<div class="titulo">sup. por caja</div>
 
-                <div class="unidad">50 mts.</div>
-            </div>
+			<div class="unidad">50 mts.</div>
+		</div>
 
-            <div class="embalaje">
-                <div class="titulo">caja por palet</div>
+		<div class="embalaje">
+			<div class="titulo">caja por palet</div>
 
-                <div class="unidad">5 c.</div>
-            </div>
+			<div class="unidad">5 c.</div>
+		</div>
 
-            <div class="embalaje">
-                <div class="titulo">sup. por palet</div>
+		<div class="embalaje">
+			<div class="titulo">sup. por palet</div>
 
-                <div class="unidad">100 mts.</div>
-            </div>
+			<div class="unidad">100 mts.</div>
+		</div>
         <?php endif; ?>
     </div>
 
-    <div class="right">
+	<div class="right">
         <?php
-        $field = field_view_field('node', $node, 'field_imagenes_de_ambiente', 'full');
-        print render($field);
-        $block = module_invoke('views', 'block_view', 'productos_misma_categoria-block');
-        unset($block['subject']);
-        print render($block);
-        ?>
+								$field = field_view_field ( 'node', $node, 'field_imagenes_de_ambiente', 'full' );
+								print render ( $field );
+								$block = module_invoke ( 'views', 'block_view', 'productos_misma_categoria-block' );
+								unset ( $block ['subject'] );
+								print render ( $block );
+								?>
         <?php if (false): ?>
             <div class="colores">
-                <h3>colores disponibles:</h3>
-                <ul>
-                    <li><img alt="" src="http://dummyimage.com/98x98/000/fff&amp;text=colores" style="height:98px; width:98px" /><br />
-                        claro</li>
-                    <li><img alt="" src="http://dummyimage.com/98x98/000/fff&amp;text=colores" style="height:98px; width:98px" /><br />
-                        oscuro</li>
-                </ul>
-            </div>
+			<h3>colores disponibles:</h3>
+			<ul>
+				<li><img alt=""
+					src="http://dummyimage.com/98x98/000/fff&amp;text=colores"
+					style="height: 98px; width: 98px" /><br /> claro</li>
+				<li><img alt=""
+					src="http://dummyimage.com/98x98/000/fff&amp;text=colores"
+					style="height: 98px; width: 98px" /><br /> oscuro</li>
+			</ul>
+		</div>
         <?php endif ?>
     </div>
 </div>

@@ -3089,10 +3089,10 @@ All this is done for any sub-level being entered.
 	.item-list .pager li {
 		float: none;
     	margin: 0;
-		width: initial;
-		min-width: 30px;
-		min-height: 20px;
-		height: 20px;
+		width: initial !important;
+		min-width: 30px !important;
+		min-height: 20px !important;
+		height: 20px !important;
 	}
 	
 	.node-type-novedades #block-system-main, .biblioteca-archivos #block-system-main {

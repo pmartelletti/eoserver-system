@@ -2970,11 +2970,15 @@ All this is done for any sub-level being entered.
 	
 	.muestra_producto .detalle {
 		margin-left: 20px;
-		width: 400px;
+		width: 718px;
 	}
 	
 	.muestra_producto .right {
-		width: 298px;
+		width: 718px;
+	}
+	
+	.view-productos-misma-categoria ul li {
+		min-height: 140px;
 	}
 	
 	.node-type-productos .muestra_producto .imagenes {

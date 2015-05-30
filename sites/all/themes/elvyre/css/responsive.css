@@ -2973,11 +2973,14 @@ All this is done for any sub-level being entered.
 		width: 400px;
 	}
 	
+	.muestra_producto .right {
+		width: 298px;
+	}
+	
 	.node-type-productos .muestra_producto .imagenes {
 		height: 300px;
 		width: 300px;
 	}
-	
 	
 	.productos #page-title .novedades_header_side {
 		padding: 183px 0 0 40px;

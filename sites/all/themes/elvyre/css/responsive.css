@@ -2763,8 +2763,12 @@ All this is done for any sub-level being entered.
     } 
     
     #nav-container{
-        width: 702px;
+        width: 676px;
     }
+	
+	#nav > ul > li > a {
+	  padding: 8px;
+	}
     
     .grid_3 .numbers-counter li{
         width: 105px;

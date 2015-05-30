@@ -3083,7 +3083,8 @@ All this is done for any sub-level being entered.
 	}
 	
 	.item-list .pager {
-		width: 395px;
+		width: 100%;
+		margin-top: 20px;
 	}
 	
 	.item-list .pager li {

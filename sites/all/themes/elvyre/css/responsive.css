@@ -2975,6 +2975,7 @@ All this is done for any sub-level being entered.
 	
 	.muestra_producto .right {
 		width: 718px;
+		margin-top: 20px;
 	}
 	
 	.view-productos-misma-categoria ul li {

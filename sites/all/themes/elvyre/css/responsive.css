@@ -2762,7 +2762,7 @@ All this is done for any sub-level being entered.
         max-width: 742px;
     } 
     
-    #nav-container{
+    /*#nav-container{
         width: 676px;
     }
 	
@@ -2776,7 +2776,7 @@ All this is done for any sub-level being entered.
 	
 	#nav > ul > li > a.desp {
 		margin-top: 0;
-	}
+	}*/
     
     .grid_3 .numbers-counter li{
         width: 105px;

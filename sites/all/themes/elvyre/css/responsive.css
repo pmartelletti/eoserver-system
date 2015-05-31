@@ -742,6 +742,7 @@ All this is done for any sub-level being entered.
 	.detalle_producto h2 {
 		font-size: 18px;
 	    margin-bottom: 10px;
+		line-height: 20px;
 	}
 	
 	.detalle_producto p {
@@ -758,6 +759,11 @@ All this is done for any sub-level being entered.
 	.detalle_producto li {
 		font-size: 13px;
 	}
+		
+	.detalle_producto li b {
+		font-size: 18px !important;
+	}
+
 	
 	.detalle_producto li span {
 		font-size: 18px;

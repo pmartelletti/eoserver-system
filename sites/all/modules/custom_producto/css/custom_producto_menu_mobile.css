@@ -24,6 +24,7 @@
 	position: absolute;
 	/*top: 53px;*/
 	width: 94%;
+	z-index: 99;
 }
 
 #block-custom-producto-filter-all-mobile .selected a:first-child {

@@ -2604,6 +2604,21 @@ All this is done for any sub-level being entered.
 		padding: 182px 0 0 40px;
 	}
 	
+	.page-productos .productos_filtro_linea {
+		padding-left: 15px;
+		width: 525px;
+	}
+	
+	.page-productos .productos_filtro_linea .view-id-filter_categorias li:nth-child(odd) {
+		float: left;
+		margin: 0 5px 0 0 !important;
+	}
+	
+	.page-productos .productos_filtro_linea .view-id-filter_categorias li:nth-child(even) {
+		float: left;
+		margin: 0 5px 0 0 !important;
+	}
+	
 	.item-list .pager {
 		width: 100%;
 		margin-top: 20px;

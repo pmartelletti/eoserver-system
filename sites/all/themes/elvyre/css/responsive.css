@@ -2540,6 +2540,10 @@ All this is done for any sub-level being entered.
 		margin-top: 20px;
 	}
 	
+	.detalle_producto .imagen img {
+		bottom: initial;
+	}
+	
 	.node-type-productos .muestra_producto .imagenes {
 		height: auto;
 		width: 230px;

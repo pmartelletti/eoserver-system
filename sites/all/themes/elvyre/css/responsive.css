@@ -720,7 +720,7 @@ All this is done for any sub-level being entered.
 	}
 	
 	.detalle_producto .cont_detalle {
-		height: 460px;
+		height: 440px;
 		top: 0;
 		width: 60%;
 	}
@@ -766,6 +766,12 @@ All this is done for any sub-level being entered.
 	.detalle_producto .imagen {
 		height: 330px;
     	width: 40%;
+	}
+	
+	.view-productos-misma-categoria ul li {
+		margin: 0 5% 10px 0;
+		width: 20%;
+		min-height: 120px;
 	}
 	
 	.zoomWrapper {

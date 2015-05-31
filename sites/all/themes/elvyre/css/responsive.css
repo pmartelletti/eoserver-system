@@ -2531,8 +2531,13 @@ All this is done for any sub-level being entered.
 	}
 	
 	.muestra_producto .detalle {
-		width: 290px;
+		width: 536px;
 		margin-left: 20px;
+	}
+	
+	.muestra_producto .right {
+		width: 536px;
+		margin-top: 20px;
 	}
 	
 	.node-type-productos .muestra_producto .imagenes {

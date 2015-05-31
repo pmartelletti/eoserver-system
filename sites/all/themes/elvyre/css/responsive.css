@@ -2611,7 +2611,7 @@ All this is done for any sub-level being entered.
 	
 	.item-list .pager li {
 		float: none;
-    	margin: 0;
+    	margin: 0 !important;
 		width: initial !important;
 		min-width: 30px !important;
 		min-height: 20px !important;

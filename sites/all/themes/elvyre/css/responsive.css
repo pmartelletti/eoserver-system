@@ -2591,8 +2591,9 @@ All this is done for any sub-level being entered.
 	}
 	
 	.page-productos .block-system .view-id-productosbycategory ul li {
-		margin: 0 5% 0 0;
+		margin: 0 5% 5% 0;
 		width: 30%;
+		padding: 0;
 	}
 	
 	.page-productos .block-system .view-id-productosbycategory ul li:nth-child(3n+3) {
@@ -2601,6 +2602,20 @@ All this is done for any sub-level being entered.
 	
 	.productos #page-title .novedades_header_side {
 		padding: 182px 0 0 40px;
+	}
+	
+	.item-list .pager {
+		width: 100%;
+		margin-top: 20px;
+	}
+	
+	.item-list .pager li {
+		float: none;
+    	margin: 0;
+		width: initial !important;
+		min-width: 30px !important;
+		min-height: 20px !important;
+		height: 20px !important;
 	}
 	
 	.view-novedades ul {

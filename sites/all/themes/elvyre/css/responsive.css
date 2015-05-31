@@ -775,6 +775,7 @@ All this is done for any sub-level being entered.
 	
 	.detalle_producto .imagen img {
 		width: 100%;
+		bottom: initial;
 	}
 	
 	.node-type-productos #block-block-20 {

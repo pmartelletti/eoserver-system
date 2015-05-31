@@ -916,8 +916,8 @@ All this is done for any sub-level being entered.
 	}
 	
 	.productos .prod_destacados img {
-		width: 95%;
-		height: auto;
+		width: 95% !important;
+		height: auto !important;
 	}
 	
 	.productos #logo {

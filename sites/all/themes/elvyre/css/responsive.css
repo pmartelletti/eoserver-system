@@ -3165,6 +3165,7 @@ All this is done for any sub-level being entered.
 		max-height: 100%;
 		max-width: 100%;
 		position: absolute;
+		width: 190px;
 	}
 	
 	.node-type-novedades #block-system-main, .biblioteca-archivos #block-system-main {

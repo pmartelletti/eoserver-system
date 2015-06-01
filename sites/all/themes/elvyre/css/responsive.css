@@ -1785,7 +1785,9 @@ All this is done for any sub-level being entered.
 	
 	.detalle_producto .imagen img {
 		height: auto;
-		max-width: 100%;
+		max-height: 330px;
+		max-width: inherit;
+		width: auto;
 	}
 	
 	.muestra_producto {

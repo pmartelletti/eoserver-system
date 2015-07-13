@@ -5168,6 +5168,16 @@ body.page-productos-piezas-especiales {
     width: auto;
 }
 
+.item-list .pager li {
+	float: none;
+	margin: 0;
+	width: initial !important;
+	min-width: 15px !important;
+	min-height: 20px !important;
+	height: 20px !important;
+	padding: 0 5px !important;
+}
+
 .page-productos .block-system .view-id-productosbycategory ul li > div {
 	display: table;
     text-align: center;

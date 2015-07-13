@@ -1139,9 +1139,10 @@ All this is done for any sub-level being entered.
 		float: none;
     	margin: 0 !important;
 		width: initial !important;
-		min-width: 30px !important;
+		min-width: 15px !important;
 		min-height: 20px !important;
 		height: 20px !important;
+		padding: 0 5px !important;
 	}
 	
 	.node-type-novedades #block-system-main, .biblioteca-archivos #block-system-main {
@@ -2655,9 +2656,10 @@ All this is done for any sub-level being entered.
 		float: none;
     	margin: 0 !important;
 		width: initial !important;
-		min-width: 30px !important;
+		min-width: 15px !important;
 		min-height: 20px !important;
 		height: 20px !important;
+		padding: 0 5px !important;
 	}
 	
 	.view-novedades ul {
@@ -3156,9 +3158,10 @@ All this is done for any sub-level being entered.
 		float: none;
     	margin: 0;
 		width: initial !important;
-		min-width: 30px !important;
+		min-width: 15px !important;
 		min-height: 20px !important;
 		height: 20px !important;
+		padding: 0 5px !important;
 	}
 	
 	.not-front .page-content article.grid_12 {

@@ -1787,11 +1787,16 @@ All this is done for any sub-level being entered.
 		width: 40%;
 	}
 	
-	.detalle_producto .imagen img {
+	/*.detalle_producto .imagen img {
 		height: auto;
 		max-height: 330px;
 		max-width: inherit;
 		width: auto;
+	}*/
+	
+	.detalle_producto .imagen img {
+		width: 100%;
+		bottom: initial;
 	}
 	
 	.muestra_producto {
